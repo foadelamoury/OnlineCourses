@@ -11,10 +11,7 @@ public class Student : ObjectBase<int>
 
     public int CityId { get; set; }
 
-    public string PhoneNumberA { get; set; }
-
-  public string PhoneNumberB { get; set; }
-
+   
   public string PhotoName { get; set; }
 
 
