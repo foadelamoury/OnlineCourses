@@ -5,9 +5,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Application.Features.Country.Queries.GetAll
 {
-    public class GetAllCityQuery : IRequest<IEnumerable<CountryDTO>>
+    public class GetAllCountryQuery : IRequest<IEnumerable<CountryDTO>>
     {
-        public class Handler : IRequestHandler<GetAllCityQuery, IEnumerable<CountryDTO>>
+        public class Handler : IRequestHandler<GetAllCountryQuery, IEnumerable<CountryDTO>>
         {
 
             private readonly IApplicationDbContext _context;
@@ -15,7 +15,7 @@ namespace Application.Features.Country.Queries.GetAll
             {
                 _context = context;
             }
-            public async Task<IEnumerable<CountryDTO>> Handle(GetAllCityQuery request, CancellationToken cancellationToken)
+            public async Task<IEnumerable<CountryDTO>> Handle(GetAllCountryQuery request, CancellationToken cancellationToken)
             {
                 var countries = await _context.Countries.Select(x =>
                       new CountryDTO

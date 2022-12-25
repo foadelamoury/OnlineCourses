@@ -3,11 +3,11 @@ using Application.Interfaces;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace Application.Features.Courses.Queries.GetAll
+namespace Application.Features.CoursesCategory.Queries.GetAll
 {
-    public class GetAllCoursesQuery : IRequest<IEnumerable<CourseDTO>>
+    public class GetAllCourseCategoriesQuery : IRequest<IEnumerable<CourseDTO>>
   {
-    public class Handler : IRequestHandler<GetAllCoursesQuery, IEnumerable<CourseDTO>>
+    public class Handler : IRequestHandler<GetAllCourseCategoriesQuery, IEnumerable<CourseDTO>>
     {
 
       private readonly IApplicationDbContext _context;
@@ -15,7 +15,7 @@ namespace Application.Features.Courses.Queries.GetAll
       {
         _context = context;
       }
-      public async Task<IEnumerable<CourseDTO>> Handle(GetAllCoursesQuery request, CancellationToken cancellationToken)
+      public async Task<IEnumerable<CourseDTO>> Handle(GetAllCourseCategoriesQuery request, CancellationToken cancellationToken)
       {
         var countries = await _context.Countries.Select(x =>
               new CourseDTO

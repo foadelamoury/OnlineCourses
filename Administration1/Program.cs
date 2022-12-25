@@ -94,11 +94,8 @@ app.UseCookiePolicy();
 app.UseEndpoints(endpoints =>
 {
     endpoints.MapControllerRoute(
-              name: "areas",
-              pattern: "{area}/{controller}/{action}/{id?}");
-    endpoints.MapControllerRoute(
               name: "default",
-              pattern: "{area=General}/{controller=Home}/{action=Index}/{id?}");
+              pattern: "{controller=Student}/{action=Index}/{id?}");
 
 
 
