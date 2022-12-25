@@ -1,0 +1,16 @@
+using System.Collections.ObjectModel;
+
+namespace Domain.Entities;
+
+
+public class Student : ObjectBase<int>
+{
+    public string Name { get; set; }
+
+    public int CountryId { get; set; }
+
+    public int CityId { get; set; }
+
+    public Collection<PhoneNumber> PhoneNumbers { get; set; }
+
+}

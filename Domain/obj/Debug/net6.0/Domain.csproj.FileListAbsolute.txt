@@ -1,0 +1,12 @@
+D:\Github DotNet Projects\CodeNameRed\Domain\bin\Debug\net6.0\Domain.deps.json
+D:\Github DotNet Projects\CodeNameRed\Domain\bin\Debug\net6.0\Domain.dll
+D:\Github DotNet Projects\CodeNameRed\Domain\bin\Debug\net6.0\Domain.pdb
+D:\Github DotNet Projects\CodeNameRed\Domain\obj\Debug\net6.0\Domain.csproj.AssemblyReference.cache
+D:\Github DotNet Projects\CodeNameRed\Domain\obj\Debug\net6.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Github DotNet Projects\CodeNameRed\Domain\obj\Debug\net6.0\Domain.AssemblyInfoInputs.cache
+D:\Github DotNet Projects\CodeNameRed\Domain\obj\Debug\net6.0\Domain.AssemblyInfo.cs
+D:\Github DotNet Projects\CodeNameRed\Domain\obj\Debug\net6.0\Domain.csproj.CoreCompileInputs.cache
+D:\Github DotNet Projects\CodeNameRed\Domain\obj\Debug\net6.0\Domain.dll
+D:\Github DotNet Projects\CodeNameRed\Domain\obj\Debug\net6.0\refint\Domain.dll
+D:\Github DotNet Projects\CodeNameRed\Domain\obj\Debug\net6.0\Domain.pdb
+D:\Github DotNet Projects\CodeNameRed\Domain\obj\Debug\net6.0\ref\Domain.dll
