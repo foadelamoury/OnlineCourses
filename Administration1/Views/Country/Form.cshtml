@@ -12,7 +12,6 @@
         ViewData["Title"] = "Add " + TableName;
   }
 }
-<script src="~/lib/ckeditor/ckeditor.js"></script>
 
     <div asp-validation-summary="All"></div>
 
@@ -20,7 +19,7 @@
   <input type="hidden" asp-for="Id" />
 
     <div class="form-group col-md-6">
-        <Text-Box asp-for="Name" col="col-md-12" type="text" Required="Required" id="Name" label-content="@Localizer["Name"]" error-message="@Localizer["PleaseEnter"] @Localizer["Name"] @Localizer["WithoutSpaces"]" placeholder="@Localizer["Name"]"></Text-Box>
+        <input asp-for="Name"></input>
         <span asp-validation-for="Name"></span>
     </div>
   

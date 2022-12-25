@@ -1,13 +1,13 @@
-﻿using Application.Features.Courses.Models;
+﻿using Application.Features.CoursesCategory.Models;
 using Application.Interfaces;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace Application.Features.CoursesCategory.Queries.GetAll
+namespace Application.Features.CourseCategorysCategory.Queries.GetAll
 {
-    public class GetAllCourseCategoriesQuery : IRequest<IEnumerable<CourseDTO>>
+    public class GetAllCourseCategoriesQuery : IRequest<IEnumerable<CourseCategoryDTO>>
   {
-    public class Handler : IRequestHandler<GetAllCourseCategoriesQuery, IEnumerable<CourseDTO>>
+    public class Handler : IRequestHandler<GetAllCourseCategoriesQuery, IEnumerable<CourseCategoryDTO>>
     {
 
       private readonly IApplicationDbContext _context;
@@ -15,10 +15,10 @@ namespace Application.Features.CoursesCategory.Queries.GetAll
       {
         _context = context;
       }
-      public async Task<IEnumerable<CourseDTO>> Handle(GetAllCourseCategoriesQuery request, CancellationToken cancellationToken)
+      public async Task<IEnumerable<CourseCategoryDTO>> Handle(GetAllCourseCategoriesQuery request, CancellationToken cancellationToken)
       {
         var countries = await _context.Countries.Select(x =>
-              new CourseDTO
+              new CourseCategoryDTO
               {
                 Id = x.Id,
                 Name = x.Name,

@@ -35,10 +35,10 @@ public class CountryController : Controller
   #endregion
 
   #region Create
-  public async Task<IActionResult> Create()
-  {
-    return PartialView("Form", new CountryObjectDTO());
-  }
+  //public ActionResult Create()
+  //{
+  //  return PartialView("Form", new CountryDTO());
+  //}
   #endregion
 
   #region Edit
@@ -84,13 +84,13 @@ public class CountryController : Controller
 
   public async Task<JsonResult> Delete(int id)
   {
-    string response = "OK";
+    //string response = "OK";
 
     try
     {
       int res = await _mediator.Send(new DeleteCountryCommand() { Id = id });
     }
-    catch (Exception ex)
+    catch 
     { throw; }
     return null;
   }
@@ -103,6 +103,7 @@ public class CountryController : Controller
     return View(eventDTO);
   }
   #endregion
+
   #region Activate
 
   public async Task<JsonResult> Activate(long[] Ids)
@@ -116,7 +117,7 @@ public class CountryController : Controller
         await _mediator.Send(new UpdateCountryCommand(entity));
       }
     }
-    catch (Exception ex)
+    catch
     {
       throw;
     }
