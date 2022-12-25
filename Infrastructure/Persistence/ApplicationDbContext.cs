@@ -43,13 +43,13 @@ namespace Infrastructure.Persistence
             throw new NotImplementedException();
         }
     }
-    public class ApplicationDbContextFactory : IDesignTimeDbContextFactory<ApplicationDbContext>
-    {
-        public ApplicationDbContext CreateDbContext(string[] args)
-        {
-            var optionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
-            optionsBuilder.UseSqlServer("DatabaseConnection");
-            return new ApplicationDbContext(optionsBuilder.Options);
-        }
-    }
+  //public class ApplicationDbContextFactory : IDesignTimeDbContextFactory<ApplicationDbContext>
+  //{
+  //  public ApplicationDbContext CreateDbContext(string[] args)
+  //  {
+  //    var optionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
+  //    optionsBuilder.UseSqlServer("DatabaseConnection");
+  //    return new ApplicationDbContext(optionsBuilder.Options);
+  //  }
+  //}
 }

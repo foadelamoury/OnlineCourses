@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Github DotNet Projects\\CodeNameRed\\Administration1\\Administration1.csproj": {}
+    "E:\\Net Core Projects\\_Task\\EvaluationTask\\Administration1\\Administration1.csproj": {}
   },
   "projects": {
-    "D:\\Github DotNet Projects\\CodeNameRed\\Administration1\\Administration1.csproj": {
+    "E:\\Net Core Projects\\_Task\\EvaluationTask\\Administration1\\Administration1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Github DotNet Projects\\CodeNameRed\\Administration1\\Administration1.csproj",
+        "projectUniqueName": "E:\\Net Core Projects\\_Task\\EvaluationTask\\Administration1\\Administration1.csproj",
         "projectName": "Administration1",
-        "projectPath": "D:\\Github DotNet Projects\\CodeNameRed\\Administration1\\Administration1.csproj",
-        "packagesPath": "C:\\Users\\elamoury123\\.nuget\\packages\\",
-        "outputPath": "D:\\Github DotNet Projects\\CodeNameRed\\Administration1\\obj\\",
+        "projectPath": "E:\\Net Core Projects\\_Task\\EvaluationTask\\Administration1\\Administration1.csproj",
+        "packagesPath": "C:\\Users\\mfahmed\\.nuget\\packages\\",
+        "outputPath": "E:\\Net Core Projects\\_Task\\EvaluationTask\\Administration1\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\elamoury123\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mfahmed\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -31,11 +28,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Github DotNet Projects\\CodeNameRed\\Application\\Application.csproj": {
-                "projectPath": "D:\\Github DotNet Projects\\CodeNameRed\\Application\\Application.csproj"
+              "E:\\Net Core Projects\\_Task\\EvaluationTask\\Application\\Application.csproj": {
+                "projectPath": "E:\\Net Core Projects\\_Task\\EvaluationTask\\Application\\Application.csproj"
               },
-              "D:\\Github DotNet Projects\\CodeNameRed\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "D:\\Github DotNet Projects\\CodeNameRed\\Infrastructure\\Infrastructure.csproj"
+              "E:\\Net Core Projects\\_Task\\EvaluationTask\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "E:\\Net Core Projects\\_Task\\EvaluationTask\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -83,8 +80,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -96,24 +92,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Github DotNet Projects\\CodeNameRed\\Application\\Application.csproj": {
+    "E:\\Net Core Projects\\_Task\\EvaluationTask\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Github DotNet Projects\\CodeNameRed\\Application\\Application.csproj",
+        "projectUniqueName": "E:\\Net Core Projects\\_Task\\EvaluationTask\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "D:\\Github DotNet Projects\\CodeNameRed\\Application\\Application.csproj",
-        "packagesPath": "C:\\Users\\elamoury123\\.nuget\\packages\\",
-        "outputPath": "D:\\Github DotNet Projects\\CodeNameRed\\Application\\obj\\",
+        "projectPath": "E:\\Net Core Projects\\_Task\\EvaluationTask\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\mfahmed\\.nuget\\packages\\",
+        "outputPath": "E:\\Net Core Projects\\_Task\\EvaluationTask\\Application\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\elamoury123\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mfahmed\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -127,8 +120,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Github DotNet Projects\\CodeNameRed\\Domain\\Domain.csproj": {
-                "projectPath": "D:\\Github DotNet Projects\\CodeNameRed\\Domain\\Domain.csproj"
+              "E:\\Net Core Projects\\_Task\\EvaluationTask\\Domain\\Domain.csproj": {
+                "projectPath": "E:\\Net Core Projects\\_Task\\EvaluationTask\\Domain\\Domain.csproj"
               }
             }
           }
@@ -186,8 +179,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -196,24 +188,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Github DotNet Projects\\CodeNameRed\\Domain\\Domain.csproj": {
+    "E:\\Net Core Projects\\_Task\\EvaluationTask\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Github DotNet Projects\\CodeNameRed\\Domain\\Domain.csproj",
+        "projectUniqueName": "E:\\Net Core Projects\\_Task\\EvaluationTask\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "D:\\Github DotNet Projects\\CodeNameRed\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\elamoury123\\.nuget\\packages\\",
-        "outputPath": "D:\\Github DotNet Projects\\CodeNameRed\\Domain\\obj\\",
+        "projectPath": "E:\\Net Core Projects\\_Task\\EvaluationTask\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\mfahmed\\.nuget\\packages\\",
+        "outputPath": "E:\\Net Core Projects\\_Task\\EvaluationTask\\Domain\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\elamoury123\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mfahmed\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -258,8 +247,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -268,24 +256,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Github DotNet Projects\\CodeNameRed\\Infrastructure\\Infrastructure.csproj": {
+    "E:\\Net Core Projects\\_Task\\EvaluationTask\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Github DotNet Projects\\CodeNameRed\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "E:\\Net Core Projects\\_Task\\EvaluationTask\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "D:\\Github DotNet Projects\\CodeNameRed\\Infrastructure\\Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\elamoury123\\.nuget\\packages\\",
-        "outputPath": "D:\\Github DotNet Projects\\CodeNameRed\\Infrastructure\\obj\\",
+        "projectPath": "E:\\Net Core Projects\\_Task\\EvaluationTask\\Infrastructure\\Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\mfahmed\\.nuget\\packages\\",
+        "outputPath": "E:\\Net Core Projects\\_Task\\EvaluationTask\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\elamoury123\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mfahmed\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -299,8 +284,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Github DotNet Projects\\CodeNameRed\\Application\\Application.csproj": {
-                "projectPath": "D:\\Github DotNet Projects\\CodeNameRed\\Application\\Application.csproj"
+              "E:\\Net Core Projects\\_Task\\EvaluationTask\\Application\\Application.csproj": {
+                "projectPath": "E:\\Net Core Projects\\_Task\\EvaluationTask\\Application\\Application.csproj"
               }
             }
           }
@@ -358,8 +343,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -368,7 +352,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

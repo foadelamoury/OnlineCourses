@@ -10,3 +10,15 @@ D:\Github DotNet Projects\CodeNameRed\Domain\obj\Debug\net6.0\Domain.dll
 D:\Github DotNet Projects\CodeNameRed\Domain\obj\Debug\net6.0\refint\Domain.dll
 D:\Github DotNet Projects\CodeNameRed\Domain\obj\Debug\net6.0\Domain.pdb
 D:\Github DotNet Projects\CodeNameRed\Domain\obj\Debug\net6.0\ref\Domain.dll
+E:\Net Core Projects\_Task\EvaluationTask\Domain\bin\Debug\net6.0\Domain.deps.json
+E:\Net Core Projects\_Task\EvaluationTask\Domain\bin\Debug\net6.0\Domain.dll
+E:\Net Core Projects\_Task\EvaluationTask\Domain\bin\Debug\net6.0\ref\Domain.dll
+E:\Net Core Projects\_Task\EvaluationTask\Domain\bin\Debug\net6.0\Domain.pdb
+E:\Net Core Projects\_Task\EvaluationTask\Domain\obj\Debug\net6.0\Domain.csproj.AssemblyReference.cache
+E:\Net Core Projects\_Task\EvaluationTask\Domain\obj\Debug\net6.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\Net Core Projects\_Task\EvaluationTask\Domain\obj\Debug\net6.0\Domain.AssemblyInfoInputs.cache
+E:\Net Core Projects\_Task\EvaluationTask\Domain\obj\Debug\net6.0\Domain.AssemblyInfo.cs
+E:\Net Core Projects\_Task\EvaluationTask\Domain\obj\Debug\net6.0\Domain.csproj.CoreCompileInputs.cache
+E:\Net Core Projects\_Task\EvaluationTask\Domain\obj\Debug\net6.0\Domain.dll
+E:\Net Core Projects\_Task\EvaluationTask\Domain\obj\Debug\net6.0\ref\Domain.dll
+E:\Net Core Projects\_Task\EvaluationTask\Domain\obj\Debug\net6.0\Domain.pdb
