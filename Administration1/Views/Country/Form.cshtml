@@ -1,262 +1,28 @@
 ﻿@using Application.Features.Country.Models
 @model CountryDTO
 @{
-  Layout = "_Layout";
-  if (Model.Id != 0)
+    Layout = "_Layout";
+    var TableName = "Country";
+    if (Model.Id != 0)
   {
-    ViewData["Title"] = "Edit Country" + ":" + @Model.Name;
+    ViewData["Title"] = "Edit " +TableName + ":" + @Model.Name;
   }
   else
   {
-    ViewData["Title"] = "AddCountry";
+        ViewData["Title"] = "Add " + TableName;
   }
 }
 <script src="~/lib/ckeditor/ckeditor.js"></script>
 
     <div asp-validation-summary="All"></div>
 
-<form asp-action="Form" method="post" class="needs-validation" novalidate enctype="multipart/form-data">
+<form asp-action="Form" method="post"   enctype="multipart/form-data">
   <input type="hidden" asp-for="Id" />
 
-
-  <div class="modal-body">
-    <ul class="nav nav-tabs p-0" role="tablist">
-      <li class="nav-Model"><a class="nav-link active" data-toggle="tab" href="#tab_direction-1" role="tab">BasicInformation</a></li>
-      <li class="nav-Model"><a class="nav-link " data-toggle="tab" href="#tab_direction-2" role="tab">ContentForm</a></li>
-      <li class="nav-Model"><a class="nav-link" data-toggle="tab" href="#tab_direction-3" role="tab">Translation</a></li>
-    </ul>
-    <div class="tab-content p-3">
-      <div class="tab-pane fade show active" id="tab_direction-1" role="tabpanel">
-        <div class="panel-content">
-          <div class="form-row">
-            <div class="form-group col-md-6">
-              <Text-Box asp-for="TitleA" col="col-md-12" type="text" Required="Required" id="TitleA" label-content="@Localizer["TitleA"]" error-message="@Localizer["PleaseEnter"] @Localizer["TitleA"] @Localizer["WithoutSpaces"]" placeholder="@Localizer["TitleA"]"></Text-Box>
-            <span asp-validation-for="TitleA"></span>
-            </div>
-
-            <div class="form-group col-md-6">
-              <Text-Box asp-for="BriefA" col="col-md-12" type="text" id="BriefA" label-content="@Localizer["BriefA"]" error-message="@Localizer["PleaseEnter"] @Localizer["BriefA"]" placeholder="@Localizer["BriefA"]"></Text-Box>
-              <span asp-validation-for="BriefA"></span>
-            </div>
-
-          </div>
-                    <div class="form-row">
-
-                        <div class="form-group col-md-6">
-                            <Dropdown asp-for="@Model.EventCategoryId" col="col-md-12" required="Required" error-message="@Localizer["PleaseEnter"] @Localizer["EventCategory"]" asp-items="@ViewBag.EventCategory" id="EventCategoryId" label-content="@Localizer["EventCategory"]"></Dropdown>
-                        
-                          </div>
-
-                        <div class="form-group col-md-6">
-                            <Dropdown asp-for="@Model.SectorId" col="col-md-12" required="Required" error-message="@Localizer["PleaseEnter"] @Localizer["Sector"]" asp-items="@ViewBag.Sector" id="SectorId" label-content="@Localizer["Sector"]"></Dropdown>
-              <span asp-validation-for="SectorId"></span>
-                            
-                          </div>
-
-                    </div>
-
-      
-
-          <div class="form-row">
-                 <div class="form-group col-md-6">
-                            <Dropdown asp-for="@Model.EntityId" col="col-md-12" required="Required" error-message="@Localizer["PleaseEnter"] @Localizer["Destination"]" asp-items="@ViewBag.Entity" id="EntityId" label-content="@Localizer["Destination"]"></Dropdown>
-              <span asp-validation-for="EntityId"></span>
-
-            </div>
-         
-            <div class="form-group col-md-6">
-
-              <Text-Box asp-for="AddressA" col="col-md-12" type="text" id="AddressA" label-content="@Localizer["EventAddressA"]" error-message="@Localizer["PleaseEnter"] @Localizer["EventAddressA"]" placeholder="@Localizer["EventAddressA"]"></Text-Box>
-              <span asp-validation-for="AddressA"></span>
-
-            </div>
-          </div>
-
-          <div class="form-row">
-            <div class="form-group col-md-6">
-              @*<label class='form-label'> @Localizer["StartDate"] <span style='color:red'> * </span> </label>
-                <input class="form-control" Required="Required" asp-for="StartDate" asp-format="{0:yyyy-MM-ddTHH:mm}" />
-                <div class='invalid-feedback'>
-                {ErrorMessage}
-                </div>*@
-
-              <Date-Picker asp-for="StartDate" Required="Required" asp-format="{0:yyyy-MM-ddTHH:mm}" col="col-md-12" id="StartDate" label-content="@Localizer["StartDate"]" error-message="@Localizer["PleaseEnter"] @Localizer["StartDate"]" placeholder="@Localizer["StartDate"]"></Date-Picker>
-
-              <span asp-validation-for="StartDate" class="text-danger"></span>
-            </div>
-            <div class="form-group col-md-6">
-              @* <label class='form-label'> @Localizer["EndDate"] <span style='color:red'> * </span> </label>
-                <input class="form-control" Required="Required" asp-for="EndDate" asp-format="{0:yyyy-MM-ddTHH:mm}" />
-                <div class='invalid-feedback'>
-                {ErrorMessage}
-                </div>*@
-              <Date-Picker asp-for="EndDate" Required="Required" col="col-md-12" id="EndDate" label-content="@Localizer["EndDate"]" error-message="@Localizer["PleaseEnter"] @Localizer["EndDate"]" placeholder="@Localizer["EndDate"]"></Date-Picker>
-
-              <span asp-validation-for="EndDate" class="text-danger js-sweetalert2"></span>
-            </div>
-          </div>
-
-
-          <div class="form-row">
-         
-                        <div class="form-group col-md-6">
-                            <Text-Box asp-for="UrlA" col="col-md-12" type="url" id="UrlA" label-content="@Localizer["Url"]" error-message="@Localizer["PleaseEnter"] @Localizer["Url"]" placeholder="@Localizer["Url"]"></Text-Box>
-                         <span asp-validation-for="UrlA"></span>
-                          </div>
-            <div class="form-group col-md-6">
-
-              <File-Upload area="Content" controllername="Event" max-allowed-size="10240" name="AttachmentA" extension=".pdf,.docx,.xlsx,.xlsm,.xlsb,.xltx" filename="@Model.AttachmentA" label-content="@Localizer["Attachment"]" objectname="Event" object-id="@Model.Id" property="AttachmentA"></File-Upload>
-                         <span asp-validation-for="AttachmentA"></span>
-            
-            </div>
-          </div>
-          <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <File-Upload area="Content" controllername="Event" extension=".png,.jpg,.jpeg,.svg,.gif,.jfif" required="Required" name="PhotoA" filename="@Model.PhotoA" label-content="@Localizer["Photo"]" objectname="Event" object-id="@Model.Id" property="PhotoA"></File-Upload>
-                         <span asp-validation-for="PhotoA"></span>
-                        
-                          </div>
-            <div class="form-group col-md-6">
-              <Text-Box asp-for="BriefA" col="col-md-12" type="text" id="PhotoCaptionA" label-content="@Localizer["PhotoCaption"]" error-message="@Localizer["PleaseEnter"] @Localizer["PhotoCaption"]" placeholder="@Localizer["PhotoCaption"]"></Text-Box>
-                         <span asp-validation-for="BriefA"></span>
-            
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group col-md-6">
-              <Dropdown asp-for="@Model.PhotoLibraryAlbumId" col="col-md-12" asp-items="@ViewBag.PhotoLibraryAlbum" id="PhotoLibraryAlbumId" label-content="@Localizer["PhotoLibraryAlbum"]"></Dropdown>
-            </div>
-            <div class="form-group col-md-6">
-              <Dropdown asp-for="@Model.VideoLibraryId" col="col-md-12" asp-items="@ViewBag.VideoLibrary" id="VideoLibraryId" label-content="@Localizer["VideoLibraryAlbum"]"></Dropdown>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-md-8">
-              <Standard asp-for-active="Active" asp-for-focus="Focus" asp-for-sort-index="SortIndex"></Standard>
-            </div>
-          </div>
-
-        </div>
-      </div>
-      <div class="tab-pane fade show " id="tab_direction-2" role="tabpanel">
-        <div class="panel-content">
-
-          <div class="form-row">
-            <Ck-Editor asp-for="ContentA" id="ContentA" label-content="@Localizer["ContentA"]"></Ck-Editor>
-                         <span asp-validation-for="ContentA"></span>
-          
-          </div>
-
-        </div>
-      </div>
-      <div id="tab_direction-3" class="tab-pane fade">
-        <div class="panel-content">
-          <div class="form-row">
-            <div class="form-group col-md-12">
-
-              <Text-Box asp-for="TitleE" col="col-md-12" type="text" id="TitleE" style="text-align:right" dir="ltr" label-content="@Localizer["TitleE"]" error-message="@Localizer["PleaseEnter"] @Localizer["TitleE"]" placeholder="@Localizer["TitleE"]"></Text-Box>
-            
-                         <span asp-validation-for="TitleE"></span>
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group col-md-12">
-              <Text-Box asp-for="BriefE" col="col-md-12" type="text" id="BriefE" label-content="@Localizer["BriefE"]" error-message="@Localizer["PleaseEnter"] @Localizer["BriefE"]" placeholder="@Localizer["BriefE"]"></Text-Box>
-                         <span asp-validation-for="BriefE"></span>
-            
-            </div>
-          </div>
-          <div class="form-row">
-
-            <div class="form-group col-md-6">
-              <Text-Box asp-for="UrlE" col="col-md-12" type="url" id="UrlE" style="text-align:right" dir="ltr" label-content="@Localizer["UrlE"]" error-message="@Localizer["PleaseEnter"] @Localizer["UrlE"]" placeholder="@Localizer["UrlE"]"></Text-Box>
-                         <span asp-validation-for="UrlE"></span>
-            
-            </div>
-            <div class="form-group col-md-6">
-
-              <Text-Box asp-for="AddressE" col="col-md-12" type="text" id="AddressE" style="text-align:right" dir="ltr" label-content="@Localizer["EventAddressE"]" error-message="@Localizer["PleaseEnter"] @Localizer["EventAddressE"]" placeholder="@Localizer["EventAddressE"]"></Text-Box>
-                         <span asp-validation-for="AddressE"></span>
-            
-            </div>
-
-
-          </div>
-
-          <div class="form-row">
-            <Ck-Editor asp-for="ContentE" id="ContentE" label-content="@Localizer["ContentE"]"></Ck-Editor>
-                         <span asp-validation-for="ContentE"></span>
-          
-          </div>
-          <div class="form-row">
-
-            <div class="form-group col-md-6">
-              <File-Upload area="Content" controllername="Event" name="PhotoFileE" extension=".png,.jpg,.jpeg,.svg,.gif,.jfif" filename="@Model.PhotoE" label-content="@Localizer["PhotoE"]" objectname="Event" object-id="@Model.Id" property="PhotoE"></File-Upload>
-            </div>
-            <div class="form-group col-md-6">
-              <File-Upload area="Content" controllername="Event" name="AttachmentFileE" extension=".pdf,.docx,.xlsx,.xlsm,.xlsb,.xltx" filename="@Model.AttachmentE" label-content="@Localizer["AttachmentE"]" objectname="Event" object-id="@Model.Id" property="AttachmentE"></File-Upload>
-            </div>
-          </div>
-
-          <div class="form-row">
-            <div class="form-group col-md-12">
-
-              <Text-Box asp-for="PhotoCaptionE" col="col-md-12" type="text" style="text-align:right" dir="ltr" id="PhotoCaptionE" label-content="@Localizer["PhotoCaptionE"]" error-message="@Localizer["PleaseEnter"] @Localizer["PhotoCaptionE"]" placeholder="@Localizer["PhotoCaptionE"]"></Text-Box>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="modal-footer border-top-0 panel-content">
-        <button id="save" type="submit" class="btn btn-primary btn-main-bg m-1">@Localizer["Save"]</button>
-        <a asp-area="Content" asp-Controller="Events" asp-action="Index" class="btn btn-secondary m-1">@Localizer["Cancel"]</a>
-
-      </div>
+    <div class="form-group col-md-6">
+        <Text-Box asp-for="Name" col="col-md-12" type="text" Required="Required" id="Name" label-content="@Localizer["Name"]" error-message="@Localizer["PleaseEnter"] @Localizer["Name"] @Localizer["WithoutSpaces"]" placeholder="@Localizer["Name"]"></Text-Box>
+        <span asp-validation-for="Name"></span>
     </div>
-  </div>
-  @if (ViewBag.errorResults != null){
-
-    <span>@ViewBag.errorResults</span>
-  }
-
+  
 </form>
 
-@section Scripts{
-<script src="~/js/notifications/sweetalert2/sweetalert2.bundle.js"></script>
-
-<script>
-    $("#EventCategoryId").select2({ containerCssClass: "EventCategoryId" });
-        $("#EntityId").select2({ containerCssClass: "EntityId" });
-    $("#SectorId").select2({ containerCssClass: "SectorId" });
-    $("#PhotoLibraryAlbumId").select2({ containerCssClass: "PhotoLibraryAlbumId" });
-    $("#VideoLibraryId").select2({ containerCssClass: "VideoLibraryId" });
-
-     $(document).ready(function () {
-
-              validate();
-              runDatePicker();
-        var StartDate = $("#StartDate").val();
-        var EndDate = $("#EndDate").val();
-
-
-
-         $("#EndDate").change(function () {
-      var startDate = document.getElementById("StartDate").value;
-      var endDate = document.getElementById("EndDate").value;
-
-      if ((Date.parse(startDate) > Date.parse(endDate))) {
-
-         console.log("StartDate2" , startDate);
-        console.log("EndDate2" , endDate);
-          toastr.error("يجب أن يكون تاريخ الانتهاء أكبر من تاريخ البدء");
-          document.getElementById("EndDate").value = "";
-      }
-  });
-
-
-         });
-
-</script>
-
-}
