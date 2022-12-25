@@ -8,11 +8,9 @@ public interface IApplicationDbContext
 {
     DatabaseFacade? Database { get; }
 
-    DbSet<City> Cities { get; }
     DbSet<Country> Countries { get; }
     DbSet<Course> Courses { get; }
     DbSet<CourseCategory> CourseCategories { get; } // Lookup
-    DbSet<Image> Images { get; }
     DbSet<Student> Students { get; }
     DbSet<StudentCourse> StudentCourses { get; }
 

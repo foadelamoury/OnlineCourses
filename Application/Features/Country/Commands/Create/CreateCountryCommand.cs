@@ -1,5 +1,4 @@
-﻿using Application.Features.City.Models;
-using Application.Features.Country.Models;
+﻿using Application.Features.Country.Models;
 using Application.Interfaces;
 using MediatR;
 
@@ -11,7 +10,7 @@ namespace Application.Features.Country.Commands.Create
         { }
 
 
-        public CreateCountryCommand(CityDTO dto)
+        public CreateCountryCommand(CountryDTO dto)
         {
             Name = dto.Name;
             Id = dto.Id;
@@ -27,7 +26,7 @@ namespace Application.Features.Country.Commands.Create
             }
             public async Task<int> Handle(CreateCountryCommand request, CancellationToken cancellationToken)
             {
-                Domain.Entities.City entity = new Domain.Entities.City
+                Domain.Entities.Country entity = new Domain.Entities.Country
                 {
                     Id = request.Id,
 
@@ -36,7 +35,7 @@ namespace Application.Features.Country.Commands.Create
                 };
 
 
-                await _context.Cities.AddAsync(entity);
+                await _context.Countries.AddAsync(entity);
                 await _context.SaveChangesAsync(cancellationToken);
 
 

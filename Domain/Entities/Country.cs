@@ -10,5 +10,8 @@ public class Country : ObjectBase<int>
 
     public string Name;
 
-    public Collection<City> cities;
+    public int ParentId;
+
+  public Country Parent;
+
 }

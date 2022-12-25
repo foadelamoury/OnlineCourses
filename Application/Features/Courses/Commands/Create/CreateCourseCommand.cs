@@ -1,5 +1,4 @@
-﻿using Application.Features.City.Models;
-using Application.Features.Country.Commands.Create;
+﻿using Application.Features.Country.Commands.Create;
 using Application.Features.Courses.Models;
 using Application.Interfaces;
 using MediatR;

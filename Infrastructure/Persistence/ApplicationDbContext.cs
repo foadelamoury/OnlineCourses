@@ -24,7 +24,6 @@ namespace Infrastructure.Persistence
       
         public DatabaseFacade? Database { get; }
 
-        public DbSet<City> Cities => Set<City>();
 
         public DbSet<Country> Countries => Set<Country>();
 
@@ -32,7 +31,6 @@ namespace Infrastructure.Persistence
 
         public DbSet<CourseCategory> CourseCategories => Set<CourseCategory>();
 
-        public DbSet<Image> Images => Set<Image>();
 
         public DbSet<Student> Students => Set<Student>();
 

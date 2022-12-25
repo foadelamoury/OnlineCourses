@@ -19,12 +19,12 @@ namespace Application.Features.Country.Commands.Delete
         {
             try
             {
-                var entity = await _context.Cities.Where(a => a.Id == request.Id).FirstOrDefaultAsync(cancellationToken);
+                var entity = await _context.Countries.Where(a => a.Id == request.Id).FirstOrDefaultAsync(cancellationToken);
 
                 if (entity is null)
                     throw new DirectoryNotFoundException($"Country Not Found With {request.Id}");
 
-                _context.Cities.Remove(entity);
+                _context.Countries.Remove(entity);
                 int result = await _context.SaveChangesAsync(cancellationToken);
 
                 return result;

@@ -7,11 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Features\Image\Dupliacated\**" />
     <Compile Remove="Features\Student\Dupliacated\**" />
-    <EmbeddedResource Remove="Features\Image\Dupliacated\**" />
     <EmbeddedResource Remove="Features\Student\Dupliacated\**" />
-    <None Remove="Features\Image\Dupliacated\**" />
     <None Remove="Features\Student\Dupliacated\**" />
   </ItemGroup>
 
