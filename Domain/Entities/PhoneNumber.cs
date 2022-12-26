@@ -2,10 +2,10 @@
 {
     public class PhoneNumber : ObjectBase<int>
     {
-        public string number;
+        public string? number;
 
         public int studentId;
 
-        public Student Student;
+        public Student? Student;
     }
 }

@@ -82,47 +82,47 @@ public class CountryController : Controller
 
 
 
-    public async Task<JsonResult> Delete(int id)
-    {
-        //string response = "OK";
+    //public async Task<JsonResult> Delete(int id)
+    //{
+    //    //string response = "OK";
 
-        try
-        {
-            int res = await _mediator.Send(new DeleteCountryCommand() { Id = id });
-        }
-        catch
-        { throw; }
-        return null;
-    }
-    #endregion
+    //    try
+    //    {
+    //        int res = await _mediator.Send(new DeleteCountryCommand() { Id = id });
+    //    }
+    //    catch
+    //    { throw; }
+    //    return null;
+    //}
+    //#endregion
 
-    #region Detail
-    public async Task<IActionResult> Details(int id)
-    {
-        var eventDTO = await _mediator.Send(new GetCountryByIdQuery() { Id = id });
-        return View(eventDTO);
-    }
+    //#region Detail
+    //public async Task<IActionResult> Details(int id)
+    //{
+    //    var eventDTO = await _mediator.Send(new GetCountryByIdQuery() { Id = id });
+    //    return View(eventDTO);
+    //}
     #endregion
 
     #region Activate
 
-    public async Task<JsonResult> Activate(long[] Ids)
-    {
-        try
-        {
-            foreach (var item in Ids)
-            {
-                var entity = await _mediator.Send(new GetCountryByIdQuery() { Id = (int)item });
+    //public async Task<JsonResult> Activate(long[] Ids)
+    //{
+    //    try
+    //    {
+    //        foreach (var item in Ids)
+    //        {
+    //            var entity = await _mediator.Send(new GetCountryByIdQuery() { Id = (int)item });
 
-                await _mediator.Send(new UpdateCountryCommand(entity));
-            }
-        }
-        catch
-        {
-            throw;
-        }
-        return null;
-    }
+    //            await _mediator.Send(new UpdateCountryCommand(entity));
+    //        }
+    //    }
+    //    catch
+    //    {
+    //        throw;
+    //    }
+    //    return null;
+    //}
     #endregion
 
 

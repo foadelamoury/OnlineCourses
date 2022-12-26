@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using System.Security.Claims;
 
 namespace Infrastructure.Persistence
 {
@@ -11,18 +12,14 @@ namespace Infrastructure.Persistence
     {
         private readonly IHttpContextAccessor _httpContextAccessor;
 
-        public ApplicationDbContext(DbContextOptions options) : base(options)
-        {
-        }
-
-        public ApplicationDbContext(DbContextOptions options, IHttpContextAccessor httpContextAccessor) : base(options)
+        public ApplicationDbContext(DbContextOptions options,HttpContextAccessor httpContextAccessor) : base(options)
         {
             _httpContextAccessor = httpContextAccessor;
-
         }
 
       
-        public DatabaseFacade? Database { get; }
+
+      
 
 
         public DbSet<Country> Countries => Set<Country>();
@@ -36,9 +33,16 @@ namespace Infrastructure.Persistence
 
         public DbSet<StudentCourse> StudentCourses => Set<StudentCourse>();
 
-        public Task<int> SaveChangesAsync(CancellationToken cancellationToken)
+        public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
         {
-            throw new NotImplementedException();
+            foreach (var entry in ChangeTracker.Entries<AuditableEntity>())
+            {
+              
+            }
+
+            var result = await base.SaveChangesAsync(cancellationToken);
+
+            return result;
         }
     }
   //public class ApplicationDbContextFactory : IDesignTimeDbContextFactory<ApplicationDbContext>
