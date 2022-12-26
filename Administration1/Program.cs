@@ -3,8 +3,10 @@ using Application.Interfaces;
 using FluentValidation.AspNetCore;
 using Infrastructure;
 using Infrastructure.Persistence;
+using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -52,6 +54,9 @@ builder.Services
   .AddDbContext<ApplicationDbContext>(options =>
   options.UseSqlServer(configuration.GetConnectionString("DatabaseConnection")));
 
+builder.Services.AddMediatR(Assembly.GetExecutingAssembly());
+
+
 
 var app = builder.Build();
 
@@ -85,7 +90,7 @@ app.Use(async (context, next) =>
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-app.UseSession();
+//app.UseSession();
 app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
@@ -95,7 +100,7 @@ app.UseEndpoints(endpoints =>
 {
     endpoints.MapControllerRoute(
               name: "default",
-              pattern: "{controller=Student}/{action=Index}/{id?}");
+              pattern: "{controller=Country}/{action=Index}/{id?}");
 
 
 

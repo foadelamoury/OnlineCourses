@@ -1,182 +1,59 @@
-﻿@model IEnumerable<Application.Features.ManageEvent.Models.EventDTO>
+﻿@model IEnumerable<Application.Features.Country.Models.CountryDTO>
 @{
-  ViewData["Title"] = Localizer["Event"];
-  Layout = "~/Views/Shared/_Layout.cshtml";
-  <script src="~/js/Administration/Custom/location.js"></script>
-  int add = (_businessHelper.IsPermitted("Events.Create") == true) ? 1 : 0;
-  int Export = (_businessHelper.IsPermitted("Events.Export") == true) ? 1 : 0;
-  int search = (_businessHelper.IsPermitted("Events.AdvancedSearch") == true) ? 1 : 0;
-  int approve = (_businessHelper.IsPermitted("Events.Approve") == true) ? 1 : 0;
+var TableName = "Country";
+ViewData["Title"] = "Event";
 }
 
-<partial name="_SearchModal" />
 
-<table id="dt-basic-example" class="table  table-hover w-100">
-  <thead class="">
-    <tr>
-      <th width="30" align="center" valign="middle">
-        <div class="custom-checkbox px-0">
-          <input type="checkbox" class="selectAll select-checkbox custom-control-input" id="selectAll" tabindex="0" name="selectAll" value="all">
-          <label class="custom-control-label" for="selectAll"></label>
-        </div>
-      </th>
+    <table id="dt-basic-example" class="table  table-hover w-100">
+        <thead class="">
+            <tr>
+                <th width="30" align="center" valign="middle">
+                    <div class="custom-checkbox px-0">
+                        <input type="checkbox" class="selectAll select-checkbox custom-control-input" id="selectAll" tabindex="0" name="selectAll" value="all">
+                        <label class="custom-control-label" for="selectAll"></label>
+                    </div>
+                </th>
 
-      <th hidden="hidden">@Localizer["Id"]</th>
-      <th hidden="hidden">@Localizer["TitleANormalized"]</th>
-      <th style="width:30%;">
-        @Localizer["Title"]
-      </th>
-      <th>
-        @Localizer["EventCategory"]
-      </th>
-      <th>
-        @Localizer["Sector"]
-      </th>
-      <th>
-        @Localizer["StartDate"]
-      </th>
-      <th>
-        @Localizer["EndDate"]
-      </th>
-      @*    <th style="width:15px">
-        @Localizer["TranslationStatus"]
-        </th>*@
-      <th style="width:15px">
-        @Localizer["SortIndex"]
-      </th>
-      <th style="width:15px">
-        @Localizer["Active"]
-      </th>
-      <th style="width:12px">@Localizer["Functions"]</th>
-    </tr>
-  </thead>
-  <tbody>
-    @foreach (var item in Model)
-    {
-      <tr>
-        <td>
-          <div class="custom-checkbox px-0">
-            <input type="checkbox" class="selectRow custom-control-input" id="item @item.Id">
-            <label class="custom-control-label" for="item @item.Id"></label>
-          </div>
-        </td>
+                <th hidden="hidden">Id</th>
+                <th style="width:30%;">
+                     Name
+                </th>
+               
+            
+                <th style="width:15px">
+                     SortIndex"]
+                </th>
+                <th style="width:15px">
+                     Active"]
+                </th>
+                <th style="width:12px"> Functions"]</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    <div class="custom-checkbox px-0">
+                        <input type="checkbox" class="selectRow custom-control-input" id="item @item.Id">
+                        <label class="custom-control-label" for="item @item.Id"></label>
+                    </div>
+                </td>
 
-        <td hidden="hidden">
-          @Html.DisplayFor(modelItem => item.Id)
-        </td>
-        <td hidden="hidden">
-          @Html.DisplayFor(modelItem => item.TitleANormalized)
-        </td>
-        <td>
-          <a href="@Url.ActionLink("Details", "Events", new { area = "Content", Id = item.Id })" aria-expanded="false">
-            @item.TitleA
-          </a>
-        </td>
-        @*<td style="background-color:@item.NameA">
-          @item.NameA
-          </td>*@
-        <td>
-          @Html.DisplayFor(modelItem => item.EventCategoryName)
-        </td>
-        <td>
-          @Html.DisplayFor(modelItem => item.SectorName)
-        </td>
-        <td>
-          @item.StartDate.ToString("yyyy/MM/dd")
-        </td>
-        <td>
-          @item.EndDate.ToString("yyyy/MM/dd")
-          @*@Html.DisplayFor(modelItem => item.PublishDate)*@
-        </td>
-        @*     <td>
-          @if (item.TitleE != null)
-          {
-          <p style="color:black">نعم</p>
-          }
+                <td hidden="hidden">
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
 
-          else
-          {
-          <p style="color:black">لا</p>
-          }
-          </td>*@
-        <td>
-          @Html.DisplayFor(modelItem => item.SortIndex)
-        </td>
-        <td>
-          @if (item.Active == true)
-          {
-            <p style="color:black">نعم</p>
-          }
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+               
 
-          else
-          {
-            <p style="color:black">لا</p>
-          }
-        </td>
-        <td class="rowControl">
-          <div class="btn-group">
-            <button type="button" style="vertical-align: middle;" class="btn btn-outline-primary rounded-circle btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="fa fa-ellipsis-h" style="vertical-align: middle;"></i>
-            </button>
-            <div class="dropdown-menu fadeleft">
-              @if (_businessHelper.IsPermitted("Events.Delete"))
-              {
-                <a title="@Localizer["Delete"]" data-id=@item.Id data-area="Content" data-Controller='Events' data-Action1='CheckDeletePermission' data-Action2='Delete' data-Name='@item.TitleA' data-Msg1='@Localizer["DeleteConfirm"]' data-Msg2='@Localizer["DeletedSuccessfully"]' onclick='DeleteObject(this)' class="btn btn-primary bg-primary-700 btn-icon text-white rounded-circle mx-1 waves-effect waves-themed js-sweetalert2" style="font-size:x-large"><i class="fa fa-times" style="vertical-align: middle" data-toggle="tooltip" data-placement="top" title="@Localizer["Delete"]" data-original-title="@Localizer["Delete"]"></i></a>
-              }
-              @if (_businessHelper.IsPermitted("Events.Update"))
-              {
-                <a onclick="ShowFormModal(@item.Id, 'Edit')" class=" btn btn-primary bg-primary-700 text-white btn-icon rounded-circle mx-1 waves-effect waves-themed" style="font-size:large"><i class="fa fa-edit " data-toggle="tooltip" data-placement="top" title="@Localizer["Edit"]" data-original-title="@Localizer["Edit"]"></i></a>
-              }
-              @if (_businessHelper.IsPermitted("Events.Update"))
-              {
-                if (@item.PhotoLibraryAlbumId != null)
-                {
-                  @*<a href="@Url.ActionLink("Index", "PhotoLibraryAlbum", new { area = "Content", PhotoAlbumId = item.PhotoLibraryAlbumId })" class="  btn btn-primary bg-primary-700 text-white btn-icon rounded-circle mx-1 waves-effect waves-themed" style="font-size:large"><i class="fa fa fa-camera " data-toggle="tooltip" data-placement="top" title="@Localizer["PhotoAlbum"]" data-original-title="@Localizer["PhotoAlbum"]"></i></a>*@
-                }
-                else
-                {
-                  <a onclick="ShowFormModal(@item.Id, 'PhotoAlbumCreate')" class=" btn btn-primary bg-primary-700 text-white btn-icon rounded-circle mx-1 waves-effect waves-themed" style="font-size:large"><i class="fa fa-camera " data-toggle="tooltip" data-placement="top" title="@Localizer["CreatePhotoAlbum"]" data-original-title="@Localizer["CreatePhotoAlbum"]"></i></a>
-                }
-              }
-              @if (_businessHelper.IsPermitted("Events.Update") && @item.PhotoLibraryAlbumId != null)
-              {
-                <a href="@Url.ActionLink("PhotoIndex", "PhotoLibraryAlbum", new { area = "Content", Id = item.PhotoLibraryAlbumId })" class=" btn btn-primary bg-primary-700 text-white btn-icon rounded-circle mx-1 waves-effect waves-themed" style="font-size:large"><i class="fa fa-images " data-toggle="tooltip" data-placement="top" title="@Localizer["PhotoList"]" data-original-title="@Localizer["PhotoList"]"></i></a>
+                   
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
 
-              }
-
-              @*                            @if (_businessHelper.IsPermitted("Events.Update"))
-                {
-                if (@item.VideoLibraryAlbumId != null)
-                {
-                <a href="@Url.ActionLink("Index", "VideoLibraryAlbum", new { area = "Content", VideoAlbumId = item.VideoLibraryAlbumId })" class="  btn btn-primary bg-primary-700 text-white btn-icon rounded-circle mx-1 waves-effect waves-themed" style="font-size:large"><i class="fa fa fa-video " data-toggle="tooltip" data-placement="top" title="@Localizer["VideoAlbum"]" data-original-title="@Localizer["VideoAlbum"]"></i></a>
-                }
-                else
-                {
-                <a onclick="ShowFormModal(@item.Id, 'VideoAlbumCreate')" class=" btn btn-primary bg-primary-700 text-white btn-icon rounded-circle mx-1 waves-effect waves-themed" style="font-size:large"><i class="fa fa-video " data-toggle="tooltip" data-placement="top" title="@Localizer["CreateVideoAlbum"]" data-original-title="@Localizer["CreateVideoAlbum"]"></i></a>
-                }
-
-                }
-                @if (_businessHelper.IsPermitted("Events.Update"))
-                {
-                <a href="@Url.ActionLink("VideoIndex", "VideoLibraryAlbum", new { area = "Content", Id = item.VideoLibraryAlbumId })" class="  btn btn-primary bg-primary-700 text-white btn-icon rounded-circle mx-1 waves-effect waves-themed" style="font-size:large"><i class="fa fa-toggle-right" data-toggle="tooltip" data-placement="top" title="@Localizer["VideoList"]" data-original-title="@Localizer["VideoList"]"></i></a>
-
-                }*@
-
-            </div>
-          </div>
-        </td>
-      </tr>
-    }
-  </tbody>
-</table>
-
-@section Scripts
-{
-<script>
-  $(document).ready(function () {
-  IntiDataTable(@add, @Export, @search, /*'@Localizer["Print"]',*/ '@Localizer["Excel"]', '@Localizer["AdvancedSearch"]','@Localizer["ClearAdvancedSearch"]', [3,4,5,6], '@Localizer["Add"]');
-  });
-</script>
-
-
-}
+  

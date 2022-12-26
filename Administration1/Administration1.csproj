@@ -15,7 +15,6 @@
 
   <ItemGroup>
     <Content Remove="Views\Country\Details.cshtml" />
-    <Content Remove="Views\Country\Index.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,6 +26,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.jQuery.Unobtrusive.Ajax" Version="3.2.6" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.11" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
   </ItemGroup>
 
