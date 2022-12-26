@@ -193,3 +193,12 @@ E:\Net Core Projects\_Task\EvaluationTask\Administration1\obj\Debug\net6.0\Admin
 E:\Net Core Projects\_Task\EvaluationTask\Administration1\obj\Debug\net6.0\ref\Administration1.dll
 E:\Net Core Projects\_Task\EvaluationTask\Administration1\obj\Debug\net6.0\Administration1.pdb
 E:\Net Core Projects\_Task\EvaluationTask\Administration1\obj\Debug\net6.0\Administration1.genruntimeconfig.cache
+D:\Github DotNet Projects\EvaluationTask\Administration1\obj\Debug\net6.0\Administration1.csproj.AssemblyReference.cache
+D:\Github DotNet Projects\EvaluationTask\Administration1\obj\Debug\net6.0\Administration1.GeneratedMSBuildEditorConfig.editorconfig
+D:\Github DotNet Projects\EvaluationTask\Administration1\obj\Debug\net6.0\Administration1.AssemblyInfoInputs.cache
+D:\Github DotNet Projects\EvaluationTask\Administration1\obj\Debug\net6.0\Administration1.AssemblyInfo.cs
+D:\Github DotNet Projects\EvaluationTask\Administration1\obj\Debug\net6.0\Administration1.csproj.CoreCompileInputs.cache
+D:\Github DotNet Projects\EvaluationTask\Administration1\obj\Debug\net6.0\Administration1.MvcApplicationPartsAssemblyInfo.cs
+D:\Github DotNet Projects\EvaluationTask\Administration1\obj\Debug\net6.0\Administration1.MvcApplicationPartsAssemblyInfo.cache
+D:\Github DotNet Projects\EvaluationTask\Administration1\obj\Debug\net6.0\Administration1.RazorAssemblyInfo.cache
+D:\Github DotNet Projects\EvaluationTask\Administration1\obj\Debug\net6.0\Administration1.RazorAssemblyInfo.cs
