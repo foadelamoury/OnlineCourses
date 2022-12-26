@@ -22,23 +22,24 @@
    
 
 <form asp-action="Form" method="post"  enctype="multipart/form-data">
+   
+        @if (Model.Id > 0)
+        {
+            <input type="hidden" asp-for="Id" />
 
-    @if (Model.Id > 0)
-    {
-        <input type="hidden" asp-for="Id" />
+            <div class="form-group col-md-6">
+                الاسم
+                <input asp-for="NameA" value="@Html.DisplayFor(modelItem => Model.NameA)" />
+                <span asp-validation-for="NameA"></span>
+            </div>
 
-        <div class="form-group col-md-6">
-            الاسم
-            <input asp-for="NameA" value="@Html.DisplayFor(modelItem => Model.NameA)" />
-            <span asp-validation-for="NameA"></span>
-        </div>
-
-        <div class="form-group col-md-6">
-            Name
-            <input asp-for="NameE" value="@Html.DisplayFor(modelItem => Model.NameE)" />
-            <span asp-validation-for="NameE"></span>
-        </div>
-    }
+            <div class="form-group col-md-6">
+                Name
+                <input asp-for="NameE" value="@Html.DisplayFor(modelItem => Model.NameE)" />
+                <span asp-validation-for="NameE"></span>
+            </div>
+        }
+    <input type="hidden" asp-for="Id" />
     <div class="form-group col-md-6">
         الاسم
         <input asp-for="NameA"/>
@@ -47,7 +48,7 @@
 
        <div class="form-group col-md-6">
         Name
-        <input asp-for="NameE" value="@Model."/>
+        <input asp-for="NameE"/>
         <span asp-validation-for="NameE"></span>
     </div>
 

@@ -60,7 +60,7 @@ public class CountryController : Controller
             var command = new UpdateCountryCommand(model);
             await _mediator.Send(command);
 
-            return View("form", command);
+            return View("form", command.Id);
 
 
         }
@@ -69,10 +69,10 @@ public class CountryController : Controller
         {
             var command = new CreateCountryCommand(model);
             await _mediator.Send(command);
-            return View("form", command);
+            return RedirectToAction("Index");
+
 
         }
-        //return RedirectToAction("Index");
     }
 
     #endregion
