@@ -1,10 +1,9 @@
 ﻿namespace Application.Features.Country.Models
 {
-    public class CountryDTO : GlobalModels.GlobalModel
+    public class CountryDTO : GlobalModels.GlobalModelWithName
     {
 
-        public string NameA;
-        public string NameE;
+      
 
 
 

@@ -25,7 +25,7 @@ namespace Application.Features.Country.Queries.GetAll
                       new CountryDTO
                       {
                           Id = x.Id,
-                          Name = x.Name,
+                         NameA = x.NameA,NameE = x.NameE,
                           SortIndex = x.SortIndex,
                           Focus = x.Focus,
                           Active = x.Active

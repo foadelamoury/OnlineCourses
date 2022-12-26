@@ -34,7 +34,7 @@ namespace Application.Features.CoursesCategory.Commands.Update
         {
           Id = request.Id,
 
-          Name = request.Name
+          NameA = request.NameA,NameE = request.NameE
         
 
         };

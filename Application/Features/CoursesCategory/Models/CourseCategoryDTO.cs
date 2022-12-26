@@ -1,7 +1,6 @@
 ﻿namespace Application.Features.CoursesCategory.Models
 {
-    public class CourseCategoryDTO : GlobalModels.GlobalModel
+    public class CourseCategoryDTO : GlobalModels.GlobalModelWithName
     {
-        public string NameA;public string NameE;
     }
 }

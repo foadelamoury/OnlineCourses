@@ -2,11 +2,10 @@
 
 namespace Application.Features.Courses.Models
 {
-    public class CourseDTO : GlobalModel
+    public class CourseDTO : GlobalModelWithName
     {
 
 
-        public string NameA;public string NameE;
 
         public int CreditHours;
 

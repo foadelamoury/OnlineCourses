@@ -21,7 +21,7 @@ namespace Application.Features.Courses.Queries.GetAll
               new CourseDTO
               {
                 Id = x.Id,
-                Name = x.Name,
+               NameA = x.NameA,NameE = x.NameE,
                 SortIndex = x.SortIndex,
                 Focus = x.Focus,
                 Active = x.Active

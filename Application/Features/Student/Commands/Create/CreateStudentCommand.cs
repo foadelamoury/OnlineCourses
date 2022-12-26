@@ -30,7 +30,7 @@ namespace Application.Features.Student.Commands.Create
         {
           Id = request.Id,
 
-          Name = request.Name
+          NameA = request.NameA,NameE = request.NameE
 
         };
 

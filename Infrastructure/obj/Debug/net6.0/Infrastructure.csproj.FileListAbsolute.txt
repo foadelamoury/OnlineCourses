@@ -36,8 +36,3 @@ E:\Net Core Projects\_Task\EvaluationTask\Infrastructure\obj\Debug\net6.0\Infras
 E:\Net Core Projects\_Task\EvaluationTask\Infrastructure\obj\Debug\net6.0\ref\Infrastructure.dll
 E:\Net Core Projects\_Task\EvaluationTask\Infrastructure\obj\Debug\net6.0\Infrastructure.pdb
 E:\Net Core Projects\_Task\EvaluationTask\Infrastructure\obj\Debug\net6.0\Infrastructure.genruntimeconfig.cache
-D:\Github DotNet Projects\EvaluationTask\Infrastructure\obj\Debug\net6.0\Infrastructure.csproj.AssemblyReference.cache
-D:\Github DotNet Projects\EvaluationTask\Infrastructure\obj\Debug\net6.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
-D:\Github DotNet Projects\EvaluationTask\Infrastructure\obj\Debug\net6.0\Infrastructure.AssemblyInfoInputs.cache
-D:\Github DotNet Projects\EvaluationTask\Infrastructure\obj\Debug\net6.0\Infrastructure.AssemblyInfo.cs
-D:\Github DotNet Projects\EvaluationTask\Infrastructure\obj\Debug\net6.0\Infrastructure.csproj.CoreCompileInputs.cache

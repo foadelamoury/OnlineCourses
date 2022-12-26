@@ -1,6 +1,6 @@
 ﻿namespace Application.Features.Student.Models
 {
-    public class StudentDTO : GlobalModels.GlobalModel
+    public class StudentDTO : GlobalModels.GlobalModelWithName
     {
 
         public string Name { get; set; }

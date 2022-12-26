@@ -28,8 +28,3 @@ E:\Net Core Projects\_Task\EvaluationTask\Application\obj\Debug\net6.0\Applicati
 E:\Net Core Projects\_Task\EvaluationTask\Application\obj\Debug\net6.0\Application.dll
 E:\Net Core Projects\_Task\EvaluationTask\Application\obj\Debug\net6.0\ref\Application.dll
 E:\Net Core Projects\_Task\EvaluationTask\Application\obj\Debug\net6.0\Application.pdb
-D:\Github DotNet Projects\EvaluationTask\Application\obj\Debug\net6.0\Application.csproj.AssemblyReference.cache
-D:\Github DotNet Projects\EvaluationTask\Application\obj\Debug\net6.0\Application.GeneratedMSBuildEditorConfig.editorconfig
-D:\Github DotNet Projects\EvaluationTask\Application\obj\Debug\net6.0\Application.AssemblyInfoInputs.cache
-D:\Github DotNet Projects\EvaluationTask\Application\obj\Debug\net6.0\Application.AssemblyInfo.cs
-D:\Github DotNet Projects\EvaluationTask\Application\obj\Debug\net6.0\Application.csproj.CoreCompileInputs.cache

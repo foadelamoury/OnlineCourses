@@ -12,7 +12,8 @@ namespace Application.Features.Student.Commands.Update
 
     public UpdateStudentCommand(StudentDTO dto)
     {
-      NameA = dto.NameA;NameE = dto.NameE;
+      NameA = dto.NameA;
+        NameE = dto.NameE;
       Id = dto.Id;
 
     }
@@ -30,7 +31,8 @@ namespace Application.Features.Student.Commands.Update
         {
           Id = request.Id,
 
-          Name = request.Name
+          NameA = request.NameA,
+          NameE = request.NameE
 
         };
 

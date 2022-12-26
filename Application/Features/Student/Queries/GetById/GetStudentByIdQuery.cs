@@ -21,7 +21,7 @@ namespace Application.Features.Student.Queries.GetById
       var country = await _context.Countries.Where(x => x.Id == request.Id).Select(x => new StudentDTO
       {
         Id = x.Id,
-        Name = x.Name,
+       NameA = x.NameA,NameE = x.NameE,
         SortIndex = x.SortIndex,
         Focus = x.Focus,
         Active = x.Active
