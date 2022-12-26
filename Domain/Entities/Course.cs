@@ -5,7 +5,8 @@ public class Course : ObjectBase<int>
 
 {
 
-    public string Name;
+    public string NameA { get; set; }
+    public string NameE { get; set; }
 
     public int CreditHours;
 

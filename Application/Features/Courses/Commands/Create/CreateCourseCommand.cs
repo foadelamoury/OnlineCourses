@@ -13,7 +13,7 @@ namespace Application.Features.Courses.Commands.Create
 
         public CreateCourseCommand(CourseDTO dto)
         {
-            Name = dto.Name;
+            NameA = dto.NameA;NameE = dto.NameE;
             Id = dto.Id;
             CreditHours = dto.CreditHours;
 
@@ -34,7 +34,7 @@ namespace Application.Features.Courses.Commands.Create
                 {
                     Id = request.Id,
 
-                    Name = request.Name,
+                    NameA = request.NameA,NameE = request.NameE,
                     CreditHours = request.CreditHours,
 
                     CourseCategoryId = request.CourseCategoryId,

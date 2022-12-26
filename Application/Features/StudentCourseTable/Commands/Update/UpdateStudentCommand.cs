@@ -12,7 +12,7 @@ namespace Application.Features.StudentCourseTable.Commands.Update
 
     public UpdateStudentCommand(StudentDTO dto)
     {
-      Name = dto.Name;
+      NameA = dto.NameA;NameE = dto.NameE;
       Id = dto.Id;
 
     }

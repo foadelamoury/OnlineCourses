@@ -12,7 +12,8 @@ namespace Application.Features.Country.Commands.Create
 
         public CreateCountryCommand(CountryDTO dto)
         {
-            Name = dto.Name;
+            NameA = dto.NameA;
+            NameE = dto.NameE;
             Id = dto.Id;
 
         }

@@ -6,7 +6,7 @@ namespace Application.Features.Courses.Models
     {
 
 
-        public string Name;
+        public string NameA;public string NameE;
 
         public int CreditHours;
 

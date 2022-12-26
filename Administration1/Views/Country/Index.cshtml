@@ -4,7 +4,7 @@ var TableName = "Country";
 ViewData["Title"] = TableName;
 }
 
-
+    <partial name="_FormModal" />
     <table id="dt-basic-example" class="table  table-hover w-100">
         <thead class="">
             <tr>
@@ -52,8 +52,63 @@ ViewData["Title"] = TableName;
                    
                 </td>
             </tr>
-            }
+        }
+
         </tbody>
     </table>
 
-  
+<a href="@Url.ActionLink("create", "country")" aria-expanded="false" class=" btn btn-primary bg-primary-700 text-white btn-icon rounded-circle mx-1 waves-effect waves-themed" style="font-size:large"><i class="fa fa-edit " data-toggle="tooltip" data-placement="top" title="Create" data-original-title="Create"></i></a>
+
+
+@section Scripts
+{
+
+    <script>
+
+        $(document).ready(function(Item, Url, OldMinValue, OldMaxValue) {
+            console.log("ddd");
+            let urlPage = "";
+
+            var ID = Item[0];
+            var MarketCategoryId = Item[1];
+            var GeneralindicatorId = Item[2];
+            var GovernorateId = Item[3];
+            //var InsertionDate = $("#IndicatorDate").val();
+            var InsertionDate = $("#InsertionDateId").val();
+
+            if(ID == 0) {
+            urlPage = Url;
+        } else {
+            urlPage = Url + "/" + ID;
+        }
+
+        $.ajax({
+            type: "Get",
+            url: urlPage,
+            data: {
+                InsertionDate: InsertionDate, SubIndicatorId: ID, GovernorateId, InsertionDateString: InsertionDate,
+                MarketCategoryId: 0,
+                GeneralindicatorId: GeneralindicatorId, OldMinValue: OldMinValue, OldMaxValue: OldMaxValue
+
+            },
+            success: function (htmlResponse) {
+                console.log(htmlResponse);
+                $('#ModalForm').html(htmlResponse);
+
+                $('#default-example-modal-lg').modal();
+            },
+            error: function (htmlResponse) {
+                console.log(htmlResponse);
+                $('#ModalForm').html(htmlResponse);
+
+                $('#default-example-modal-lg').modal();
+
+            }
+        });
+
+        }
+
+
+    </script>
+
+}  

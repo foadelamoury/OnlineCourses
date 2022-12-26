@@ -18,8 +18,11 @@ public class CountryConfiguration : IEntityTypeConfiguration<Country>
 
 
 
-        builder.Property(e => e.Name)
+        builder.Property(e => e.NameA)
                   .IsRequired();
+
+        builder.Property(e => e.NameE)
+                  ;
 
     }
 }

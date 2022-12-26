@@ -3,7 +3,8 @@
     public class CountryDTO : GlobalModels.GlobalModel
     {
 
-        public string Name;
+        public string NameA;
+        public string NameE;
 
 
 

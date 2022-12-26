@@ -14,7 +14,7 @@ namespace Application.Features.CoursesCategory.Commands.Update
     {
       Id = dto.Id;
 
-      Name = dto.Name;
+      NameA = dto.NameA;NameE = dto.NameE;
       
 
 

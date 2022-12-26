@@ -18,7 +18,7 @@ namespace Application.Features.Courses.Commands.Update
         {
             Id = dto.Id;
 
-            Name = dto.Name;
+            NameA = dto.NameA;NameE = dto.NameE;
             CreditHours= dto.CreditHours;
 
             CourseCategoryId = dto.CourseCategoryId;
@@ -40,7 +40,8 @@ namespace Application.Features.Courses.Commands.Update
                 {
                  Id = request.Id,
 
-                Name = request.Name,
+                NameA = request.NameA,
+                NameE = request.NameE,
                 CreditHours = request.CreditHours,
 
                 CourseCategoryId = request.CourseCategoryId

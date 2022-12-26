@@ -18,7 +18,10 @@ public class CourseCategoryConfiguration : IEntityTypeConfiguration<CourseCatego
 
 
 
-        builder.Property(e => e.Name)
+        builder.Property(e => e.NameA)
                   .IsRequired();
+
+        builder.Property(e => e.NameE)
+                  ;
     }
 }

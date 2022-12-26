@@ -12,7 +12,7 @@ namespace Application.Features.Student.Commands.Create
 
     public CreateStudentCommand(StudentDTO dto)
     {
-      Name = dto.Name;
+      NameA = dto.NameA;NameE = dto.NameE;
       Id = dto.Id;
 
     }

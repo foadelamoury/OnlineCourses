@@ -14,7 +14,7 @@ namespace Application.Features.Country.Commands.Update
         {
             Id = dto.Id;
 
-            Name = dto.Name;
+            NameA = dto.NameA;NameE = dto.NameE;
 
 
 
@@ -31,7 +31,7 @@ namespace Application.Features.Country.Commands.Update
             {
                 Domain.Entities.Country entity = new Domain.Entities.Country
                 {
-                    Name = request.Name,
+                    NameA = request.NameA,NameE = request.NameE,
                     Id = request.Id
 
                 };

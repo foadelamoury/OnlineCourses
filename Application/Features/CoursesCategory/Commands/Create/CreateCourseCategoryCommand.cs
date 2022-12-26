@@ -16,7 +16,7 @@ namespace Application.Features.CoursesCategory.Commands.Create
 
         public CreateCourseCategoryCommand(CourseCategoryDTO dto)
         {
-            Name = dto.Name;
+            NameA = dto.NameA;NameE = dto.NameE;
             Id = dto.Id;
 
 
@@ -35,7 +35,7 @@ namespace Application.Features.CoursesCategory.Commands.Create
                 {
                     Id = request.Id,
 
-                    Name = request.Name,
+                    NameA = request.NameA,NameE = request.NameE,
 
 
                 };

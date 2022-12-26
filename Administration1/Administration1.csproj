@@ -7,14 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Controllers\CourseCategoryController.cs" />
-    <Compile Remove="Controllers\CourseController.cs" />
-    <Compile Remove="Controllers\StudentController.cs" />
-    <Compile Remove="Controllers\StudentCourseController.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Remove="Views\Country\Details.cshtml" />
+    <None Include="Views\Country\Details.cshtml" />
+    <None Include="Views\Country\Form.cshtml" />
+    <None Include="Views\Country\Index.cshtml" />
+    <None Include="Views\Home\Index.cshtml" />
+    <None Include="Views\Home\Privacy.cshtml" />
+    <None Include="Views\Shared\Error.cshtml" />
+    <None Include="Views\Shared\_FormModal.cshtml" />
+    <None Include="Views\Shared\_Layout.cshtml" />
+    <None Include="Views\Shared\_ValidationScriptsPartial.cshtml" />
+    <None Include="Views\_ViewImports.cshtml" />
+    <None Include="Views\_ViewStart.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
