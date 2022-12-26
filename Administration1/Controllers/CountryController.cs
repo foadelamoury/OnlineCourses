@@ -47,7 +47,7 @@ public class CountryController : Controller
     {
         CountryDTO countryDTO = await _mediator.Send(new GetCountryByIdQuery() { Id = id });
 
-        return PartialView("form", new CountryDTO { Active=true, ModifyDate=DateTime.Now});
+        return PartialView("form", countryDTO);
     }
     #endregion
 

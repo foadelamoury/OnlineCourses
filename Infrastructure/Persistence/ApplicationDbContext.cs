@@ -10,11 +10,9 @@ namespace Infrastructure.Persistence
 {
     public class ApplicationDbContext : DbContext, IApplicationDbContext
     {
-        private readonly IHttpContextAccessor _httpContextAccessor;
 
-        public ApplicationDbContext(DbContextOptions options,HttpContextAccessor httpContextAccessor) : base(options)
+        public ApplicationDbContext(DbContextOptions options) : base(options)
         {
-            _httpContextAccessor = httpContextAccessor;
         }
 
       
