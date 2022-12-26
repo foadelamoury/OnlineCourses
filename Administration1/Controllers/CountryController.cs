@@ -27,8 +27,8 @@ public class CountryController : Controller
   #region Index
   public async Task<IActionResult> Index()
   {
-    //IEnumerable<CountryDTO> Countries = await _mediator.Send(new GetAllCountryQuery());
-    return View();
+        IEnumerable<CountryDTO> Countries = await _mediator.Send(new GetAllCountryQuery());
+        return View(Countries);
   }
 
 
@@ -59,17 +59,18 @@ public class CountryController : Controller
     {
       var command = new UpdateCountryCommand(model);
       await _mediator.Send(command);
+            return View("Create", command);
 
 
 
-    }
+        }
 
-    else
+        else
     {
       var command = new CreateCountryCommand(model);
       await _mediator.Send(command);
 
-
+            return View("Edit", command);
     }
 
     return RedirectToAction("Index");

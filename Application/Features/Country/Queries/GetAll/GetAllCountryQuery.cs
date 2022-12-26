@@ -7,6 +7,10 @@ namespace Application.Features.Country.Queries.GetAll
 {
     public class GetAllCountryQuery : IRequest<IEnumerable<CountryDTO>>
     {
+        public GetAllCountryQuery()
+        {
+        }
+
         public class Handler : IRequestHandler<GetAllCountryQuery, IEnumerable<CountryDTO>>
         {
 

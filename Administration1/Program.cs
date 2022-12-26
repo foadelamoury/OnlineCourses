@@ -45,8 +45,6 @@ builder.Services.AddControllersWithViews();
 //fluent Validation
 //builder.Services.AddValidatorsFromAssemblyContaining<Program>();
 
-//builder.Services.AddInfrastructure(builder.Configuration, builder.Environment);
-//builder.Services.AddApplication();
 
 builder.Services.AddScoped<IApplicationDbContext>(provider => provider.GetService<ApplicationDbContext>());
 
@@ -54,7 +52,9 @@ builder.Services
   .AddDbContext<ApplicationDbContext>(options =>
   options.UseSqlServer(configuration.GetConnectionString("DatabaseConnection")));
 
-builder.Services.AddMediatR(Assembly.GetExecutingAssembly());
+builder.Services.AddApplication();
+builder.Services.AddInfrastructure(builder.Configuration, builder.Environment);
+
 
 
 
