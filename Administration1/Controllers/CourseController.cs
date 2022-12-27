@@ -107,22 +107,25 @@ public class CourseController : Controller
 
     #region Activate
 
-    //public async Task<JsonResult> Activate(long[] Ids)
-    //{
-    //    try
-    //    {
-    //        foreach (var item in Ids)
-    //        {
-    //            var entity = await _mediator.Send(new GetCourseByIdQuery() { Id = (int)item });
+    public async Task<JsonResult> Activate(long[] Ids)
+    {
+        try
+        {
+            foreach (var item in Ids)
+            {
+                var entity = await _mediator.Send(new GetCourseByIdQuery() { Id = (int)item });
 
-    //            await _mediator.Send(new UpdateCourseCommand(entity));
-    //        }
-    //    }
-    //    catch
-    //    {
-    //        throw;
-    //    }
-    //    return null;
-    //}
+                entity.Active = !entity.Active;
+                await _mediator.Send(new UpdateCourseCommand(entity));
+            }
+        }
+        catch
+        {
+            throw;
+        }
+        return null;
+    }
+
+
     #endregion
 }

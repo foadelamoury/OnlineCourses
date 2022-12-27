@@ -4,7 +4,7 @@ namespace Domain.Entities;
 
 
 
-public class Country : ObjectBase<int>
+public class Country : ObjectBase
 
 {
 
