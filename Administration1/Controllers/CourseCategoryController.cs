@@ -5,6 +5,7 @@ using Application.Features.CoursesCategory.Models;
 using Application.Features.CoursesCategory.Queries.GetById;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Application.Features.Country.Queries.GetById;
 
 namespace Administration1.Controllers;
 
@@ -80,6 +81,13 @@ public class CourseCategoryCategoryController : Controller
 
     #endregion
 
+    #region Details
+    public async Task<IActionResult> Details(int id)
+    {
+        var eventDTO = await _mediator.Send(new GetCourseCategoryByIdQuery() { Id = id });
+        return View(eventDTO);
+    }
+    #endregion
 
     #region Delete
 

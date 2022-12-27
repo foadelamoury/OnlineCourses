@@ -1,3 +1,4 @@
+using Application.Features.Country.Queries.GetById;
 using Application.Features.Student.Commands.Create;
 using Application.Features.Student.Commands.Update;
 using Application.Features.Student.Models;
@@ -78,6 +79,13 @@ public class StudentController : Controller
 
     }
 
+    #endregion
+    #region Details
+    public async Task<IActionResult> Details(int id)
+    {
+        var eventDTO = await _mediator.Send(new GetStudentByIdQuery() { Id = id });
+        return View(eventDTO);
+    }
     #endregion
 
 

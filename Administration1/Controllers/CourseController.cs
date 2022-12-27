@@ -60,7 +60,6 @@ public class CourseController : Controller
             var command = new UpdateCourseCommand(model);
             await _mediator.Send(command);
 
-            //return View("form", command.Id);
 
 
 
@@ -96,14 +95,14 @@ public class CourseController : Controller
     //    { throw; }
     //    return null;
     //}
-    //#endregion
+    #endregion
 
-    //#region Detail
-    //public async Task<IActionResult> Details(int id)
-    //{
-    //    var eventDTO = await _mediator.Send(new GetCourseByIdQuery() { Id = id });
-    //    return View(eventDTO);
-    //}
+    #region Details
+    public async Task<IActionResult> Details(int id)
+    {
+        var eventDTO = await _mediator.Send(new GetCourseByIdQuery() { Id = id });
+        return View(eventDTO);
+    }
     #endregion
 
     #region Activate

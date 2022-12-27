@@ -45,7 +45,7 @@ public class StudentCourseController : Controller
     public async Task<IActionResult> Edit(int id)
     {
 #pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
-        StudentCourseDTO countryDTO = await _mediator.Send(new GetStudentCourseById() { Id = id });
+        StudentCourseDTO countryDTO = await _mediator.Send(new GetStudentCourseByIdQuery() { Id = id });
 #pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
 
 
@@ -79,6 +79,14 @@ public class StudentCourseController : Controller
 
     }
 
+    #endregion
+
+    #region Details
+    public async Task<IActionResult> Details(int id)
+    {
+        var eventDTO = await _mediator.Send(new GetStudentCourseByIdQuery() { Id = id });
+        return View(eventDTO);
+    }
     #endregion
 
 

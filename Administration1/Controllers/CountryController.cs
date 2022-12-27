@@ -98,7 +98,7 @@ public class CountryController : Controller
     //}
     #endregion
 
-    #region Detail
+    #region Details
     public async Task<IActionResult> Details(int id)
     {
         var eventDTO = await _mediator.Send(new GetCountryByIdQuery() { Id = id });
