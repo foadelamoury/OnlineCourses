@@ -1,11 +1,10 @@
-using Application.Features.CoursesCategory.Queries.GetAll;
 using Application.Features.CoursesCategory.Commands.Create;
 using Application.Features.CoursesCategory.Commands.Update;
 using Application.Features.CoursesCategory.Models;
+using Application.Features.CoursesCategory.Queries.GetAll;
 using Application.Features.CoursesCategory.Queries.GetById;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Application.Features.Country.Queries.GetById;
 
 namespace Administration1.Controllers;
 
@@ -62,7 +61,7 @@ public class CourseCategoryCategoryController : Controller
             var command = new UpdateCourseCategoryCommand(model);
             await _mediator.Send(command);
 
-            //return View("form", command.Id);
+            return View("form", command);
 
 
 
@@ -72,10 +71,10 @@ public class CourseCategoryCategoryController : Controller
         {
             var command = new CreateCourseCategoryCommand(model);
             await _mediator.Send(command);
+            return RedirectToAction("Index");
 
 
         }
-        return RedirectToAction("Index");
 
     }
 

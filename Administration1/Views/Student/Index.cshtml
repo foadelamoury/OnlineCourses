@@ -56,7 +56,7 @@ ViewData["Title"] = TableName;
                 </td>
                 <td>
 
-                    <a onclick="ShowFormModal(@item.Id, 'Edit')" class=" btn btn-primary bg-primary-700 text-white btn-icon rounded-circle mx-1 waves-effect waves-themed" style="font-size:large"><i class="fa fa-edit " data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit">تعديل</i></a>
+                    <a onclick="ShowFormModal(@item.Id, 'Student/Edit')" class=" btn btn-primary bg-primary-700 text-white btn-icon rounded-circle mx-1 waves-effect waves-themed" style="font-size:large"><i class="fa fa-edit " data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit">تعديل</i></a>
 
                 </td>
                 
@@ -68,6 +68,7 @@ ViewData["Title"] = TableName;
     </table>
 <a href="@Url.ActionLink("create", "student")" aria-expanded="false" class=" btn btn-primary bg-primary-700 text-white btn-icon rounded-circle mx-1 waves-effect waves-themed" style="font-size:large"><i class="fa fa-edit " data-toggle="tooltip" data-placement="top">اضافه</i></a>
 
+<a href="@Url.ActionLink("index")" aria-expanded="false" class=" btn btn-primary bg-primary-700 text-white btn-icon rounded-circle mx-1 waves-effect waves-themed" style="font-size:large"><i class="fa fa-edit " data-toggle="tooltip" data-placement="top">اضافه</i></a>
 
 
 @section Scripts

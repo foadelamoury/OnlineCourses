@@ -3,9 +3,9 @@
 function ShowFormModal(ID, Url) {
   let urlPage = "";
   if (ID == 0) {
-      urlPage =Url;
+      urlPage = Url;
   } else {
-      urlPage =  Url + "/" + ID;
+      urlPage = Url + "/" + ID;
   }
     window.location.href = urlPage;
   

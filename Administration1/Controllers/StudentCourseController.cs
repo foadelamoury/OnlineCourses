@@ -62,7 +62,7 @@ public class StudentCourseController : Controller
             var command = new UpdateStudentCourseCommand(model);
             await _mediator.Send(command);
 
-            //return View("form", command.Id);
+            return View("form", command);
 
 
 

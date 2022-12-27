@@ -1,50 +1,55 @@
-﻿using Application.Features.Student.Models;
+﻿using Application.Common.Interfaces;
+using Application.Features.Student.Models;
 using Application.Interfaces;
 using MediatR;
 
 namespace Application.Features.Student.Commands.Create
 {
     public class CreateStudentCommand : StudentDTO, IRequest<long>
-  {
-    public CreateStudentCommand()
-    { }
-
-
-    public CreateStudentCommand(StudentDTO dto)
     {
-      NameA = dto.NameA;NameE = dto.NameE;
-      Id = dto.Id;
+        public CreateStudentCommand()
+        { }
 
-    }
-    public class Handler : IRequestHandler<CreateStudentCommand, long>
-    {
-      private readonly IApplicationDbContext _context;
-      public Handler(IApplicationDbContext context)
-      {
 
-        _context = context;
-      }
-      public async Task<long> Handle(CreateStudentCommand request, CancellationToken cancellationToken)
-      {
-        Domain.Entities.Country entity = new Domain.Entities.Country
+        public CreateStudentCommand(StudentDTO dto)
         {
-          Id = request.Id,
+            NameA = dto.NameA; NameE = dto.NameE;
+            Id = dto.Id;
 
-          NameA = request.NameA,NameE = request.NameE
+        }
+        public class Handler : IRequestHandler<CreateStudentCommand, long>
+        {
+            private readonly IApplicationDbContext _context;
+            private readonly IFileUploadHelper _uploadHelper;
 
-        };
+            public Handler(IApplicationDbContext context, IFileUploadHelper uploadHelper)
+            {
+
+                _context = context;
+                _uploadHelper = uploadHelper;
+            }
+            public async Task<long> Handle(CreateStudentCommand request, CancellationToken cancellationToken)
+            {
+                Domain.Entities.Country entity = new Domain.Entities.Country
+                {
+                    Id = request.Id,
+
+                    NameA = request.NameA,
+                    NameE = request.NameE
+
+                };
+
+                if (request.photoFile != null)
+                    await _uploadHelper.Upload(request.photoFile, entity.Id.ToString(), "Governer", "Resume");
+
+                await _context.Countries.AddAsync(entity);
+                await _context.SaveChangesAsync(cancellationToken);
 
 
-        await _context.Countries.AddAsync(entity);
-        await _context.SaveChangesAsync(cancellationToken);
+                return entity.Id;
+            }
 
-
-
-
-        return entity.Id;
-      }
-
+        }
     }
-  }
 }
 

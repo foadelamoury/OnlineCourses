@@ -1,5 +1,4 @@
-﻿using Application.Features.Country.Commands.Create;
-using Application.Features.Courses.Models;
+﻿using Application.Features.Courses.Models;
 using Application.Interfaces;
 using MediatR;
 
@@ -13,7 +12,7 @@ namespace Application.Features.Courses.Commands.Create
 
         public CreateCourseCommand(CourseDTO dto)
         {
-            NameA = dto.NameA;NameE = dto.NameE;
+            NameA = dto.NameA; NameE = dto.NameE;
             Id = dto.Id;
             CreditHours = dto.CreditHours;
 
@@ -34,7 +33,8 @@ namespace Application.Features.Courses.Commands.Create
                 {
                     Id = request.Id,
 
-                    NameA = request.NameA,NameE = request.NameE,
+                    NameA = request.NameA,
+                    NameE = request.NameE,
                     CreditHours = request.CreditHours,
 
                     CourseCategoryId = request.CourseCategoryId,

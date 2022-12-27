@@ -1,4 +1,3 @@
-using Application.Features.Country.Queries.GetById;
 using Application.Features.Student.Commands.Create;
 using Application.Features.Student.Commands.Update;
 using Application.Features.Student.Models;
@@ -62,7 +61,7 @@ public class StudentController : Controller
             var command = new UpdateStudentCommand(model);
             await _mediator.Send(command);
 
-            //return View("form", command.Id);
+            return View("form", command);
 
 
 
@@ -72,10 +71,10 @@ public class StudentController : Controller
         {
             var command = new CreateStudentCommand(model);
             await _mediator.Send(command);
+            return RedirectToAction("Index");
 
 
         }
-        return RedirectToAction("Index");
 
     }
 

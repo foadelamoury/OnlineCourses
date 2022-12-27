@@ -1,12 +1,9 @@
 using Application;
 using Application.Interfaces;
-using FluentValidation.AspNetCore;
 using Infrastructure;
 using Infrastructure.Persistence;
-using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
-using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 

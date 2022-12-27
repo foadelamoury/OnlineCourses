@@ -1,10 +1,6 @@
-﻿using Application.Features.Country.Commands.Update;
-using Application.Features.Country.Models;
-using Application.Features.Courses.Models;
-using Application.Features.CoursesCategory.Models;
+﻿using Application.Features.Courses.Models;
 using Application.Interfaces;
 using MediatR;
-using System.Xml.Linq;
 
 namespace Application.Features.Courses.Commands.Update
 {
@@ -18,14 +14,14 @@ namespace Application.Features.Courses.Commands.Update
         {
             Id = dto.Id;
 
-            NameA = dto.NameA;NameE = dto.NameE;
-            CreditHours= dto.CreditHours;
+            NameA = dto.NameA; NameE = dto.NameE;
+            CreditHours = dto.CreditHours;
 
             CourseCategoryId = dto.CourseCategoryId;
 
 
 
-    }
+        }
         public class Handler : IRequestHandler<UpdateCourseCommand, long>
         {
             private readonly IApplicationDbContext _context;
@@ -38,15 +34,15 @@ namespace Application.Features.Courses.Commands.Update
             {
                 Domain.Entities.Course entity = new Domain.Entities.Course
                 {
-                 Id = request.Id,
+                    Id = request.Id,
 
-                NameA = request.NameA,
-                NameE = request.NameE,
-                CreditHours = request.CreditHours,
+                    NameA = request.NameA,
+                    NameE = request.NameE,
+                    CreditHours = request.CreditHours,
 
-                CourseCategoryId = request.CourseCategoryId
+                    CourseCategoryId = request.CourseCategoryId
 
-            };
+                };
 
 
                 _context.Courses.Update(entity);

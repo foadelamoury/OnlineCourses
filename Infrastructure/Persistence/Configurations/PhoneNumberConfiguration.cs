@@ -1,11 +1,6 @@
 ﻿using Domain.Entities;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Infrastructure.Persistence.Configurations
 {
@@ -26,10 +21,10 @@ namespace Infrastructure.Persistence.Configurations
 
 
 
-        builder.Property(e => e.number)
-                      .IsRequired();
+            builder.Property(e => e.number)
+                          .IsRequired();
 
             builder.Property(e => e.StudentId).IsRequired();
-    }
+        }
     }
 }

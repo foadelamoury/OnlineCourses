@@ -1,5 +1,3 @@
-using System.Collections.ObjectModel;
-
 namespace Domain.Entities;
 
 
@@ -14,6 +12,6 @@ public class Country : ObjectBase
 
     public int ParentId;
 
-  public Country? Parent;
+    public Country? Parent;
 
 }

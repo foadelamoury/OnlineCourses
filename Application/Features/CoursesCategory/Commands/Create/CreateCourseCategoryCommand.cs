@@ -1,10 +1,6 @@
-﻿using Application.Features.Courses.Commands.Create;
-using Application.Features.Courses.Models;
-using Application.Features.CoursesCategory.Models;
+﻿using Application.Features.CoursesCategory.Models;
 using Application.Interfaces;
-using Domain.Entities;
 using MediatR;
-using System.Xml.Linq;
 
 namespace Application.Features.CoursesCategory.Commands.Create
 {
@@ -16,7 +12,7 @@ namespace Application.Features.CoursesCategory.Commands.Create
 
         public CreateCourseCategoryCommand(CourseCategoryDTO dto)
         {
-            NameA = dto.NameA;NameE = dto.NameE;
+            NameA = dto.NameA; NameE = dto.NameE;
             Id = dto.Id;
 
 
@@ -35,7 +31,8 @@ namespace Application.Features.CoursesCategory.Commands.Create
                 {
                     Id = request.Id,
 
-                    NameA = request.NameA,NameE = request.NameE,
+                    NameA = request.NameA,
+                    NameE = request.NameE,
 
 
                 };

@@ -1,5 +1,3 @@
-using System.Collections.ObjectModel;
-
 namespace Domain.Entities;
 
 
@@ -11,8 +9,8 @@ public class Student : ObjectBase
 
     public int CityId { get; set; }
 
-   
-  public string? PhotoName { get; set; }
+
+    public string? PhotoName { get; set; }
 
 
 }

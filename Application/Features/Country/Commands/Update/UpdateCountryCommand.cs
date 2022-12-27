@@ -14,7 +14,7 @@ namespace Application.Features.Country.Commands.Update
         {
             Id = dto.Id;
 
-            NameA = dto.NameA;NameE = dto.NameE;
+            NameA = dto.NameA; NameE = dto.NameE;
 
 
 

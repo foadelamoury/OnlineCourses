@@ -1,12 +1,10 @@
 using Application.Features.Country.Commands.Create;
-using Application.Features.Country.Commands.Delete;
 using Application.Features.Country.Commands.Update;
 using Application.Features.Country.Models;
 using Application.Features.Country.Queries.GetAll;
 using Application.Features.Country.Queries.GetById;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using System.ComponentModel.Design;
 
 namespace Administration1.Controllers;
 
@@ -40,14 +38,14 @@ public class CountryController : Controller
     #region Create
     public ActionResult Create()
     {
-        return PartialView("Form", new CountryDTO{ Active = true, CreateDate = DateTime.Now });
+        return PartialView("Form", new CountryDTO { Active = true, CreateDate = DateTime.Now });
     }
     #endregion
 
     #region Edit
     public async Task<IActionResult> Edit(long id)
     {
-        CountryDTO countryDTO = await _mediator.Send(new GetCountryByIdQuery() { Id = id });
+        CountryDTO? countryDTO = await _mediator.Send(new GetCountryByIdQuery() { Id = id });
 
 
         return PartialView("Form", countryDTO);
@@ -73,7 +71,7 @@ public class CountryController : Controller
         {
             var command = new CreateCountryCommand(model);
             await _mediator.Send(command);
-            return View("form", command.Id);
+            return RedirectToAction("Index");
 
 
         }

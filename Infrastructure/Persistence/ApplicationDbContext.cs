@@ -1,10 +1,6 @@
 ﻿using Application.Interfaces;
 using Domain.Entities;
-using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Design;
-using Microsoft.EntityFrameworkCore.Infrastructure;
-using System.Security.Claims;
 
 namespace Infrastructure.Persistence
 {
@@ -15,9 +11,9 @@ namespace Infrastructure.Persistence
         {
         }
 
-      
 
-      
+
+
 
 
         public DbSet<Country> Countries => Set<Country>();
@@ -35,7 +31,7 @@ namespace Infrastructure.Persistence
         {
             foreach (var entry in ChangeTracker.Entries<AuditableEntity>())
             {
-              
+
             }
 
             var result = await base.SaveChangesAsync(cancellationToken);
@@ -43,13 +39,13 @@ namespace Infrastructure.Persistence
             return result;
         }
     }
-  //public class ApplicationDbContextFactory : IDesignTimeDbContextFactory<ApplicationDbContext>
-  //{
-  //  public ApplicationDbContext CreateDbContext(string[] args)
-  //  {
-  //    var optionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
-  //    optionsBuilder.UseSqlServer("DatabaseConnection");
-  //    return new ApplicationDbContext(optionsBuilder.Options);
-  //  }
-  //}
+    //public class ApplicationDbContextFactory : IDesignTimeDbContextFactory<ApplicationDbContext>
+    //{
+    //  public ApplicationDbContext CreateDbContext(string[] args)
+    //  {
+    //    var optionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
+    //    optionsBuilder.UseSqlServer("DatabaseConnection");
+    //    return new ApplicationDbContext(optionsBuilder.Options);
+    //  }
+    //}
 }

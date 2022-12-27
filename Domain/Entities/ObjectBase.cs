@@ -6,7 +6,7 @@ namespace Domain.Entities
 
     public abstract class ObjectBase : AuditableEntity
     {
-        [Column(Order =0)]
+        [Column(Order = 0)]
         public long Id { get; set; }
         public int SortIndex { get; set; }
         public bool Focus { get; set; }

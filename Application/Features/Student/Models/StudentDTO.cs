@@ -1,4 +1,6 @@
-﻿namespace Application.Features.Student.Models
+﻿using Microsoft.AspNetCore.Http;
+
+namespace Application.Features.Student.Models
 {
     public class StudentDTO : GlobalModels.GlobalModelWithName
     {
@@ -11,5 +13,7 @@
 
         public string? PhotoName { get; set; }
 
-  }
+        public IFormFile? photoFile { get; set; }
+
+    }
 }

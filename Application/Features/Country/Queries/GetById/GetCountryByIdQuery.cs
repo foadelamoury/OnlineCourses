@@ -22,7 +22,7 @@ namespace Application.Features.Country.Queries.GetById
             var country = await _context.Countries.Where(x => x.Id == request.Id).Select(x => new CountryDTO
             {
                 Id = x.Id,
-               NameA = x.NameA,
+                NameA = x.NameA,
                 NameE = x.NameE,
                 SortIndex = x.SortIndex,
                 Focus = x.Focus,

@@ -1,6 +1,4 @@
-﻿using Domain.Entities;
-
-namespace Application.Features.StudentCourseTable.Models
+﻿namespace Application.Features.StudentCourseTable.Models
 {
     public class StudentCourseDTO : GlobalModels.GlobalModel
     {

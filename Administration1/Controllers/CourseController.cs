@@ -62,6 +62,7 @@ public class CourseController : Controller
         {
             var command = new UpdateCourseCommand(model);
             await _mediator.Send(command);
+            return View("form", command);
 
 
 
@@ -72,10 +73,10 @@ public class CourseController : Controller
         {
             var command = new CreateCourseCommand(model);
             await _mediator.Send(command);
+            return RedirectToAction("Index");
 
 
         }
-        return RedirectToAction("Index");
 
     }
 
@@ -110,7 +111,7 @@ public class CourseController : Controller
 
     #region Activate
 
-    public async Task<JsonResult> Activate(long[] Ids)
+    public async Task<int> Activate(long[] Ids)
     {
         try
         {
@@ -126,7 +127,7 @@ public class CourseController : Controller
         {
             throw;
         }
-        return null;
+        return 1;
     }
 
 
