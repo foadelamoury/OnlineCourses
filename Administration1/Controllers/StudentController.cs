@@ -47,7 +47,10 @@ public class StudentController : Controller
     #region Edit
     public async Task<IActionResult> Edit(long id)
     {
-        ViewBag.Countries = await _mediator.Send(new GetAllCountryQuery()); 
+        ViewBag.Countries = await _mediator.Send(new GetAllCountryQuery() { parentId=0});
+
+        ViewBag.Cities = await _mediator.Send(new GetAllCountryQuery() { parentId = 1 });
+
 
         StudentDTO studentDTO = await _mediator.Send(new GetStudentByIdQuery() { Id = id });
 
