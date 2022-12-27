@@ -38,7 +38,7 @@ public class CountryController : Controller
     #region Create
     public ActionResult Create()
     {
-        return PartialView("form", new CountryDTO{ Active = true, CreateDate = DateTime.Now });
+        return PartialView("Form", new CountryDTO{ Active = true, CreateDate = DateTime.Now });
     }
     #endregion
 
@@ -47,7 +47,8 @@ public class CountryController : Controller
     {
         CountryDTO countryDTO = await _mediator.Send(new GetCountryByIdQuery() { Id = id });
 
-        return PartialView("form", countryDTO);
+        
+        return PartialView("Form", countryDTO);
     }
     #endregion
 
@@ -60,7 +61,8 @@ public class CountryController : Controller
             var command = new UpdateCountryCommand(model);
             await _mediator.Send(command);
 
-            return View("form", command.Id);
+            //return View("form", command.Id);
+
 
 
         }
@@ -69,10 +71,11 @@ public class CountryController : Controller
         {
             var command = new CreateCountryCommand(model);
             await _mediator.Send(command);
-            return RedirectToAction("Index");
 
 
         }
+        return RedirectToAction("Index");
+
     }
 
     #endregion

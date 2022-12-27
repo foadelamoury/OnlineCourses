@@ -47,18 +47,27 @@ ViewData["Title"] = TableName;
 
                 <td>
                     @Html.DisplayFor(modelItem => item.NameA)
-               
-
-                   
                 </td>
+                 <td>
+                    @Html.DisplayFor(modelItem => item.SortIndex)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Active)
+                </td>
+                <td>
+
+                    <a onclick="ShowFormModal(@item.Id, 'Edit')" class=" btn btn-primary bg-primary-700 text-white btn-icon rounded-circle mx-1 waves-effect waves-themed" style="font-size:large"><i class="fa fa-edit " data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit">تعديل</i></a>
+
+                </td>
+                
             </tr>
         }
 
+
         </tbody>
     </table>
-
 <a href="@Url.ActionLink("create", "country")" aria-expanded="false" class=" btn btn-primary bg-primary-700 text-white btn-icon rounded-circle mx-1 waves-effect waves-themed" style="font-size:large"><i class="fa fa-edit " data-toggle="tooltip" data-placement="top">اضافه</i></a>
-<a href="@Url.ActionLink("edit", "country")" aria-expanded="false" class=" btn btn-primary bg-primary-700 text-white btn-icon rounded-circle mx-1 waves-effect waves-themed" style="font-size:large"><i class="fa fa-edit " data-toggle="tooltip" data-placement="top">تعديل</i></a>
+
 
 
 @section Scripts
