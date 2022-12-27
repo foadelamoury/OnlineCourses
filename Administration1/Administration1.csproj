@@ -7,18 +7,24 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Controllers\**" />
-    <Compile Remove="Models\**" />
-    <Compile Remove="Views\**" />
-    <Content Remove="Controllers\**" />
-    <Content Remove="Models\**" />
-    <Content Remove="Views\**" />
-    <EmbeddedResource Remove="Controllers\**" />
-    <EmbeddedResource Remove="Models\**" />
-    <EmbeddedResource Remove="Views\**" />
-    <None Remove="Controllers\**" />
-    <None Remove="Models\**" />
-    <None Remove="Views\**" />
+    <None Include="Views\Country\Form.cshtml" />
+    <None Include="Views\Country\Index.cshtml" />
+    <None Include="Views\CourseCategory\Form.cshtml" />
+    <None Include="Views\CourseCategory\Index.cshtml" />
+    <None Include="Views\Course\Form.cshtml" />
+    <None Include="Views\Course\Index.cshtml" />
+    <None Include="Views\Home\Index.cshtml" />
+    <None Include="Views\Home\Privacy.cshtml" />
+    <None Include="Views\Shared\Error.cshtml" />
+    <None Include="Views\Shared\_FormModal.cshtml" />
+    <None Include="Views\Shared\_Layout.cshtml" />
+    <None Include="Views\Shared\_ValidationScriptsPartial.cshtml" />
+    <None Include="Views\StudentCourse\Form.cshtml" />
+    <None Include="Views\StudentCourse\Index.cshtml" />
+    <None Include="Views\Student\Form.cshtml" />
+    <None Include="Views\Student\Index.cshtml" />
+    <None Include="Views\_ViewImports.cshtml" />
+    <None Include="Views\_ViewStart.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
