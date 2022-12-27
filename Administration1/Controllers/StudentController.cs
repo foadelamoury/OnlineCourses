@@ -1,4 +1,5 @@
 using Application.Features.Student.Commands.Create;
+using Application.Features.Student.Commands.Delete;
 using Application.Features.Student.Commands.Update;
 using Application.Features.Student.Models;
 using Application.Features.Student.Queries.GetAll;
@@ -79,6 +80,7 @@ public class StudentController : Controller
     }
 
     #endregion
+
     #region Details
     public async Task<IActionResult> Details(int id)
     {
@@ -92,46 +94,41 @@ public class StudentController : Controller
 
 
 
-    //public async Task<JsonResult> Delete(int id)
-    //{
-    //    //string response = "OK";
-
-    //    try
-    //    {
-    //        int res = await _mediator.Send(new DeleteStudentCommand() { Id = id });
-    //    }
-    //    catch
-    //    { throw; }
-    //    return null;
-    //}
-    //#endregion
-
-    //#region Detail
-    //public async Task<IActionResult> Details(int id)
-    //{
-    //    var eventDTO = await _mediator.Send(new GetStudentByIdQuery() { Id = id });
-    //    return View(eventDTO);
-    //}
+    public async Task<int> Delete(int id)
+    {
+        int res = 0;
+        try
+        {
+            res = await _mediator.Send(new DeleteStudentCommand() { Id = id });
+        }
+        catch
+        { throw; }
+        return 1;
+    }
     #endregion
+
+
 
     #region Activate
 
-    //public async Task<JsonResult> Activate(long[] Ids)
-    //{
-    //    try
-    //    {
-    //        foreach (var item in Ids)
-    //        {
-    //            var entity = await _mediator.Send(new GetStudentByIdQuery() { Id = (int)item });
+    public async Task<int> Activate(long[] Ids)
+    {
+        try
+        {
+            foreach (var item in Ids)
+            {
+                var entity = await _mediator.Send(new GetStudentByIdQuery() { Id = (int)item });
+                if (entity.Active == true) entity.Active = false;
+                else if (entity.Active == false) entity.Active = true;
 
-    //            await _mediator.Send(new UpdateStudentCommand(entity));
-    //        }
-    //    }
-    //    catch
-    //    {
-    //        throw;
-    //    }
-    //    return null;
-    //}
+                await _mediator.Send(new UpdateStudentCommand(entity));
+            }
+        }
+        catch
+        {
+            throw;
+        }
+        return 1;
+    }
     #endregion
 }

@@ -13,7 +13,8 @@ namespace Application.Features.Student.Commands.Create
 
         public CreateStudentCommand(StudentDTO dto)
         {
-            NameA = dto.NameA; NameE = dto.NameE;
+            NameA = dto.NameA;
+            NameE = dto.NameE;
             Id = dto.Id;
 
         }
@@ -30,19 +31,21 @@ namespace Application.Features.Student.Commands.Create
             }
             public async Task<long> Handle(CreateStudentCommand request, CancellationToken cancellationToken)
             {
-                Domain.Entities.Country entity = new Domain.Entities.Country
+                Domain.Entities.Student entity = new Domain.Entities.Student
                 {
                     Id = request.Id,
 
                     NameA = request.NameA,
-                    NameE = request.NameE
+                    NameE = request.NameE,
+                    PhotoName = request.photoFile?.FileName
+                    
 
                 };
 
                 if (request.photoFile != null)
                     await _uploadHelper.Upload(request.photoFile, entity.Id.ToString(), "Governer", "Resume");
 
-                await _context.Countries.AddAsync(entity);
+                await _context.Students.AddAsync(entity);
                 await _context.SaveChangesAsync(cancellationToken);
 
 

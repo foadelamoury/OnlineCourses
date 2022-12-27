@@ -27,17 +27,18 @@ namespace Application.Features.Student.Commands.Update
             }
             public async Task<long> Handle(UpdateStudentCommand request, CancellationToken cancellationToken)
             {
-                Domain.Entities.Country entity = new Domain.Entities.Country
+                Domain.Entities.Student entity = new Domain.Entities.Student
                 {
                     Id = request.Id,
 
                     NameA = request.NameA,
-                    NameE = request.NameE
+                    NameE = request.NameE,
+                    PhotoName = request.photoFile?.FileName  
 
                 };
 
 
-                await _context.Countries.AddAsync(entity);
+                await _context.Students.AddAsync(entity);
                 await _context.SaveChangesAsync(cancellationToken);
 
 

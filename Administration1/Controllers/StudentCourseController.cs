@@ -46,7 +46,6 @@ public class StudentCourseController : Controller
     {
 #pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
         StudentCourseDTO countryDTO = await _mediator.Send(new GetStudentCourseByIdQuery() { Id = id });
-#pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
 
 
         return PartialView("Form", countryDTO);

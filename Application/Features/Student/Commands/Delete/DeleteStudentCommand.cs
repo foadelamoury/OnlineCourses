@@ -27,11 +27,12 @@ namespace Application.Features.Student.Commands.Delete
                 _context.Courses.Remove(entity);
                 int result = await _context.SaveChangesAsync(cancellationToken);
 
-                return result;
+                return 1;
             }
             catch (Exception)
             {
                 throw;
+                return 0;
             }
         }
     }
