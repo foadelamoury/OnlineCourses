@@ -1,0 +1,81 @@
+﻿@model IEnumerable<Application.Features.Courses.Models.CourseDTO>
+@{
+var TableName = "Course";
+ViewData["Title"] = TableName;
+}
+
+    <partial name="_FormModal" />
+    <table id="dt-basic-example" class="table  table-hover w-100">
+        <thead class="">
+            <tr>
+                <th width="30" align="center" valign="middle">
+                    <div class="custom-checkbox px-0">
+                        <input type="checkbox" class="selectAll select-checkbox custom-control-input" id="selectAll" tabindex="0" name="selectAll" value="all">
+                        <label class="custom-control-label" for="selectAll"></label>
+                    </div>
+                </th>
+
+                <th hidden="hidden">Id</th>
+                <th style="width:30%;">
+                     اسم
+                </th>
+               
+            
+                <th style="width:15px">
+                     SortIndex
+                </th>
+                <th style="width:15px">
+                     Active
+                </th>
+                <th style="width:12px"> Functions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    <div class="custom-checkbox px-0">
+                        <input type="checkbox" class="selectRow custom-control-input" id="item @item.Id">
+                        <label class="custom-control-label" for="item @item.Id"></label>
+                    </div>
+                </td>
+
+                <td hidden="hidden">
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.NameA)
+                </td>
+                 <td>
+                    @Html.DisplayFor(modelItem => item.SortIndex)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Active)
+                </td>
+                <td>
+
+                    <a onclick="ShowFormModal(@item.Id, 'Edit')" class=" btn btn-primary bg-primary-700 text-white btn-icon rounded-circle mx-1 waves-effect waves-themed" style="font-size:large"><i class="fa fa-edit " data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit">تعديل</i></a>
+
+                </td>
+                
+            </tr>
+        }
+
+
+        </tbody>
+    </table>
+<a href="@Url.ActionLink("create", "course")" aria-expanded="false" class=" btn btn-primary bg-primary-700 text-white btn-icon rounded-circle mx-1 waves-effect waves-themed" style="font-size:large"><i class="fa fa-edit " data-toggle="tooltip" data-placement="top">اضافه</i></a>
+
+
+
+@section Scripts
+{
+
+    <script>
+
+
+    </script>
+
+}  

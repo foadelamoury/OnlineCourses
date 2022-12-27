@@ -1,4 +1,11 @@
+using Application.Features.Student.Commands.Create;
+using Application.Features.Student.Commands.Update;
+using Application.Features.Student.Models;
+using Application.Features.Student.Queries.GetAll;
+using Application.Features.Student.Queries.GetById;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
+namespace Administration1.Controllers;
 
 public class StudentController : Controller
 {
@@ -8,7 +15,7 @@ public class StudentController : Controller
     private readonly IMediator _mediator;
 
 
-    public CountryController(IWebHostEnvironment webHostEnvironment, IMediator mediator)
+    public StudentController(IWebHostEnvironment webHostEnvironment, IMediator mediator)
     {
         _webHostEnvironment = webHostEnvironment;
         _mediator = mediator;
@@ -20,7 +27,7 @@ public class StudentController : Controller
     #region Index
     public async Task<IActionResult> Index()
     {
-        IEnumerable<CountryDTO> Countries = await _mediator.Send(new GetAllCountryQuery());
+        IEnumerable<StudentDTO> Countries = await _mediator.Send(new GetAllStudentsQuery());
         return View(Countries);
     }
 
@@ -28,30 +35,32 @@ public class StudentController : Controller
     #endregion
 
     #region Create
-    public async Task<IActionResult> Create()
+    public ActionResult Create()
     {
-        return PartialView("Form", new CountryObjectDTO());
+        return PartialView("Form", new StudentDTO { Active = true, CreateDate = DateTime.Now });
     }
     #endregion
 
     #region Edit
     public async Task<IActionResult> Edit(int id)
     {
-        CountryDTO countryDTO = await _mediator.Send(new GetCountryByIdQuery() { Id = id });
+        StudentDTO studentDTO = await _mediator.Send(new GetStudentByIdQuery() { Id = id });
 
-        return PartialView("Form", countryDTO);
+
+        return PartialView("Form", studentDTO);
     }
     #endregion
 
     #region Form
     [HttpPost]
-    public async Task<IActionResult> Form(CountryDTO model)
+    public async Task<IActionResult> Form(StudentDTO model)
     {
-
         if (model.Id > 0)
         {
-            var command = new UpdateCountryCommand(model);
+            var command = new UpdateStudentCommand(model);
             await _mediator.Send(command);
+
+            //return View("form", command.Id);
 
 
 
@@ -59,13 +68,13 @@ public class StudentController : Controller
 
         else
         {
-            var command = new CreateCountryCommand(model);
+            var command = new CreateStudentCommand(model);
             await _mediator.Send(command);
 
 
         }
-
         return RedirectToAction("Index");
+
     }
 
     #endregion
@@ -75,50 +84,46 @@ public class StudentController : Controller
 
 
 
-    public async Task<JsonResult> Delete(int id)
-    {
-        string response = "OK";
+    //public async Task<JsonResult> Delete(int id)
+    //{
+    //    //string response = "OK";
 
-        try
-        {
-            int res = await _mediator.Send(new DeleteCountryCommand() { Id = id });
-        }
-        catch (Exception ex)
-        { throw; }
-        return null;
-    }
-    #endregion
+    //    try
+    //    {
+    //        int res = await _mediator.Send(new DeleteStudentCommand() { Id = id });
+    //    }
+    //    catch
+    //    { throw; }
+    //    return null;
+    //}
+    //#endregion
 
-    #region Detail
-    public async Task<IActionResult> Details(int id)
-    {
-        var eventDTO = await _mediator.Send(new GetCountryByIdQuery() { Id = id });
-        return View(eventDTO);
-    }
+    //#region Detail
+    //public async Task<IActionResult> Details(int id)
+    //{
+    //    var eventDTO = await _mediator.Send(new GetStudentByIdQuery() { Id = id });
+    //    return View(eventDTO);
+    //}
     #endregion
 
     #region Activate
 
-    public async Task<JsonResult> Activate(long[] Ids)
-    {
-        try
-        {
-            foreach (var item in Ids)
-            {
-                var entity = await _mediator.Send(new GetCountryByIdQuery() { Id = (int)item });
+    //public async Task<JsonResult> Activate(long[] Ids)
+    //{
+    //    try
+    //    {
+    //        foreach (var item in Ids)
+    //        {
+    //            var entity = await _mediator.Send(new GetStudentByIdQuery() { Id = (int)item });
 
-                await _mediator.Send(new UpdateCountryCommand(entity));
-            }
-        }
-        catch (Exception ex)
-        {
-            throw;
-        }
-        return null;
-    }
+    //            await _mediator.Send(new UpdateStudentCommand(entity));
+    //        }
+    //    }
+    //    catch
+    //    {
+    //        throw;
+    //    }
+    //    return null;
+    //}
     #endregion
-
-
-
-
 }

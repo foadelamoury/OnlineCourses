@@ -31,7 +31,8 @@ namespace Application.Features.Country.Commands.Create
                 {
                     Id = request.Id,
 
-                    NameA = request.NameA,NameE = request.NameE
+                    NameA = request.NameA,
+                    NameE = request.NameE,
 
                 };
 

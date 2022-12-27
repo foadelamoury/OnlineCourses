@@ -1,0 +1,57 @@
+﻿@using Application.Features.Courses.Models
+@model CourseDTO
+@{
+    Layout = "_Layout";
+    var TableName = "Course";
+   
+    if (Model.Id > 0)
+    {
+    ViewData["Title"] = "Edit " +TableName + ":" + @Model.NameA;
+        <h1>@ViewData["Title"]</h1>
+    } 
+    
+   
+  else
+  {
+        ViewData["Title"] = "Add " + TableName;
+        <h1>@ViewData["Title"]</h1>
+
+  }
+}
+
+   
+
+<form asp-action="Form" method="post"  enctype="multipart/form-data">
+   
+      
+
+          
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group col-md-6">
+        الاسم
+        <input asp-for="NameA"/>
+        <span asp-validation-for="NameA"></span>
+    </div>
+
+       <div class="form-group col-md-6">
+        Name
+        <input asp-for="NameE"/>
+        <span asp-validation-for="NameE"></span>
+    </div>
+
+    <div class="form-group col-md-6">
+        CreditHours
+        <input asp-for="CreditHours" />
+        <span asp-validation-for="CreditHours"></span>
+    </div>
+
+
+    <div class="form-group col-md-6">
+            CourseCategoryId
+        <input asp-for="CourseCategoryId" />
+        <span asp-validation-for="CourseCategoryId"></span>
+    </div>
+
+    <input type="submit" class="btn btn-primary btn-main-bg m-1" placeholder="حفظ"/>
+	
+</form>

@@ -8,6 +8,8 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.Design;
 
+namespace Administration1.Controllers;
+
 public class CountryController : Controller
 {
     #region CTOR
@@ -28,7 +30,7 @@ public class CountryController : Controller
     #region Index
     public async Task<IActionResult> Index()
     {
-        IEnumerable<CountryDTO> Countries = await _mediator.Send(new GetAllCountryQuery());
+        IEnumerable<CountryDTO?> Countries = await _mediator.Send(new GetAllCountryQuery());
         return View(Countries);
     }
 
@@ -45,9 +47,11 @@ public class CountryController : Controller
     #region Edit
     public async Task<IActionResult> Edit(int id)
     {
+#pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
         CountryDTO countryDTO = await _mediator.Send(new GetCountryByIdQuery() { Id = id });
+#pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
 
-        
+
         return PartialView("Form", countryDTO);
     }
     #endregion
@@ -87,24 +91,19 @@ public class CountryController : Controller
 
     //public async Task<JsonResult> Delete(int id)
     //{
-    //    //string response = "OK";
 
-    //    try
-    //    {
-    //        int res = await _mediator.Send(new DeleteCountryCommand() { Id = id });
-    //    }
-    //    catch
-    //    { throw; }
-    //    return null;
-    //}
-    //#endregion
+    //      var id =   await _mediator.Send(new DeleteCountryCommand() { Id = id });
+    //        return id;
 
-    //#region Detail
-    //public async Task<IActionResult> Details(int id)
-    //{
-    //    var eventDTO = await _mediator.Send(new GetCountryByIdQuery() { Id = id });
-    //    return View(eventDTO);
     //}
+    #endregion
+
+    #region Detail
+    public async Task<IActionResult> Details(int id)
+    {
+        var eventDTO = await _mediator.Send(new GetCountryByIdQuery() { Id = id });
+        return View(eventDTO);
+    }
     #endregion
 
     #region Activate

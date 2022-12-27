@@ -27,7 +27,7 @@ namespace Application.Features.Country.Commands.Delete
                 _context.Countries.Remove(entity);
                 int result = await _context.SaveChangesAsync(cancellationToken);
 
-                return result;
+                return result;  
             }
             catch (Exception)
             {

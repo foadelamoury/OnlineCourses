@@ -12,7 +12,7 @@ public class Student : ObjectBase<int>
     public int CityId { get; set; }
 
    
-  public string PhotoName { get; set; }
+  public string? PhotoName { get; set; }
 
 
 }

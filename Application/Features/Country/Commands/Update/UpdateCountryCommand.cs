@@ -31,8 +31,11 @@ namespace Application.Features.Country.Commands.Update
             {
                 Domain.Entities.Country entity = new Domain.Entities.Country
                 {
-                    NameA = request.NameA,NameE = request.NameE,
-                    Id = request.Id
+                    NameA = request.NameA,
+                    NameE = request.NameE,
+                    Id = request.Id,
+                    CreateDate = request.CreateDate
+
 
                 };
 
