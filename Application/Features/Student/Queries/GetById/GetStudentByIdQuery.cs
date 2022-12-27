@@ -18,7 +18,7 @@ namespace Application.Features.Student.Queries.GetById
         }
         public async Task<StudentDTO> Handle(GetStudentByIdQuery request, CancellationToken cancellationToken)
         {
-            var country = await _context.Countries.Where(x => x.Id == request.Id).Select(x => new StudentDTO
+            var country = await _context.Students.Where(x => x.Id == request.Id).Select(x => new StudentDTO
             {
                 Id = x.Id,
                 NameA = x.NameA,
