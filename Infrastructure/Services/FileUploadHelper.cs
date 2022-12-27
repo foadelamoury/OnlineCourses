@@ -55,9 +55,9 @@ public class FileUploadHelper : IFileUploadHelper
 
     public bool IsvalidExtension(string filename)
     {
-        List<string> avilableExtensions = new List<string> { ".pdf", ".docx", ".xlsx", ".xlsm", ".xlsb", ".xltx", ".png", ".jpg", ".jpeg", ".svg", ".gif", ".jfif" };
+        List<string> availableExtensions = new List<string> { ".pdf", ".docx", ".xlsx", ".xlsm", ".xlsb", ".xltx", ".png", ".jpg", ".jpeg", ".svg", ".gif", ".jfif" };
         string ext = Path.GetExtension(filename);
-        if (avilableExtensions.Contains(ext.ToLower()))
+        if (availableExtensions.Contains(ext.ToLower()))
             return true;
         else
             return false;
