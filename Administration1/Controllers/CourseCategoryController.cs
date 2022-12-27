@@ -1,4 +1,4 @@
-using Application.Features.CourseCategorysCategory.Queries.GetAll;
+using Application.Features.CoursesCategory.Queries.GetAll;
 using Application.Features.CoursesCategory.Commands.Create;
 using Application.Features.CoursesCategory.Commands.Update;
 using Application.Features.CoursesCategory.Models;

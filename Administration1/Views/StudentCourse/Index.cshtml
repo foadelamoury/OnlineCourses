@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Application.Features.StudentCourse.Models.StudentCourseDTO>
+﻿@model IEnumerable<Application.Features.StudentCourseTable.Models.StudentCourseDTO>
 @{
 var TableName = "StudentCourse";
 ViewData["Title"] = TableName;
@@ -16,9 +16,7 @@ ViewData["Title"] = TableName;
                 </th>
 
                 <th hidden="hidden">Id</th>
-                <th style="width:30%;">
-                     اسم
-                </th>
+             
                
             
                 <th style="width:15px">
@@ -45,9 +43,7 @@ ViewData["Title"] = TableName;
                     @Html.DisplayFor(modelItem => item.Id)
                 </td>
 
-                <td>
-                    @Html.DisplayFor(modelItem => item.NameA)
-                </td>
+            
                  <td>
                     @Html.DisplayFor(modelItem => item.SortIndex)
                 </td>

@@ -1,4 +1,4 @@
-﻿namespace Application.Features.StudentCourseTable.Commands.Update
+﻿namespace Application.Features.StudentCourseTableTable.Commands.Update
 {
     public class UpdateStudentCourseCommandValidator
     {

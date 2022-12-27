@@ -3,8 +3,8 @@
     public abstract class GlobalModelWithName
     {
 
-        public string NameA { get; set; }
-        public string NameE { get; set; }
+        public string? NameA { get; set; }
+        public string? NameE { get; set; }
 
         public int Id { get; set; }
         public int SortIndex { get; set; }

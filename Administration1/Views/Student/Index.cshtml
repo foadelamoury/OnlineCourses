@@ -1,6 +1,6 @@
-﻿@model IEnumerable<Application.Features.Country.Models.CountryDTO>
+﻿@model IEnumerable<Application.Features.Student.Models.StudentDTO>
 @{
-var TableName = "Country";
+var TableName = "Student";
 ViewData["Title"] = TableName;
 }
 
@@ -66,7 +66,7 @@ ViewData["Title"] = TableName;
 
         </tbody>
     </table>
-<a href="@Url.ActionLink("create", "country")" aria-expanded="false" class=" btn btn-primary bg-primary-700 text-white btn-icon rounded-circle mx-1 waves-effect waves-themed" style="font-size:large"><i class="fa fa-edit " data-toggle="tooltip" data-placement="top">اضافه</i></a>
+<a href="@Url.ActionLink("create", "student")" aria-expanded="false" class=" btn btn-primary bg-primary-700 text-white btn-icon rounded-circle mx-1 waves-effect waves-themed" style="font-size:large"><i class="fa fa-edit " data-toggle="tooltip" data-placement="top">اضافه</i></a>
 
 
 

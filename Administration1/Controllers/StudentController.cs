@@ -5,6 +5,7 @@ using Application.Features.Student.Queries.GetAll;
 using Application.Features.Student.Queries.GetById;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+
 namespace Administration1.Controllers;
 
 public class StudentController : Controller
@@ -27,8 +28,8 @@ public class StudentController : Controller
     #region Index
     public async Task<IActionResult> Index()
     {
-        IEnumerable<StudentDTO> Countries = await _mediator.Send(new GetAllStudentsQuery());
-        return View(Countries);
+        IEnumerable<StudentDTO> Students = await _mediator.Send(new GetAllStudentsQuery());
+        return View(Students);
     }
 
 

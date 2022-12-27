@@ -3,7 +3,7 @@ using Application.Interfaces;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace Application.Features.CourseCategorysCategory.Queries.GetAll
+namespace Application.Features.CoursesCategory.Queries.GetAll
 {
     public class GetAllCourseCategoriesQuery : IRequest<IEnumerable<CourseCategoryDTO>>
   {

@@ -17,7 +17,7 @@ namespace Application.Features.Student.Queries.GetAll
       }
       public async Task<IEnumerable<StudentDTO>> Handle(GetAllStudentsQuery request, CancellationToken cancellationToken)
       {
-        var countries = await _context.Countries.Select(x =>
+        var countries = await _context.Students.Select(x =>
               new StudentDTO
               {
                 Id = x.Id,
