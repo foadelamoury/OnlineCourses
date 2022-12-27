@@ -17,7 +17,7 @@ namespace Application.Features.StudentCourseTable.Queries.GetAll
             }
             public async Task<IEnumerable<StudentCourseDTO>> Handle(GeAllStudentCoursesQuery request, CancellationToken cancellationToken)
             {
-                var countries = await _context.StudentCourses.Select(x =>
+                var studentCourse = await _context.StudentCourses.Select(x =>
                       new StudentCourseDTO
                       {
                           Id = x.Id,
@@ -30,7 +30,7 @@ namespace Application.Features.StudentCourseTable.Queries.GetAll
                       }
                   ).ToListAsync();
 
-                return countries;
+                return studentCourse;
             }
         }
     }

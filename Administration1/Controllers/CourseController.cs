@@ -30,8 +30,8 @@ public class CourseController : Controller
     #region Index
     public async Task<IActionResult> Index()
     {
-        IEnumerable<CourseDTO> Countries = await _mediator.Send(new GetAllCoursesQuery());
-        return View(Countries);
+        IEnumerable<CourseDTO> Course = await _mediator.Send(new GetAllCoursesQuery());
+        return View(Course);
     }
 
 

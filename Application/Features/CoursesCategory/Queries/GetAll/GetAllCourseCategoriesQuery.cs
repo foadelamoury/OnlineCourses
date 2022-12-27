@@ -17,7 +17,7 @@ namespace Application.Features.CoursesCategory.Queries.GetAll
             }
             public async Task<IEnumerable<CourseCategoryDTO>> Handle(GetAllCourseCategoriesQuery request, CancellationToken cancellationToken)
             {
-                var countries = await _context.Countries.Select(x =>
+                var courseCategories = await _context.CourseCategories.Select(x =>
                       new CourseCategoryDTO
                       {
                           Id = x.Id,
@@ -30,7 +30,7 @@ namespace Application.Features.CoursesCategory.Queries.GetAll
                       }
                   ).ToListAsync();
 
-                return countries;
+                return courseCategories;
             }
         }
     }

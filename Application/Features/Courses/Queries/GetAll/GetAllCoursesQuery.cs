@@ -18,7 +18,7 @@ namespace Application.Features.Courses.Queries.GetAll
             public async Task<IEnumerable<CourseDTO>> Handle(GetAllCoursesQuery request, CancellationToken cancellationToken)
             {
 #pragma warning disable CS8601 // Possible null reference assignment.
-                var countries = await _context.Countries.Select(x =>
+                var courses = await _context.Courses.Select(x =>
               new CourseDTO
               {
                   Id = x.Id,
@@ -32,7 +32,7 @@ namespace Application.Features.Courses.Queries.GetAll
           ).ToListAsync();
 #pragma warning restore CS8601 // Possible null reference assignment.
 
-                return countries;
+                return courses;
             }
         }
     }

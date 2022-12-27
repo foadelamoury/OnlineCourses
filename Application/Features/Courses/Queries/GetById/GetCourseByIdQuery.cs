@@ -19,7 +19,7 @@ namespace Application.Features.Courses.Queries.GetById
         public async Task<CourseDTO> Handle(GetCourseByIdQuery request, CancellationToken cancellationToken)
         {
 #pragma warning disable CS8601 // Possible null reference assignment.
-            var country = await _context.Countries.Where(x => x.Id == request.Id).Select(x => new CourseDTO
+            var course = await _context.Courses.Where(x => x.Id == request.Id).Select(x => new CourseDTO
             {
                 Id = x.Id,
                 NameA = x.NameA,
@@ -31,7 +31,7 @@ namespace Application.Features.Courses.Queries.GetById
 #pragma warning restore CS8601 // Possible null reference assignment.
 
 #pragma warning disable CS8603 // Possible null reference return.
-            return country;
+            return course;
 #pragma warning restore CS8603 // Possible null reference return.
         }
     }

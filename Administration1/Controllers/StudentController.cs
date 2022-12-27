@@ -46,7 +46,12 @@ public class StudentController : Controller
     #region Edit
     public async Task<IActionResult> Edit(long id)
     {
+        ViewBag.Countries = 1;
+        ViewBag.Cities = 1;
+
         StudentDTO studentDTO = await _mediator.Send(new GetStudentByIdQuery() { Id = id });
+
+        
 
 
         return PartialView("Form", studentDTO);

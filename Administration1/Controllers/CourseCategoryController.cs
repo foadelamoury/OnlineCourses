@@ -28,8 +28,8 @@ public class CourseCategoryCategoryController : Controller
     #region Index
     public async Task<IActionResult> Index()
     {
-        IEnumerable<CourseCategoryDTO> Countries = await _mediator.Send(new GetAllCourseCategoriesQuery());
-        return View(Countries);
+        IEnumerable<CourseCategoryDTO> CourseCategories = await _mediator.Send(new GetAllCourseCategoriesQuery());
+        return View(CourseCategories);
     }
 
 

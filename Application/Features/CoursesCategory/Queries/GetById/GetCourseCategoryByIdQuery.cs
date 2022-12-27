@@ -18,7 +18,7 @@ namespace Application.Features.CoursesCategory.Queries.GetById
         }
         public async Task<CourseCategoryDTO> Handle(GetCourseCategoryByIdQuery request, CancellationToken cancellationToken)
         {
-            var country = await _context.Countries.Where(x => x.Id == request.Id).Select(x => new CourseCategoryDTO
+            var courseCategory = await _context.CourseCategories.Where(x => x.Id == request.Id).Select(x => new CourseCategoryDTO
             {
                 Id = x.Id,
                 NameA = x.NameA,
@@ -28,7 +28,7 @@ namespace Application.Features.CoursesCategory.Queries.GetById
                 Active = x.Active
             }).FirstOrDefaultAsync(cancellationToken: cancellationToken);
 
-            return country;
+            return courseCategory;
         }
     }
 }
