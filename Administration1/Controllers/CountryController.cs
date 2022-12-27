@@ -47,9 +47,7 @@ public class CountryController : Controller
     #region Edit
     public async Task<IActionResult> Edit(int id)
     {
-#pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
         CountryDTO countryDTO = await _mediator.Send(new GetCountryByIdQuery() { Id = id });
-#pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
 
 
         return PartialView("Form", countryDTO);
@@ -65,7 +63,7 @@ public class CountryController : Controller
             var command = new UpdateCountryCommand(model);
             await _mediator.Send(command);
 
-            //return View("form", command.Id);
+            return View("form", command.Id);
 
 
 
@@ -75,6 +73,7 @@ public class CountryController : Controller
         {
             var command = new CreateCountryCommand(model);
             await _mediator.Send(command);
+            return View("form", command.Id);
 
 
         }

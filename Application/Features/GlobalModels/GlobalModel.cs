@@ -3,7 +3,7 @@
     public abstract class GlobalModel
     {
 
-        public int Id { get; set; }
+        public long Id { get; set; }
         public int SortIndex { get; set; }
         public bool Focus { get; set; }
         public bool Active { get; set; }
