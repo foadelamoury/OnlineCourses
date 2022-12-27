@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20221225093839_addingPhoneNumberTable")]
-    partial class addingPhoneNumberTable
+    [Migration("20221227160533_InitialDBCreation")]
+    partial class InitialDBCreation
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -26,12 +26,12 @@ namespace Infrastructure.Migrations
 
             modelBuilder.Entity("Domain.Entities.Country", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
+                        .HasColumnType("bigint")
                         .HasColumnOrder(0);
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
 
                     b.Property<bool>("Active")
                         .HasColumnType("bit");
@@ -44,6 +44,12 @@ namespace Infrastructure.Migrations
 
                     b.Property<DateTime?>("ModifyDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("NameA")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NameE")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("SortIndex")
                         .HasColumnType("int");
@@ -55,12 +61,12 @@ namespace Infrastructure.Migrations
 
             modelBuilder.Entity("Domain.Entities.Course", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
+                        .HasColumnType("bigint")
                         .HasColumnOrder(0);
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
 
                     b.Property<bool>("Active")
                         .HasColumnType("bit");
@@ -73,6 +79,12 @@ namespace Infrastructure.Migrations
 
                     b.Property<DateTime?>("ModifyDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("NameA")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NameE")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("SortIndex")
                         .HasColumnType("int");
@@ -84,12 +96,12 @@ namespace Infrastructure.Migrations
 
             modelBuilder.Entity("Domain.Entities.CourseCategory", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
+                        .HasColumnType("bigint")
                         .HasColumnOrder(0);
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
 
                     b.Property<bool>("Active")
                         .HasColumnType("bit");
@@ -103,6 +115,12 @@ namespace Infrastructure.Migrations
                     b.Property<DateTime?>("ModifyDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("NameA")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NameE")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("SortIndex")
                         .HasColumnType("int");
 
@@ -113,12 +131,12 @@ namespace Infrastructure.Migrations
 
             modelBuilder.Entity("Domain.Entities.Student", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
+                        .HasColumnType("bigint")
                         .HasColumnOrder(0);
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
 
                     b.Property<bool>("Active")
                         .HasColumnType("bit");
@@ -138,12 +156,13 @@ namespace Infrastructure.Migrations
                     b.Property<DateTime?>("ModifyDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Name")
-                        .IsRequired()
+                    b.Property<string>("NameA")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NameE")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PhotoName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("SortIndex")
@@ -156,18 +175,21 @@ namespace Infrastructure.Migrations
 
             modelBuilder.Entity("Domain.Entities.StudentCourse", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
+                        .HasColumnType("bigint")
                         .HasColumnOrder(0);
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
 
                     b.Property<bool>("Active")
                         .HasColumnType("bit");
 
                     b.Property<int>("CourseId")
                         .HasColumnType("int");
+
+                    b.Property<long?>("CourseId1")
+                        .HasColumnType("bigint");
 
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
@@ -184,11 +206,14 @@ namespace Infrastructure.Migrations
                     b.Property<int>("StudentId")
                         .HasColumnType("int");
 
+                    b.Property<long?>("StudentId1")
+                        .HasColumnType("bigint");
+
                     b.HasKey("Id");
 
-                    b.HasIndex("CourseId");
+                    b.HasIndex("CourseId1");
 
-                    b.HasIndex("StudentId");
+                    b.HasIndex("StudentId1");
 
                     b.ToTable("StudentCourses");
                 });
@@ -197,19 +222,15 @@ namespace Infrastructure.Migrations
                 {
                     b.HasOne("Domain.Entities.Course", "Course")
                         .WithMany()
-                        .HasForeignKey("CourseId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("CourseId1");
 
-                    b.HasOne("Domain.Entities.Student", "student")
+                    b.HasOne("Domain.Entities.Student", "Student")
                         .WithMany()
-                        .HasForeignKey("StudentId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("StudentId1");
 
                     b.Navigation("Course");
 
-                    b.Navigation("student");
+                    b.Navigation("Student");
                 });
 #pragma warning restore 612, 618
         }

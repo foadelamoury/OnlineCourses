@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Infrastructure.Migrations
 {
-    public partial class CoursesInitialDatabase : Migration
+    public partial class InitialDBCreation : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -13,8 +13,10 @@ namespace Infrastructure.Migrations
                 name: "Countries",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    NameA = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    NameE = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     ModifyDate = table.Column<DateTime>(type: "datetime2", nullable: true),
                     SortIndex = table.Column<int>(type: "int", nullable: false),
@@ -30,8 +32,10 @@ namespace Infrastructure.Migrations
                 name: "CourseCategories",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    NameA = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    NameE = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     ModifyDate = table.Column<DateTime>(type: "datetime2", nullable: true),
                     SortIndex = table.Column<int>(type: "int", nullable: false),
@@ -47,8 +51,10 @@ namespace Infrastructure.Migrations
                 name: "Courses",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    NameA = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    NameE = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     ModifyDate = table.Column<DateTime>(type: "datetime2", nullable: true),
                     SortIndex = table.Column<int>(type: "int", nullable: false),
@@ -61,31 +67,16 @@ namespace Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Images",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    ModifyDate = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    SortIndex = table.Column<int>(type: "int", nullable: false),
-                    Focus = table.Column<bool>(type: "bit", nullable: false),
-                    Active = table.Column<bool>(type: "bit", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Images", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Students",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    NameA = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    NameE = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CountryId = table.Column<int>(type: "int", nullable: false),
                     CityId = table.Column<int>(type: "int", nullable: false),
+                    PhotoName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     ModifyDate = table.Column<DateTime>(type: "datetime2", nullable: true),
                     SortIndex = table.Column<int>(type: "int", nullable: false),
@@ -98,61 +89,15 @@ namespace Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Cities",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CountryId = table.Column<int>(type: "int", nullable: false),
-                    CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    ModifyDate = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    SortIndex = table.Column<int>(type: "int", nullable: false),
-                    Focus = table.Column<bool>(type: "bit", nullable: false),
-                    Active = table.Column<bool>(type: "bit", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Cities", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Cities_Countries_CountryId",
-                        column: x => x.CountryId,
-                        principalTable: "Countries",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "PhoneNumber",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    StudentId = table.Column<int>(type: "int", nullable: true),
-                    CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    ModifyDate = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    SortIndex = table.Column<int>(type: "int", nullable: false),
-                    Focus = table.Column<bool>(type: "bit", nullable: false),
-                    Active = table.Column<bool>(type: "bit", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_PhoneNumber", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_PhoneNumber_Students_StudentId",
-                        column: x => x.StudentId,
-                        principalTable: "Students",
-                        principalColumn: "Id");
-                });
-
-            migrationBuilder.CreateTable(
                 name: "StudentCourses",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     CourseId = table.Column<int>(type: "int", nullable: false),
+                    CourseId1 = table.Column<long>(type: "bigint", nullable: true),
                     StudentId = table.Column<int>(type: "int", nullable: false),
+                    StudentId1 = table.Column<long>(type: "bigint", nullable: true),
                     CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     ModifyDate = table.Column<DateTime>(type: "datetime2", nullable: true),
                     SortIndex = table.Column<int>(type: "int", nullable: false),
@@ -163,59 +108,38 @@ namespace Infrastructure.Migrations
                 {
                     table.PrimaryKey("PK_StudentCourses", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_StudentCourses_Courses_CourseId",
-                        column: x => x.CourseId,
+                        name: "FK_StudentCourses_Courses_CourseId1",
+                        column: x => x.CourseId1,
                         principalTable: "Courses",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
-                        name: "FK_StudentCourses_Students_StudentId",
-                        column: x => x.StudentId,
+                        name: "FK_StudentCourses_Students_StudentId1",
+                        column: x => x.StudentId1,
                         principalTable: "Students",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Cities_CountryId",
-                table: "Cities",
-                column: "CountryId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_PhoneNumber_StudentId",
-                table: "PhoneNumber",
-                column: "StudentId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_StudentCourses_CourseId",
+                name: "IX_StudentCourses_CourseId1",
                 table: "StudentCourses",
-                column: "CourseId");
+                column: "CourseId1");
 
             migrationBuilder.CreateIndex(
-                name: "IX_StudentCourses_StudentId",
+                name: "IX_StudentCourses_StudentId1",
                 table: "StudentCourses",
-                column: "StudentId");
+                column: "StudentId1");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Cities");
+                name: "Countries");
 
             migrationBuilder.DropTable(
                 name: "CourseCategories");
 
             migrationBuilder.DropTable(
-                name: "Images");
-
-            migrationBuilder.DropTable(
-                name: "PhoneNumber");
-
-            migrationBuilder.DropTable(
                 name: "StudentCourses");
-
-            migrationBuilder.DropTable(
-                name: "Countries");
 
             migrationBuilder.DropTable(
                 name: "Courses");

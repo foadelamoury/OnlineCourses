@@ -9,6 +9,6 @@ public class StudentCourse : ObjectBase
 
     public int StudentId { get; set; }
 
-    public Student? student { get; set; }
+    public Student? Student { get; set; }
 
 }

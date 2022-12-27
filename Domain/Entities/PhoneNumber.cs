@@ -4,7 +4,7 @@
     {
         public string? number;
 
-        public int studentId;
+        public int StudentId;
 
         public Student? Student;
     }

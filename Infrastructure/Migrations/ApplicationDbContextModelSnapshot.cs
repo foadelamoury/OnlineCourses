@@ -204,14 +204,14 @@ namespace Infrastructure.Migrations
                     b.Property<int>("StudentId")
                         .HasColumnType("int");
 
-                    b.Property<long?>("studentId")
+                    b.Property<long?>("StudentId1")
                         .HasColumnType("bigint");
 
                     b.HasKey("Id");
 
                     b.HasIndex("CourseId1");
 
-                    b.HasIndex("studentId");
+                    b.HasIndex("StudentId1");
 
                     b.ToTable("StudentCourses");
                 });
@@ -222,13 +222,13 @@ namespace Infrastructure.Migrations
                         .WithMany()
                         .HasForeignKey("CourseId1");
 
-                    b.HasOne("Domain.Entities.Student", "student")
+                    b.HasOne("Domain.Entities.Student", "Student")
                         .WithMany()
-                        .HasForeignKey("studentId");
+                        .HasForeignKey("StudentId1");
 
                     b.Navigation("Course");
 
-                    b.Navigation("student");
+                    b.Navigation("Student");
                 });
 #pragma warning restore 612, 618
         }
