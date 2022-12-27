@@ -5,6 +5,9 @@ using Application.Features.Courses.Queries.GetAll;
 using Application.Features.Courses.Queries.GetById;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+
+
+
 namespace Administration1.Controllers;
 
 public class CourseController : Controller
