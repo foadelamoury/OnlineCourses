@@ -491,3 +491,5 @@ D:\Github DotNet Projects\EvaluationTask\Administration1\obj\Debug\net6.0\refint
 D:\Github DotNet Projects\EvaluationTask\Administration1\obj\Debug\net6.0\Administration1.pdb
 D:\Github DotNet Projects\EvaluationTask\Administration1\obj\Debug\net6.0\Administration1.genruntimeconfig.cache
 D:\Github DotNet Projects\EvaluationTask\Administration1\obj\Debug\net6.0\ref\Administration1.dll
+D:\Github DotNet Projects\EvaluationTask\Administration1\obj\Debug\net6.0\Administration1.RazorAssemblyInfo.cache
+D:\Github DotNet Projects\EvaluationTask\Administration1\obj\Debug\net6.0\Administration1.RazorAssemblyInfo.cs
