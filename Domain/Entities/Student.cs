@@ -3,7 +3,7 @@ using System.Collections.ObjectModel;
 namespace Domain.Entities;
 
 
-public class Student : ObjectBase<int>
+public class Student : ObjectBase
 {
     public string? NameA { get; set; }
     public string? NameE { get; set; }

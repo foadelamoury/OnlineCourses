@@ -1,6 +1,6 @@
 ﻿namespace Domain.Entities
 {
-    public class PhoneNumber : ObjectBase<int>
+    public class PhoneNumber : ObjectBase
     {
         public string? number;
 

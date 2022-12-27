@@ -1,7 +1,7 @@
 namespace Domain.Entities;
 
 
-public class StudentCourse : ObjectBase<int>
+public class StudentCourse : ObjectBase
 {
     public int CourseId { get; set; }
 

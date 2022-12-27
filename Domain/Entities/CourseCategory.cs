@@ -4,7 +4,7 @@ namespace Domain.Entities;
 
 
 
-public class CourseCategory : ObjectBase<int>
+public class CourseCategory : ObjectBase
 {
 
     public string? NameA { get; set; }
