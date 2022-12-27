@@ -55,7 +55,7 @@ namespace Application.Features.Courses.Commands.Update
 
 
 
-                return entity.Id;
+                return (int)entity.Id;
             }
 
         }
