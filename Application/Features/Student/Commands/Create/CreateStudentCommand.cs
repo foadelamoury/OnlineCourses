@@ -4,7 +4,7 @@ using MediatR;
 
 namespace Application.Features.Student.Commands.Create
 {
-    public class CreateStudentCommand : StudentDTO, IRequest<int>
+    public class CreateStudentCommand : StudentDTO, IRequest<long>
   {
     public CreateStudentCommand()
     { }
@@ -16,7 +16,7 @@ namespace Application.Features.Student.Commands.Create
       Id = dto.Id;
 
     }
-    public class Handler : IRequestHandler<CreateStudentCommand, int>
+    public class Handler : IRequestHandler<CreateStudentCommand, long>
     {
       private readonly IApplicationDbContext _context;
       public Handler(IApplicationDbContext context)
@@ -24,7 +24,7 @@ namespace Application.Features.Student.Commands.Create
 
         _context = context;
       }
-      public async Task<int> Handle(CreateStudentCommand request, CancellationToken cancellationToken)
+      public async Task<long> Handle(CreateStudentCommand request, CancellationToken cancellationToken)
       {
         Domain.Entities.Country entity = new Domain.Entities.Country
         {

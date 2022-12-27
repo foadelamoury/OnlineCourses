@@ -7,7 +7,7 @@ namespace Application.Features.Country.Queries.GetById
 {
     public class GetCountryByIdQuery : IRequest<CountryDTO?>
     {
-        public int Id { get; set; }
+        public long Id { get; set; }
     }
     public class Handler : IRequestHandler<GetCountryByIdQuery, CountryDTO?>
     {

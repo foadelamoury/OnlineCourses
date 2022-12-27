@@ -4,7 +4,7 @@ using MediatR;
 
 namespace Application.Features.Country.Commands.Create
 {
-    public class CreateCountryCommand : CountryDTO, IRequest<int>
+    public class CreateCountryCommand : CountryDTO, IRequest<long>
     {
         public CreateCountryCommand()
         { }
@@ -17,7 +17,7 @@ namespace Application.Features.Country.Commands.Create
             Id = dto.Id;
 
         }
-        public class Handler : IRequestHandler<CreateCountryCommand, int>
+        public class Handler : IRequestHandler<CreateCountryCommand, long>
         {
             private readonly IApplicationDbContext _context;
             public Handler(IApplicationDbContext context)
@@ -25,7 +25,7 @@ namespace Application.Features.Country.Commands.Create
 
                 _context = context;
             }
-            public async Task<int> Handle(CreateCountryCommand request, CancellationToken cancellationToken)
+            public async Task<long> Handle(CreateCountryCommand request, CancellationToken cancellationToken)
             {
                 Domain.Entities.Country entity = new Domain.Entities.Country
                 {

@@ -44,7 +44,7 @@ public class StudentController : Controller
     #endregion
 
     #region Edit
-    public async Task<IActionResult> Edit(int id)
+    public async Task<IActionResult> Edit(long id)
     {
         StudentDTO studentDTO = await _mediator.Send(new GetStudentByIdQuery() { Id = id });
 

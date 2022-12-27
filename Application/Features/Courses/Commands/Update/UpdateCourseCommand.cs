@@ -8,7 +8,7 @@ using System.Xml.Linq;
 
 namespace Application.Features.Courses.Commands.Update
 {
-    public class UpdateCourseCommand : CourseDTO, IRequest<int>
+    public class UpdateCourseCommand : CourseDTO, IRequest<long>
     {
         public UpdateCourseCommand()
         { }
@@ -26,7 +26,7 @@ namespace Application.Features.Courses.Commands.Update
 
 
     }
-        public class Handler : IRequestHandler<UpdateCourseCommand, int>
+        public class Handler : IRequestHandler<UpdateCourseCommand, long>
         {
             private readonly IApplicationDbContext _context;
             public Handler(IApplicationDbContext context)
@@ -34,7 +34,7 @@ namespace Application.Features.Courses.Commands.Update
 
                 _context = context;
             }
-            public async Task<int> Handle(UpdateCourseCommand request, CancellationToken cancellationToken)
+            public async Task<long> Handle(UpdateCourseCommand request, CancellationToken cancellationToken)
             {
                 Domain.Entities.Course entity = new Domain.Entities.Course
                 {
@@ -55,7 +55,7 @@ namespace Application.Features.Courses.Commands.Update
 
 
 
-                return (int)entity.Id;
+                return (long)entity.Id;
             }
 
         }

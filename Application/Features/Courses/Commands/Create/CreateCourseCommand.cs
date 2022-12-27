@@ -5,7 +5,7 @@ using MediatR;
 
 namespace Application.Features.Courses.Commands.Create
 {
-    public class CreateCourseCommand : CourseDTO, IRequest<int>
+    public class CreateCourseCommand : CourseDTO, IRequest<long>
     {
         public CreateCourseCommand()
         { }
@@ -20,7 +20,7 @@ namespace Application.Features.Courses.Commands.Create
             CourseCategoryId = dto.CourseCategoryId;
 
         }
-        public class Handler : IRequestHandler<CreateCourseCommand, int>
+        public class Handler : IRequestHandler<CreateCourseCommand, long>
         {
             private readonly IApplicationDbContext _context;
             public Handler(IApplicationDbContext context)
@@ -28,7 +28,7 @@ namespace Application.Features.Courses.Commands.Create
 
                 _context = context;
             }
-            public async Task<int> Handle(CreateCourseCommand request, CancellationToken cancellationToken)
+            public async Task<long> Handle(CreateCourseCommand request, CancellationToken cancellationToken)
             {
                 Domain.Entities.Course entity = new Domain.Entities.Course
                 {

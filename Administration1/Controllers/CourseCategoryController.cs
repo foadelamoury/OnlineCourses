@@ -44,7 +44,7 @@ public class CourseCategoryCategoryController : Controller
     #endregion
 
     #region Edit
-    public async Task<IActionResult> Edit(int id)
+    public async Task<IActionResult> Edit(long id)
     {
         CourseCategoryDTO courseCategoryDTO = await _mediator.Send(new GetCourseCategoryByIdQuery() { Id = id });
 

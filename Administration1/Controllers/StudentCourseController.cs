@@ -42,7 +42,7 @@ public class StudentCourseController : Controller
     #endregion
 
     #region Edit
-    public async Task<IActionResult> Edit(int id)
+    public async Task<IActionResult> Edit(long id)
     {
 #pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
         StudentCourseDTO countryDTO = await _mediator.Send(new GetStudentCourseByIdQuery() { Id = id });

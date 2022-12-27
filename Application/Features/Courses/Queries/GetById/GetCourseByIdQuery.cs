@@ -7,7 +7,7 @@ namespace Application.Features.Courses.Queries.GetById
 {
     public class GetCourseByIdQuery : IRequest<CourseDTO>
   {
-    public int Id { get; set; }
+    public long Id { get; set; }
   }
   public class Handler : IRequestHandler<GetCourseByIdQuery, CourseDTO>
   {

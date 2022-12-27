@@ -4,7 +4,7 @@ using MediatR;
 
 namespace Application.Features.Country.Commands.Update
 {
-    public class UpdateCountryCommand : CountryDTO, IRequest<int>
+    public class UpdateCountryCommand : CountryDTO, IRequest<long>
     {
         public UpdateCountryCommand()
         { }
@@ -19,7 +19,7 @@ namespace Application.Features.Country.Commands.Update
 
 
         }
-        public class Handler : IRequestHandler<UpdateCountryCommand, int>
+        public class Handler : IRequestHandler<UpdateCountryCommand, long>
         {
             private readonly IApplicationDbContext _context;
             public Handler(IApplicationDbContext context)
@@ -27,7 +27,7 @@ namespace Application.Features.Country.Commands.Update
 
                 _context = context;
             }
-            public async Task<int> Handle(UpdateCountryCommand request, CancellationToken cancellationToken)
+            public async Task<long> Handle(UpdateCountryCommand request, CancellationToken cancellationToken)
             {
                 Domain.Entities.Country entity = new Domain.Entities.Country
                 {

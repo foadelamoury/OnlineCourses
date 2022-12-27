@@ -4,7 +4,7 @@ using MediatR;
 
 namespace Application.Features.CoursesCategory.Commands.Update
 {
-    public class UpdateCourseCategoryCommand : CourseCategoryDTO, IRequest<int>
+    public class UpdateCourseCategoryCommand : CourseCategoryDTO, IRequest<long>
   {
     public UpdateCourseCategoryCommand()
     { }
@@ -20,7 +20,7 @@ namespace Application.Features.CoursesCategory.Commands.Update
 
 
     }
-    public class Handler : IRequestHandler<UpdateCourseCategoryCommand, int>
+    public class Handler : IRequestHandler<UpdateCourseCategoryCommand, long>
     {
       private readonly IApplicationDbContext _context;
       public Handler(IApplicationDbContext context)
@@ -28,7 +28,7 @@ namespace Application.Features.CoursesCategory.Commands.Update
 
         _context = context;
       }
-      public async Task<int> Handle(UpdateCourseCategoryCommand request, CancellationToken cancellationToken)
+      public async Task<long> Handle(UpdateCourseCategoryCommand request, CancellationToken cancellationToken)
       {
         Domain.Entities.Course entity = new Domain.Entities.Course
         {

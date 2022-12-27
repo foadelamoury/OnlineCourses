@@ -7,7 +7,7 @@ namespace Application.Features.CoursesCategory.Queries.GetById
 {
     public class GetCourseCategoryByIdQuery : IRequest<CourseCategoryDTO>
     {
-        public int Id { get; set; }
+        public long Id { get; set; }
     }
     public class Handler : IRequestHandler<GetCourseCategoryByIdQuery, CourseCategoryDTO>
     {

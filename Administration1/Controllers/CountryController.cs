@@ -45,7 +45,7 @@ public class CountryController : Controller
     #endregion
 
     #region Edit
-    public async Task<IActionResult> Edit(int id)
+    public async Task<IActionResult> Edit(long id)
     {
         CountryDTO countryDTO = await _mediator.Send(new GetCountryByIdQuery() { Id = id });
 

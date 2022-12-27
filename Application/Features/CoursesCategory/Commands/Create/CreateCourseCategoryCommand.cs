@@ -8,7 +8,7 @@ using System.Xml.Linq;
 
 namespace Application.Features.CoursesCategory.Commands.Create
 {
-    public class CreateCourseCategoryCommand : CourseCategoryDTO, IRequest<int>
+    public class CreateCourseCategoryCommand : CourseCategoryDTO, IRequest<long>
     {
         public CreateCourseCategoryCommand()
         { }
@@ -21,7 +21,7 @@ namespace Application.Features.CoursesCategory.Commands.Create
 
 
         }
-        public class Handler : IRequestHandler<CreateCourseCategoryCommand, int>
+        public class Handler : IRequestHandler<CreateCourseCategoryCommand, long>
         {
             private readonly IApplicationDbContext _context;
             public Handler(IApplicationDbContext context)
@@ -29,7 +29,7 @@ namespace Application.Features.CoursesCategory.Commands.Create
 
                 _context = context;
             }
-            public async Task<int> Handle(CreateCourseCategoryCommand request, CancellationToken cancellationToken)
+            public async Task<long> Handle(CreateCourseCategoryCommand request, CancellationToken cancellationToken)
             {
                 Domain.Entities.CourseCategory entity = new Domain.Entities.CourseCategory
                 {

@@ -477,6 +477,8 @@ D:\Github DotNet Projects\EvaluationTask\Administration1\obj\Debug\net6.0\Admini
 D:\Github DotNet Projects\EvaluationTask\Administration1\obj\Debug\net6.0\Administration1.csproj.CoreCompileInputs.cache
 D:\Github DotNet Projects\EvaluationTask\Administration1\obj\Debug\net6.0\Administration1.MvcApplicationPartsAssemblyInfo.cs
 D:\Github DotNet Projects\EvaluationTask\Administration1\obj\Debug\net6.0\Administration1.MvcApplicationPartsAssemblyInfo.cache
+D:\Github DotNet Projects\EvaluationTask\Administration1\obj\Debug\net6.0\Administration1.RazorAssemblyInfo.cache
+D:\Github DotNet Projects\EvaluationTask\Administration1\obj\Debug\net6.0\Administration1.RazorAssemblyInfo.cs
 D:\Github DotNet Projects\EvaluationTask\Administration1\obj\Debug\net6.0\staticwebassets\msbuild.Administration1.Microsoft.AspNetCore.StaticWebAssets.props
 D:\Github DotNet Projects\EvaluationTask\Administration1\obj\Debug\net6.0\staticwebassets\msbuild.build.Administration1.props
 D:\Github DotNet Projects\EvaluationTask\Administration1\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Administration1.props
@@ -484,12 +486,12 @@ D:\Github DotNet Projects\EvaluationTask\Administration1\obj\Debug\net6.0\static
 D:\Github DotNet Projects\EvaluationTask\Administration1\obj\Debug\net6.0\staticwebassets.pack.json
 D:\Github DotNet Projects\EvaluationTask\Administration1\obj\Debug\net6.0\staticwebassets.build.json
 D:\Github DotNet Projects\EvaluationTask\Administration1\obj\Debug\net6.0\staticwebassets.development.json
+D:\Github DotNet Projects\EvaluationTask\Administration1\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 D:\Github DotNet Projects\EvaluationTask\Administration1\obj\Debug\net6.0\scopedcss\bundle\Administration1.styles.css
+D:\Github DotNet Projects\EvaluationTask\Administration1\obj\Debug\net6.0\scopedcss\projectbundle\Administration1.bundle.scp.css
 D:\Github DotNet Projects\EvaluationTask\Administration1\obj\Debug\net6.0\Administration1.csproj.CopyComplete
 D:\Github DotNet Projects\EvaluationTask\Administration1\obj\Debug\net6.0\Administration1.dll
 D:\Github DotNet Projects\EvaluationTask\Administration1\obj\Debug\net6.0\refint\Administration1.dll
 D:\Github DotNet Projects\EvaluationTask\Administration1\obj\Debug\net6.0\Administration1.pdb
 D:\Github DotNet Projects\EvaluationTask\Administration1\obj\Debug\net6.0\Administration1.genruntimeconfig.cache
 D:\Github DotNet Projects\EvaluationTask\Administration1\obj\Debug\net6.0\ref\Administration1.dll
-D:\Github DotNet Projects\EvaluationTask\Administration1\obj\Debug\net6.0\Administration1.RazorAssemblyInfo.cache
-D:\Github DotNet Projects\EvaluationTask\Administration1\obj\Debug\net6.0\Administration1.RazorAssemblyInfo.cs
