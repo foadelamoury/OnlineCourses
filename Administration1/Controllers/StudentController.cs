@@ -1,3 +1,4 @@
+using Application.Features.Country.Queries.GetAll;
 using Application.Features.Student.Commands.Create;
 using Application.Features.Student.Commands.Delete;
 using Application.Features.Student.Commands.Update;
@@ -46,8 +47,7 @@ public class StudentController : Controller
     #region Edit
     public async Task<IActionResult> Edit(long id)
     {
-        ViewBag.Countries = 1;
-        ViewBag.Cities = 1;
+        ViewBag.Countries = await _mediator.Send(new GetAllCountryQuery()); 
 
         StudentDTO studentDTO = await _mediator.Send(new GetStudentByIdQuery() { Id = id });
 
