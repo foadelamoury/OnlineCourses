@@ -63,7 +63,7 @@ public class CountryController : Controller
             var command = new UpdateCountryCommand(model);
             await _mediator.Send(command);
 
-            return View("form", command.Id);
+            return View("form", command);
 
 
 
@@ -77,7 +77,6 @@ public class CountryController : Controller
 
 
         }
-        return RedirectToAction("Index");
 
     }
 
