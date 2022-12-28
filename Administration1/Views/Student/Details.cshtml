@@ -6,7 +6,12 @@
 
 <link rel="stylesheet" media="screen, print" href="~/css/page-invoice.css">
 
+
 <div>
+		<input type="hidden" asp-for="PhotoName" />
+	<input type="hidden" asp-for="photoFile" />
+
+
 @if (Model.NameA != null)
 {
 						<div class="col-sm-2 col-4 my-2">اسم</div>
@@ -52,6 +57,42 @@
 	<option value=""><button>New Thing</button></option>
 </select>
 
+
+	<form asp-action="Form" method="post" enctype="multipart/form-data">
+
+
+
+
+		<input type="hidden" asp-for="Id" />
+		<div class="form-group col-md-6">
+			الاسم
+			<input asp-for="NameA" />
+			<span asp-validation-for="NameA"></span>
+		</div>
+
+		<div class="form-group col-md-6">
+			Name
+			<input asp-for="NameE" />
+			<span asp-validation-for="NameE"></span>
+		</div>
+
+		<div class="form-group col-md-6">
+			CreditHours
+			<input asp-for="CreditHours" />
+			<span asp-validation-for="CreditHours"></span>
+		</div>
+
+
+		<div class="form-group col-md-6">
+			CourseCategoryId
+			<input asp-for="CourseCategoryId" />
+			<span asp-validation-for="CourseCategoryId"></span>
+		</div>
+
+		<input type="submit" class="btn btn-primary btn-main-bg m-1" value="حفظ" />
+		<a href="@Url.ActionLink("index")" aria-expanded="false" class=" btn btn-primary bg-primary-700 text-white btn-icon rounded-circle mx-1 waves-effect waves-themed" style="font-size:large"><i class="fa fa-edit " data-toggle="tooltip" data-placement="top">الرجوع</i></a>
+
+	</form>
 
 
 <script>

@@ -46,7 +46,9 @@ ViewData["Title"] = TableName;
                 </td>
 
                 <td>
-                    @Html.DisplayFor(modelItem => item.NameA)
+                    <a href="@Url.ActionLink("Details", "Students", new { Id = item.Id })" aria-expanded="false">
+                        @item.NameA
+                    </a>
                 </td>
                  <td>
                     @Html.DisplayFor(modelItem => item.SortIndex)
