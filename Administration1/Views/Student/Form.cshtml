@@ -66,6 +66,7 @@
 
 <div>
     <select asp-for="CountryId"
+
             asp-items="@(new SelectList(Model.CountryId, nameof(Country.Id), nameof(Employee.FullName)))">
         <option>Please select one</option>
     </select>
