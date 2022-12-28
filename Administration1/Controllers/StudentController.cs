@@ -48,8 +48,8 @@ public class StudentController : Controller
     #region Edit
     public async Task<IActionResult> Edit(long id)
     {
-        ViewBag.Countries = new SelectList(await _mediator.Send(new GetAllCountryQuery() { parentId=0}));
-
+        ViewBag.Countries = new SelectList(await _mediator.Send(new GetAllCountryQuery() { parentId=0 }));
+        
         ViewBag.Cities = new SelectList(await _mediator.Send(new GetAllCountryQuery() { parentId = 1 }));
 
 

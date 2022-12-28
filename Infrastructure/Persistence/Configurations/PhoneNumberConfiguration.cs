@@ -24,7 +24,7 @@ namespace Infrastructure.Persistence.Configurations
             builder.Property(e => e.number)
                           .IsRequired();
 
-            builder.Property(e => e.StudentId).IsRequired();
+            builder.Property(e => e.StudentId);
         }
     }
 }

@@ -43,7 +43,12 @@ builder.Services.AddControllersWithViews();
 //builder.Services.AddValidatorsFromAssemblyContaining<Program>();
 
 
-builder.Services.AddScoped<IApplicationDbContext>(provider => provider.GetService<ApplicationDbContext>());
+builder.Services.AddScoped<IApplicationDbContext>(provider =>
+{
+#pragma warning disable CS8603 // Possible null reference return.
+    return provider.GetService<ApplicationDbContext>();
+#pragma warning restore CS8603 // Possible null reference return.
+});
 
 builder.Services
   .AddDbContext<ApplicationDbContext>(options =>

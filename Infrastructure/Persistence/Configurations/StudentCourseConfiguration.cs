@@ -11,11 +11,10 @@ public class StudentCourseConfiguration : IEntityTypeConfiguration<StudentCourse
 
 
         builder.Property(e => e.CourseId)
-                  .IsRequired();
+                  ;
 
 
-        builder.Property(e => e.StudentId)
-                  .IsRequired();
+        builder.Property(e => e.StudentId);
 
         builder.Property(e => e.CreateDate)
                 .HasColumnType("datetime")

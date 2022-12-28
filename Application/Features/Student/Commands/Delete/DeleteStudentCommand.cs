@@ -31,8 +31,8 @@ namespace Application.Features.Student.Commands.Delete
             }
             catch (Exception)
             {
-                throw;
                 return 0;
+                throw;
             }
         }
     }

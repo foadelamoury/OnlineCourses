@@ -11,7 +11,9 @@ namespace Infrastructure.Services
         public bool DeleteFile()
         {
             bool ret = true;
+#pragma warning disable CS0219 // Variable is assigned but its value is never used
             string? filepath = "";
+#pragma warning restore CS0219 // Variable is assigned but its value is never used
             if (!string.IsNullOrEmpty(Objectname) && !string.IsNullOrEmpty(Property))
             {
 

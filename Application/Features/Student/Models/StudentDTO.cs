@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 
 namespace Application.Features.Student.Models
 {
@@ -9,7 +10,6 @@ namespace Application.Features.Student.Models
 
         public int CountryId { get; set; }
 
-        public int CityId { get; set; }
 
         public string? PhotoName { get; set; }
 

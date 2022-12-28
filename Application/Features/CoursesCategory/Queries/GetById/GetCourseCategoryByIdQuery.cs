@@ -28,7 +28,9 @@ namespace Application.Features.CoursesCategory.Queries.GetById
                 Active = x.Active
             }).FirstOrDefaultAsync(cancellationToken: cancellationToken);
 
+#pragma warning disable CS8603 // Possible null reference return.
             return courseCategory;
+#pragma warning restore CS8603 // Possible null reference return.
         }
     }
 }
