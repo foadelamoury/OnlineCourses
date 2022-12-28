@@ -42,9 +42,9 @@ public class StudentController : Controller
     #region Create
     public ActionResult Create()
     {
-        ViewBag.Countries = await _mediator.Send(new GetAllCountryQuery() { parentId = 0 });
+        ViewBag.Countries =  _mediator.Send(new GetAllCountryQuery() { parentId = 0 });
 
-        ViewBag.Cities = await _mediator.Send(new GetAllCountryQuery() { parentId = 1 });
+        ViewBag.Cities =  _mediator.Send(new GetAllCountryQuery() { parentId = 1 });
         return PartialView("Form", new StudentDTO { Active = true, CreateDate = DateTime.Now });
     }
     #endregion
