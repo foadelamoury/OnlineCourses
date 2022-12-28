@@ -6,6 +6,7 @@ using Application.Features.Student.Commands.Update;
 using Application.Features.Student.Models;
 using Application.Features.Student.Queries.GetAll;
 using Application.Features.Student.Queries.GetById;
+using Application.Features.StudentCourseTable.Commands.Create;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -27,10 +28,19 @@ public class StudentController : Controller
     }
 
 
-    #endregion
+	#endregion
 
-    #region Index
-    public async Task<IActionResult> Index()
+	#region adding Course to Student
+	public async Task<IActionResult> AddCourse(int studentId, int courseId)
+	{
+	            long Id = await _mediator.Send(new CreateStudentCourseCommand() { StudentId=studentId,CourseId=courseId});
+		return RedirectToAction("Index");
+	}
+
+
+	#endregion
+	#region Index
+	public async Task<IActionResult> Index()
     {
         IEnumerable<StudentDTO> Students = await _mediator.Send(new GetAllStudentsQuery());
         return View(Students);
@@ -45,7 +55,7 @@ public class StudentController : Controller
 
         ViewBag.Countries = new SelectList(await _mediator.Send(new GetAllCountryQuery() { parentId = 0 }), "Id", "NameA");
 
-        //ViewBag.Cities = new SelectList(await _mediator.Send(new GetAllCountryQuery() { parentId = 1 }), "Id", "NameA");
+        ViewBag.Cities = new SelectList(await _mediator.Send(new GetAllCountryQuery() { parentId = 1 }), "Id", "NameA");
 
 
         return PartialView("Form", new StudentDTO { Active = true, CreateDate = DateTime.Now });
@@ -85,7 +95,7 @@ public class StudentController : Controller
         #endregion
         ViewBag.Countries = new SelectList(await _mediator.Send(new GetAllCountryQuery() { parentId = 0 }), "Id", "NameA");
 
-        //ViewBag.Cities = new SelectList(await _mediator.Send(new GetAllCountryQuery() { parentId = 1 }), "Id", "NameA");
+        ViewBag.Cities = new SelectList(await _mediator.Send(new GetAllCountryQuery() { parentId = 1 }), "Id", "NameA");
 
 
         StudentDTO studentDTO = await _mediator.Send(new GetStudentByIdQuery() { Id = id });
@@ -130,9 +140,9 @@ public class StudentController : Controller
 
         #endregion
 
-        //ViewBag.Countries = new SelectList(await _mediator.Send(new GetAllCountryQuery() { parentId = 0}), "Id", "NameA");
+        ViewBag.Countries = new SelectList(await _mediator.Send(new GetAllCountryQuery() { parentId = 0 }), "Id", "NameA");
 
-        //ViewBag.Cities = new SelectList(await _mediator.Send(new GetAllCountryQuery() {parentId = 1}), "Id", "NameA");
+        ViewBag.Cities = new SelectList(await _mediator.Send(new GetAllCountryQuery() { parentId = 1 }), "Id", "NameA");
 
         if (model.Id > 0)
         {

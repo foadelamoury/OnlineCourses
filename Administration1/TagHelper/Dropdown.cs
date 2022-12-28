@@ -1,10 +1,11 @@
 ﻿using Application;
+using Application.Common.Resources;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 using Microsoft.Extensions.Localization;
 
-namespace Administration1
+namespace WEb.TagHelpers
 {
   [HtmlTargetElement("Dropdown")]
   public class Dropdown : TagHelper
@@ -31,7 +32,7 @@ namespace Administration1
     {
       string ReqSpan = !string.IsNullOrEmpty(Required) && Required.ToLower() == "required" ? "<span style='color:red'> * </span>" : "";
       string DisabledAttribute = !string.IsNullOrEmpty(Disabled) && Disabled.ToLower() == "disabled" ? "disabled" : "";
-      string Options = DisableEmptySelection ? "" : $"<option value=''>{"اختر"}</option>";
+      string Options = DisableEmptySelection ? "" : $"<option value=''>{"Select"}</option>";
       string option = "";
       string DataValueRequired = AspFor != null ? $"the {AspFor.Name} field is required." : "";
       string iname = AspFor != null ? AspFor?.Name : name;
@@ -52,7 +53,9 @@ namespace Administration1
                                       <select {DisabledAttribute?.ToLower()} {Required?.ToLower()} class='select2 custom-select form-control' data-val='true'  data-val-required='{DataValueRequired}' id='{id}' name='{ID}'>
                                        {Options}
                                       </select>
-                                        
+                                        <div class='invalid-feedback'>
+                                          {ErrorMessage}
+                                        </div>
                                       </div>");
       if (!string.IsNullOrEmpty(col))
         output.Attributes.Add("class", col);

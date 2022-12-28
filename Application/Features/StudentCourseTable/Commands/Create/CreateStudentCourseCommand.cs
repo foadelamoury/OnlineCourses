@@ -6,7 +6,8 @@ namespace Application.Features.StudentCourseTable.Commands.Create
 {
     public class CreateStudentCourseCommand : StudentCourseDTO, IRequest<long>
     {
-        public CreateStudentCourseCommand()
+        
+		public CreateStudentCourseCommand()
         { }
 
 

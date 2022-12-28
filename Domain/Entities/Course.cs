@@ -2,7 +2,6 @@ namespace Domain.Entities;
 
 
 public class Course : ObjectBase
-
 {
 
     public string? NameA { get; set; }
@@ -13,8 +12,5 @@ public class Course : ObjectBase
     public int CourseCategoryId;
 
     public CourseCategory? CourseCategory;
-
-
-
 
 }

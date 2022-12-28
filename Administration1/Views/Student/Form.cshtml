@@ -55,7 +55,9 @@
 
 
         <div class="form-group col-md-6">
-        <Dropdown asp-for="@Model.CountryId" col="col-md-12" required="Required" error-message="PleaseEnter Country" asp-items="@ViewBag.Countries" id="CountryId" label-content="Country"></Dropdown>
+        <Dropdown asp-for="@Model.CountryId" col="col-md-12" required="Required" 
+        error-message="PleaseEnter Country" asp-items="@ViewBag.Countries" 
+        id="CountryId" label-content="Country"></Dropdown>
             </div>
 
 
@@ -63,7 +65,10 @@
 
     <input type="submit" class="btn btn-primary btn-main-bg m-1" value="حفظ" />
 
-    <a href="@Url.ActionLink("index")" aria-expanded="false" class=" btn btn-primary bg-primary-700 text-white btn-icon rounded-circle mx-1 waves-effect waves-themed" style="font-size:large"><i class="fa fa-edit " data-toggle="tooltip" data-placement="top">الرجوع</i></a>
+    <a href="@Url.ActionLink("index")" aria-expanded="false" 
+    class="btn btn-primary bg-primary-700 text-white btn-icon rounded-circle mx-1 waves-effect waves-themed" 
+    style="font-size:large">
+    <i class="fa fa-edit " data-toggle="tooltip" data-placement="top">الرجوع</i></a>
 
 	
 </form>
