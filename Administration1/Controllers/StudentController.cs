@@ -1,3 +1,4 @@
+using Application.Features.Country.Models;
 using Application.Features.Country.Queries.GetAll;
 using Application.Features.Student.Commands.Create;
 using Application.Features.Student.Commands.Delete;
@@ -41,6 +42,9 @@ public class StudentController : Controller
     #region Create
     public ActionResult Create()
     {
+        ViewBag.Countries = await _mediator.Send(new GetAllCountryQuery() { parentId = 0 });
+
+        ViewBag.Cities = await _mediator.Send(new GetAllCountryQuery() { parentId = 1 });
         return PartialView("Form", new StudentDTO { Active = true, CreateDate = DateTime.Now });
     }
     #endregion
@@ -48,9 +52,9 @@ public class StudentController : Controller
     #region Edit
     public async Task<IActionResult> Edit(long id)
     {
-        ViewBag.Countries = new SelectList(await _mediator.Send(new GetAllCountryQuery() { parentId=0 }));
-        
-        ViewBag.Cities = new SelectList(await _mediator.Send(new GetAllCountryQuery() { parentId = 1 }));
+        ViewBag.Countries = await _mediator.Send(new GetAllCountryQuery() { parentId = 0 });
+
+        ViewBag.Cities = await _mediator.Send(new GetAllCountryQuery() { parentId = 1 });
 
 
         StudentDTO studentDTO = await _mediator.Send(new GetStudentByIdQuery() { Id = id });
@@ -68,6 +72,9 @@ public class StudentController : Controller
     {
         if (model.Id > 0)
         {
+            ViewBag.Countries = await _mediator.Send(new GetAllCountryQuery() { parentId = 0 });
+
+            ViewBag.Cities = await _mediator.Send(new GetAllCountryQuery() { parentId = 1 });
             var command = new UpdateStudentCommand(model);
             await _mediator.Send(command);
 
@@ -79,6 +86,9 @@ public class StudentController : Controller
 
         else
         {
+            ViewBag.Countries = await _mediator.Send(new GetAllCountryQuery() { parentId = 0 });
+
+            ViewBag.Cities = await _mediator.Send(new GetAllCountryQuery() { parentId = 1 });
             var command = new CreateStudentCommand(model);
             await _mediator.Send(command);
             return RedirectToAction("Index");

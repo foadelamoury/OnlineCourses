@@ -55,10 +55,13 @@
 </form>
 
 <div>
-    <select asp-for="CountryId"
+    <select>
+        
+        <option selected="selected"> اختر بلد</option>
+        @for (int i = 0; i < ViewBag.Countries.length;i++){
+            <option>ViewBag.Countries[i]</option>
 
-            asp-items="@ViewBag.Countries">
-        <option> اختر بلد</option>
+        }
     </select>
      
 
@@ -66,8 +69,8 @@
 
 <div>
   
-    <select asp-for="CountryId"
-            asp-items="@ViewBag.Cities">
+    <select>
+        @if(Model.CountryId==0)   
         <option>اختر المدينه</option>
     </select>
 
