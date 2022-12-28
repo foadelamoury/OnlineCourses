@@ -1,12 +1,13 @@
+using Application.Features.Country.Queries.GetAll;
 using Application.Features.Courses.Commands.Create;
 using Application.Features.Courses.Commands.Update;
 using Application.Features.Courses.Models;
 using Application.Features.Courses.Queries.GetAll;
 using Application.Features.Courses.Queries.GetById;
+using Application.Features.CoursesCategory.Queries.GetAll;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-
-
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Administration1.Controllers;
 
@@ -38,8 +39,10 @@ public class CourseController : Controller
     #endregion
 
     #region Create
-    public ActionResult Create()
+    public async Task<ActionResult> Create()
     {
+        ViewBag.CourseCategory = new SelectList(await _mediator.Send(new GetAllCourseCategoriesQuery()), "Id", "NameA");
+
         return PartialView("Form", new CourseDTO { Active = true, CreateDate = DateTime.Now });
     }
     #endregion
@@ -47,6 +50,8 @@ public class CourseController : Controller
     #region Edit
     public async Task<IActionResult> Edit(long id)
     {
+        ViewBag.CourseCategory = new SelectList(await _mediator.Send(new GetAllCourseCategoriesQuery()), "Id", "NameA");
+
         CourseDTO courseDTO = await _mediator.Send(new GetCourseByIdQuery() { Id = id });
 
 
@@ -58,6 +63,8 @@ public class CourseController : Controller
     [HttpPost]
     public async Task<IActionResult> Form(CourseDTO model)
     {
+        ViewBag.CourseCategory = new SelectList(await _mediator.Send(new GetAllCourseCategoriesQuery()), "Id", "NameA");
+
         if (model.Id > 0)
         {
             var command = new UpdateCourseCommand(model);

@@ -1,0 +1,36 @@
+﻿@using Application.Features.Country.Models
+@model CountryDTO
+@{
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" media="screen, print" href="~/css/page-invoice.css">
+
+<div>
+@if (Model.NameA != null)
+{
+						<div class="col-sm-2 col-4 my-2">اسم</div>
+		<div class="col-sm-4 col-8 my-2">@Model.NameA</div>
+}
+	@if (Model.NameE != null)
+	{
+							<div class="col-sm-2 col-4 my-2">Name</div>
+							<div class="col-sm-4 col-8 my-2">@Model.NameE</div>
+	}
+	@if (Model.Focus != null)
+{
+						<div class="col-sm-2 col-4 my-2">focus</div>
+						<div class="col-sm-4 col-8 my-2">@Model.Focus</div>
+}
+@if (Model.Active != null)
+{
+						<div class="col-sm-2 col-4 my-2">Active</div>
+						<div class="col-sm-4 col-8 my-2">@Model.Active</div>
+}
+@if (Model.SortIndex != null)
+{
+		<div class="col-sm-2 col-4 my-2">SortIndex</div>
+		<div class="col-sm-4 col-8 my-2">@Model.SortIndex</div>
+}
+
+</div>

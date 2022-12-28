@@ -48,7 +48,6 @@ public class StudentController : Controller
         ViewBag.Cities = new SelectList(await _mediator.Send(new GetAllCountryQuery() { parentId = 1 }), "Id", "NameA");
 
 
-        ViewBag.Cities =  _mediator.Send(new GetAllCountryQuery() { parentId = 1 });
         return PartialView("Form", new StudentDTO { Active = true, CreateDate = DateTime.Now });
     }
     #endregion
