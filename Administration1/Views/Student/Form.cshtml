@@ -50,8 +50,27 @@
     </div>
 
     <div>
-        @Html.DropDownList("CountryId", new SelectList(ViewBag.Countries, "CountryId", "NameA"))
+        @*@Html.DropDownList("CountryId", new SelectList(ViewBag.Countries, "CountryId", "NameA"))*@
+        <select>
+            <option selected="selected">اختر</option>
+            <option>مصر</option>
+            <option>ألمانيا</option>
+            <option>روسيا</option>
+
+        </select>>
     </div>
+
+    <div>
+        @*@Html.DropDownList("CountryId", new SelectList(ViewBag.Countries, "CountryId", "NameA"))*@
+        <select>
+            <option selected="selected">اختر</option>
+            <option>القاهرة</option>
+            <option>ألمانيا</option>
+            <option>روسيا</option>
+
+        </select>>
+    </div>
+
 
     <input type="submit" class="btn btn-primary btn-main-bg m-1" value="حفظ" />
 

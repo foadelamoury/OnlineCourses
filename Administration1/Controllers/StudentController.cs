@@ -54,11 +54,34 @@ public class StudentController : Controller
     #region Edit
     public async Task<IActionResult> Edit(long id)
     {
-        ViewBag.Countries = await _mediator.Send(new GetAllCountryQuery() { parentId = 0 });
+        #region Dynamic List
+        //var Countries = await _mediator.Send(new GetAllCountryQuery() { parentId = 0 });
 
-        ViewBag.Cities = await _mediator.Send(new GetAllCountryQuery() { parentId = 1 });
+        //List<SelectListItem> items = Countries.ConvertAll(a =>
+        //{
+        //    return new SelectListItem()
+        //    {
+        //        Text = a.ToString(),
+        //        Value = a.ToString(),
+        //        Selected = false
+        //    };
+        //});
+        //ViewBag.Countries = items;
 
+        //var Cities = await _mediator.Send(new GetAllCountryQuery() { parentId = 1 });
 
+        //List<SelectListItem> items2 = Cities.ConvertAll(a =>
+        //{
+        //    return new SelectListItem()
+        //    {
+        //        Text = a.ToString(),
+        //        Value = a.ToString(),
+        //        Selected = false
+        //    };
+        //});
+        //ViewBag.Cities = items2;
+
+        #endregion
         StudentDTO studentDTO = await _mediator.Send(new GetStudentByIdQuery() { Id = id });
 
         
@@ -72,32 +95,34 @@ public class StudentController : Controller
     [HttpPost]
     public async Task<IActionResult> Form(StudentDTO model)
     {
-        var Countries = await _mediator.Send(new GetAllCountryQuery() { parentId = 0 });
+        #region dynamic select System
+        //var Countries = await _mediator.Send(new GetAllCountryQuery() { parentId = 0 });
 
-        List<SelectListItem> items = Countries.ConvertAll(a =>
-        {
-            return new SelectListItem()
-            {
-                Text = a.ToString(),
-                Value = a.ToString(),
-                Selected = false
-            };
-        });
-        ViewBag.Countries = items;
+        //List<SelectListItem> items = Countries.ConvertAll(a =>
+        //{
+        //    return new SelectListItem()
+        //    {
+        //        Text = a.ToString(),
+        //        Value = a.ToString(),
+        //        Selected = false
+        //    };
+        //});
+        //ViewBag.Countries = items;
 
-        var Cities = await _mediator.Send(new GetAllCountryQuery() { parentId = 1 });
+        //var Cities = await _mediator.Send(new GetAllCountryQuery() { parentId = 1 });
 
-        List<SelectListItem> items2 = Cities.ConvertAll(a =>
-        {
-            return new SelectListItem()
-            {
-                Text = a.ToString(),
-                Value = a.ToString(),
-                Selected = false
-            };
-        });
-        ViewBag.Cities = items2;
+        //List<SelectListItem> items2 = Cities.ConvertAll(a =>
+        //{
+        //    return new SelectListItem()
+        //    {
+        //        Text = a.ToString(),
+        //        Value = a.ToString(),
+        //        Selected = false
+        //    };
+        //});
+        //ViewBag.Cities = items2;
 
+        #endregion 
 
         if (model.Id > 0)
         {

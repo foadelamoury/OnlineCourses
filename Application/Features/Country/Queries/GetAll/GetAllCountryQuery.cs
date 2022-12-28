@@ -25,7 +25,9 @@ namespace Application.Features.Country.Queries.GetAll
 #pragma warning disable CS8613 // Nullability of reference types in return type doesn't match implicitly implemented member.
             public async Task<List<CountryDTO>?> Handle(GetAllCountryQuery request, CancellationToken cancellationToken)
             {
-                var countries = await _context.Countries.Where(x => x.ParentId.Equals(request.parentId)).Select(x =>
+                if (request.parentId == 0 || request.parentId == 1)
+                {
+                    var countries = await _context.Countries.Where(x => x.ParentId.Equals(request.parentId)).Select(x =>
                   new CountryDTO
                   {
                       Id = x.Id,
@@ -37,7 +39,24 @@ namespace Application.Features.Country.Queries.GetAll
 
                   }
                     ).ToListAsync();
-                return countries;
+                    return countries;
+                }
+                else
+                {
+                    var countries = await _context.Countries.Where(x => x.ParentId.Equals(request.parentId)).Select(x =>
+                  new CountryDTO
+                  {
+                      Id = x.Id,
+                      NameA = x.NameA,
+                      NameE = x.NameE,
+                      SortIndex = x.SortIndex,
+                      Focus = x.Focus,
+                      Active = x.Active
+
+                  }
+                    ).ToListAsync();
+                    return countries;
+                }
             }
         }
        
