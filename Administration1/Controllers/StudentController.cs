@@ -45,7 +45,7 @@ public class StudentController : Controller
 
         ViewBag.Countries = new SelectList(await _mediator.Send(new GetAllCountryQuery() { parentId = 0 }), "Id", "NameA");
 
-        ViewBag.Cities = new SelectList(await _mediator.Send(new GetAllCountryQuery() { parentId = 1 }), "Id", "NameA");
+        //ViewBag.Cities = new SelectList(await _mediator.Send(new GetAllCountryQuery() { parentId = 1 }), "Id", "NameA");
 
 
         return PartialView("Form", new StudentDTO { Active = true, CreateDate = DateTime.Now });
@@ -85,7 +85,7 @@ public class StudentController : Controller
         #endregion
         ViewBag.Countries = new SelectList(await _mediator.Send(new GetAllCountryQuery() { parentId = 0 }), "Id", "NameA");
 
-        ViewBag.Cities = new SelectList(await _mediator.Send(new GetAllCountryQuery() { parentId = 1 }), "Id", "NameA");
+        //ViewBag.Cities = new SelectList(await _mediator.Send(new GetAllCountryQuery() { parentId = 1 }), "Id", "NameA");
 
 
         StudentDTO studentDTO = await _mediator.Send(new GetStudentByIdQuery() { Id = id });
@@ -130,9 +130,9 @@ public class StudentController : Controller
 
         #endregion
 
-        ViewBag.Countries = new SelectList(await _mediator.Send(new GetAllCountryQuery() { parentId = 0}), "Id", "NameA");
+        //ViewBag.Countries = new SelectList(await _mediator.Send(new GetAllCountryQuery() { parentId = 0}), "Id", "NameA");
 
-        ViewBag.Cities = new SelectList(await _mediator.Send(new GetAllCountryQuery() {parentId = 1}), "Id", "NameA");
+        //ViewBag.Cities = new SelectList(await _mediator.Send(new GetAllCountryQuery() {parentId = 1}), "Id", "NameA");
 
         if (model.Id > 0)
         {
