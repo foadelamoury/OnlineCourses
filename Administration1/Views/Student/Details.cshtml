@@ -1,5 +1,5 @@
-﻿@using Application.Features.Country.Models
-@model CountryDTO
+﻿@using Application.Features.Student.Models
+@model StudentDTO
 @{
 	Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -33,4 +33,39 @@
 		<div class="col-sm-4 col-8 my-2">@Model.SortIndex</div>
 }
 
+	<div class="row">
+		@if (Model.PhotoName != null)
+		{
+			<div class="col-sm-2 col-4 my-2">صورة الطالب</div>
+			<div class="col-sm-4 col-8 my-2">
+				<a href="javascript:var x=window.open('/Photos/Student/PhotoA/@Model.Id/@Model.PhotoName',target = '_blank', width = '100%', height = '100%');">
+					<img src="~/Photos/Student/Photo/@Model.Id/@Model.PhotoName" style="height:100% ;width: 30%;" />
+				</a>
+			</div>
+		}
+
 </div>
+<select name="things">
+	<option value="1">Thing One</option>
+	<option value="2">Thing Two</option>
+	<option value="3">Thing Three</option>
+	<option value=""><button>New Thing</button></option>
+</select>
+
+
+
+<script>
+
+	$('select[name=things]').change(function () {
+		if ($(this).val() == '') {
+			var newThing = prompt('Enter a name for the new thing:');
+			var newValue = $('option', this).length;
+			$('<option>')
+				.text(newThing)
+				.attr('value', newValue)
+				.insertBefore($('option[value=]', this));
+			$(this).val(newValue);
+		}
+	});
+
+</script>
