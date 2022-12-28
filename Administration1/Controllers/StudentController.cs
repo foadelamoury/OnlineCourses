@@ -40,10 +40,12 @@ public class StudentController : Controller
     #endregion
 
     #region Create
-    public ActionResult Create()
+    public async Task<ActionResult> Create()
     {
-        //ViewBag.Countries =  _mediator.Send(new GetAllCountryQuery() { parentId = 0 });
 
+        ViewBag.Countries = new SelectList(await _mediator.Send(new GetAllCountryQuery() { parentId = 0 }), "Id", "NameA");
+
+        ViewBag.Cities = new SelectList(await _mediator.Send(new GetAllCountryQuery() { parentId = 1 }), "Id", "NameA");
 
 
         ViewBag.Cities =  _mediator.Send(new GetAllCountryQuery() { parentId = 1 });
@@ -82,6 +84,11 @@ public class StudentController : Controller
         //ViewBag.Cities = items2;
 
         #endregion
+        ViewBag.Countries = new SelectList(await _mediator.Send(new GetAllCountryQuery() { parentId = 0 }), "Id", "NameA");
+
+        ViewBag.Cities = new SelectList(await _mediator.Send(new GetAllCountryQuery() { parentId = 1 }), "Id", "NameA");
+
+
         StudentDTO studentDTO = await _mediator.Send(new GetStudentByIdQuery() { Id = id });
 
         
@@ -122,7 +129,11 @@ public class StudentController : Controller
         //});
         //ViewBag.Cities = items2;
 
-        #endregion 
+        #endregion
+
+        ViewBag.Countries = new SelectList(await _mediator.Send(new GetAllCountryQuery() { parentId = 0}), "Id", "NameA");
+
+        ViewBag.Cities = new SelectList(await _mediator.Send(new GetAllCountryQuery() {parentId = 1}), "Id", "NameA");
 
         if (model.Id > 0)
         {

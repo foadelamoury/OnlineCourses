@@ -28,7 +28,7 @@ public class CountryController : Controller
     #region Index
     public async Task<IActionResult> Index()
     {
-        IEnumerable<CountryDTO?> Countries = await _mediator.Send(new GetAllCountryQuery());
+        IEnumerable<CountryDTO?> Countries = await _mediator.Send(new GetAllCountryQuery() { parentId=2});
         return View(Countries);
     }
 

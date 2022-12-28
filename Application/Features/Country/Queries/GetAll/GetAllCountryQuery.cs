@@ -43,7 +43,7 @@ namespace Application.Features.Country.Queries.GetAll
                 }
                 else
                 {
-                    var countries = await _context.Countries.Where(x => x.ParentId.Equals(request.parentId)).Select(x =>
+                    var countries = await _context.Countries.Select(x =>
                   new CountryDTO
                   {
                       Id = x.Id,

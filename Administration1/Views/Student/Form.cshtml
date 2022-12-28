@@ -3,8 +3,7 @@
 @{
     Layout = "_Layout";
     var TableName = "Student";
-    var Countries = ViewBag.Countries;
-    var Cities = ViewBag.Cities;
+ 
 
     if (Model.Id > 0)
     {
@@ -50,7 +49,20 @@
     </div>
 
     <div>
-        @*@Html.DropDownList("CountryId", new SelectList(ViewBag.Countries, "CountryId", "NameA"))*@
+
+        <Dropdown asp-for="@Model.CountryId" col="col-md-12" asp-items="@ViewBag.Countries" id="CountryId" label-content="Country"></Dropdown>
+
+
+    </div>
+
+
+    <div>
+
+        <Dropdown asp-for="@Model.CountryId" col="col-md-12" asp-items="@ViewBag.Cities" id="CountryId" label-content="Country"></Dropdown>
+
+
+    </div>
+  @*  <div>
         <select>
             <option selected="selected">اختر</option>
             <option>مصر</option>
@@ -61,7 +73,6 @@
     </div>
 
     <div>
-        @*@Html.DropDownList("CountryId", new SelectList(ViewBag.Countries, "CountryId", "NameA"))*@
         <select>
             <option selected="selected">اختر</option>
             <option>القاهرة</option>
@@ -70,7 +81,7 @@
 
         </select>>
     </div>
-
+*@
 
     <input type="submit" class="btn btn-primary btn-main-bg m-1" value="حفظ" />
 
