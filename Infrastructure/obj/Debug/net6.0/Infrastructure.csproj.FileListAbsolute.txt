@@ -55,3 +55,5 @@ D:\Github DotNet Projects\EvaluationTask\Infrastructure\obj\Debug\net6.0\refint\
 D:\Github DotNet Projects\EvaluationTask\Infrastructure\obj\Debug\net6.0\Infrastructure.pdb
 D:\Github DotNet Projects\EvaluationTask\Infrastructure\obj\Debug\net6.0\Infrastructure.genruntimeconfig.cache
 D:\Github DotNet Projects\EvaluationTask\Infrastructure\obj\Debug\net6.0\ref\Infrastructure.dll
+D:\Github DotNet Projects\EvaluationTask\Infrastructure\bin\Debug\net6.0\ar-EG\Application.resources.dll
+D:\Github DotNet Projects\EvaluationTask\Infrastructure\bin\Debug\net6.0\en-US\Application.resources.dll

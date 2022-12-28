@@ -52,9 +52,7 @@ namespace Administration1
                                       <select {DisabledAttribute?.ToLower()} {Required?.ToLower()} class='select2 custom-select form-control' data-val='true'  data-val-required='{DataValueRequired}' id='{id}' name='{ID}'>
                                        {Options}
                                       </select>
-                                        <div class='invalid-feedback'>
-                                          {ErrorMessage}
-                                        </div>
+                                        
                                       </div>");
       if (!string.IsNullOrEmpty(col))
         output.Attributes.Add("class", col);

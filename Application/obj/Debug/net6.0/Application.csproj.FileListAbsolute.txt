@@ -43,3 +43,12 @@ D:\Github DotNet Projects\EvaluationTask\Application\obj\Debug\net6.0\Applicatio
 D:\Github DotNet Projects\EvaluationTask\Application\obj\Debug\net6.0\refint\Application.dll
 D:\Github DotNet Projects\EvaluationTask\Application\obj\Debug\net6.0\Application.pdb
 D:\Github DotNet Projects\EvaluationTask\Application\obj\Debug\net6.0\ref\Application.dll
+D:\Github DotNet Projects\EvaluationTask\Application\bin\Debug\net6.0\ar-EG\Application.resources.dll
+D:\Github DotNet Projects\EvaluationTask\Application\bin\Debug\net6.0\en-US\Application.resources.dll
+D:\Github DotNet Projects\EvaluationTask\Application\obj\Debug\net6.0\Application.Common.Resources.CssClasses.ar-EG.resources
+D:\Github DotNet Projects\EvaluationTask\Application\obj\Debug\net6.0\Application.Common.Resources.CssClasses.en-US.resources
+D:\Github DotNet Projects\EvaluationTask\Application\obj\Debug\net6.0\Application.Common.Resources.SharedResource.ar-EG.resources
+D:\Github DotNet Projects\EvaluationTask\Application\obj\Debug\net6.0\Application.Common.Resources.SharedResource.en-US.resources
+D:\Github DotNet Projects\EvaluationTask\Application\obj\Debug\net6.0\Application.csproj.GenerateResource.cache
+D:\Github DotNet Projects\EvaluationTask\Application\obj\Debug\net6.0\ar-EG\Application.resources.dll
+D:\Github DotNet Projects\EvaluationTask\Application\obj\Debug\net6.0\en-US\Application.resources.dll

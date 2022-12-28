@@ -2667,6 +2667,14 @@
         },
         "runtime": {
           "Application.dll": {}
+        },
+        "resources": {
+          "ar-EG/Application.resources.dll": {
+            "locale": "ar-EG"
+          },
+          "en-US/Application.resources.dll": {
+            "locale": "en-US"
+          }
         }
       },
       "Domain/1.0.0": {

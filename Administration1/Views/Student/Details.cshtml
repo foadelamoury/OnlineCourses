@@ -7,7 +7,7 @@
 <link rel="stylesheet" media="screen, print" href="~/css/page-invoice.css">
 
 
-<div>
+<>
 		<input type="hidden" asp-for="PhotoName" />
 	<input type="hidden" asp-for="photoFile" />
 
@@ -50,15 +50,23 @@
 		}
 
 </div>
+<form asp-action="addCourse" method="post"  enctype="multipart/form-data">
 <div id="selectContainer">
   <select id="statement" name="statement">
     <option value="1">Maths</option>
     <option value="2">Science</option>
     <option value="3">Arabic</option>
+    <option value="4">English</option>
+
+
+
   </select>
 </div>
+	<input type="submit" class="btn btn-primary btn-main-bg m-1" value="حفظ" />
 
-<button onclick="cloneSelect()">Add another Select</button>
+	</form>
+
+<button onclick="cloneSelect()">Add another Course</button>
 
 
 <script>
@@ -72,5 +80,6 @@
 			clone.setAttribute("name", name)
 			document.getElementById("selectContainer").appendChild(clone)
 		}
+	
 
 </script>

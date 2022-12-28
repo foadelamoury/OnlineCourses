@@ -51,40 +51,15 @@
         <span asp-validation-for="PhotoName"></span>
     </div>
 
-    <div>
-
-        <Dropdown asp-for="@Model.CountryId" col="col-md-12" asp-items="@ViewBag.Countries" id="CountryId" label-content="Country"></Dropdown>
 
 
-    </div>
+
+        <div class="form-group col-md-6">
+        <Dropdown asp-for="@Model.CountryId" col="col-md-12" required="Required" error-message="PleaseEnter Country" asp-items="@ViewBag.Countries" id="CountryId" label-content="Country"></Dropdown>
+            </div>
 
 
-@*    <div>
 
-        <Dropdown asp-for="@Model.CountryId" col="col-md-12" asp-items="@ViewBag.Cities" id="CountryId" label-content="Country"></Dropdown>
-
-
-    </div>*@
-  @*  <div>
-        <select>
-            <option selected="selected">اختر</option>
-            <option>مصر</option>
-            <option>ألمانيا</option>
-            <option>روسيا</option>
-
-        </select>>
-    </div>
-
-    <div>
-        <select>
-            <option selected="selected">اختر</option>
-            <option>القاهرة</option>
-            <option>ألمانيا</option>
-            <option>روسيا</option>
-
-        </select>>
-    </div>
-*@
 
     <input type="submit" class="btn btn-primary btn-main-bg m-1" value="حفظ" />
 
@@ -92,6 +67,11 @@
 
 	
 </form>
+
+<script>
+    $("#CountryId").select2({ containerCssClass: "CountryId" });
+  
+</script>
 
 
 
