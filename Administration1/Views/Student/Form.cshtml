@@ -3,7 +3,9 @@
 @{
     Layout = "_Layout";
     var TableName = "Student";
-   
+    var Countries = ViewBag.Countries;
+    var Cities = ViewBag.Cities;
+
     if (Model.Id > 0)
     {
     ViewData["Title"] = "Edit " +TableName + ":" + @Model.NameA;
@@ -47,6 +49,10 @@
         <span asp-validation-for="PhotoName"></span>
     </div>
 
+    <div>
+        @Html.DropDownList("CountryId", new SelectList(ViewBag.Countries, "CountryId", "NameA"))
+    </div>
+
     <input type="submit" class="btn btn-primary btn-main-bg m-1" value="حفظ" />
 
     <a href="@Url.ActionLink("index")" aria-expanded="false" class=" btn btn-primary bg-primary-700 text-white btn-icon rounded-circle mx-1 waves-effect waves-themed" style="font-size:large"><i class="fa fa-edit " data-toggle="tooltip" data-placement="top">الرجوع</i></a>
@@ -54,24 +60,5 @@
 	
 </form>
 
-<div>
-    <select>
-        
-        <option selected="selected"> اختر بلد</option>
-        @for (int i = 0; i < ViewBag.Countries.length;i++){
-            <option>ViewBag.Countries[i]</option>
-
-        }
-    </select>
-     
-
-</div>
-
-<div>
-  
-    <select>
-        <option>اختر المدينه</option>
-    </select>
 
 
-</div>

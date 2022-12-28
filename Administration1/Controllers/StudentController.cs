@@ -42,7 +42,9 @@ public class StudentController : Controller
     #region Create
     public ActionResult Create()
     {
-        ViewBag.Countries =  _mediator.Send(new GetAllCountryQuery() { parentId = 0 });
+        //ViewBag.Countries =  _mediator.Send(new GetAllCountryQuery() { parentId = 0 });
+
+
 
         ViewBag.Cities =  _mediator.Send(new GetAllCountryQuery() { parentId = 1 });
         return PartialView("Form", new StudentDTO { Active = true, CreateDate = DateTime.Now });
@@ -70,11 +72,36 @@ public class StudentController : Controller
     [HttpPost]
     public async Task<IActionResult> Form(StudentDTO model)
     {
+        var Countries = await _mediator.Send(new GetAllCountryQuery() { parentId = 0 });
+
+        List<SelectListItem> items = Countries.ConvertAll(a =>
+        {
+            return new SelectListItem()
+            {
+                Text = a.ToString(),
+                Value = a.ToString(),
+                Selected = false
+            };
+        });
+        ViewBag.Countries = items;
+
+        var Cities = await _mediator.Send(new GetAllCountryQuery() { parentId = 1 });
+
+        List<SelectListItem> items2 = Cities.ConvertAll(a =>
+        {
+            return new SelectListItem()
+            {
+                Text = a.ToString(),
+                Value = a.ToString(),
+                Selected = false
+            };
+        });
+        ViewBag.Cities = items2;
+
+
         if (model.Id > 0)
         {
-            ViewBag.Countries = await _mediator.Send(new GetAllCountryQuery() { parentId = 0 });
-
-            ViewBag.Cities = await _mediator.Send(new GetAllCountryQuery() { parentId = 1 });
+            
             var command = new UpdateStudentCommand(model);
             await _mediator.Send(command);
 
@@ -86,9 +113,7 @@ public class StudentController : Controller
 
         else
         {
-            ViewBag.Countries = await _mediator.Send(new GetAllCountryQuery() { parentId = 0 });
-
-            ViewBag.Cities = await _mediator.Send(new GetAllCountryQuery() { parentId = 1 });
+         
             var command = new CreateStudentCommand(model);
             await _mediator.Send(command);
             return RedirectToAction("Index");
