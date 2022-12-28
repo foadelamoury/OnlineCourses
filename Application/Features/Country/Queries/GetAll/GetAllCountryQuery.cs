@@ -21,23 +21,45 @@ namespace Application.Features.Country.Queries.GetAll
             {
                 _context = context;
             }
-            public async Task<IEnumerable<CountryDTO>> Handle(GetAllCountryQuery request, CancellationToken cancellationToken)
-            {
-                var countries = await _context.Countries.Where(x=> x.CountryId.Equals(request.parentId)).Select(x=> 
-                new CountryDTO
+            public async Task<IEnumerable<CountryDTO>?> Handle(GetAllCountryQuery request, CancellationToken cancellationToken)
+            { 
+                
+                if (request.parentId == 0)
                 {
-                    Id = x.Id,
-                    NameA = x.NameA,
-                    NameE = x.NameE,
-                    SortIndex = x.SortIndex,
-                    Focus = x.Focus,
-                    Active = x.Active
+                    var countries = await _context.Countries.Where(x => x.CountryId.Equals(request.parentId)).Select(x =>
+                    new CountryDTO
+                    {
+                        Id = x.Id,
+                        NameA = x.NameA,
+                        NameE = x.NameE,
+                        SortIndex = x.SortIndex,
+                        Focus = x.Focus,
+                        Active = x.Active
+
+                    }
+                      ).ToListAsync();
+                    return countries;
 
                 }
-                  ).ToListAsync();
-         
+                else if (request.parentId == 1)
+                {
+                    var countries = await _context.Countries.Where(x => x.CountryId.Equals(request.parentId)).Select(x =>
+                    new CountryDTO
+                    {
+                        Id = x.Id,
+                        NameA = x.NameA,
+                        NameE = x.NameE,
+                        SortIndex = x.SortIndex,
+                        Focus = x.Focus,
+                        Active = x.Active
 
-                return countries;
+                    }
+                      ).ToListAsync();
+                    return countries;
+
+                }
+                return null;
+
             }
         }
     }

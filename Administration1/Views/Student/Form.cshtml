@@ -39,18 +39,8 @@
         <span asp-validation-for="NameE"></span>
     </div>
 
-    <div class="form-group col-md-6">
-        City
-        <input asp-for="CityId" />
-        <span asp-validation-for="CityId"></span>
-    </div>
-
-    <div class="form-group col-md-6">
-        Country
-        <input asp-for="CountryId" />
-        <span asp-validation-for="CountryId"></span>
-    </div>
-
+   
+   
     <div class="form-group col-md-6">
         Photo
         <input type="file" asp-for="PhotoName" />
@@ -68,8 +58,17 @@
     <select asp-for="CountryId"
 
             asp-items="@ViewBag.Countries">
-        <option>اختر</option>
+        <option> اختر بلد</option>
     </select>
      
+
+</div>
+
+<div>
+    <select asp-for="CountryId"
+            asp-items="@ViewBag.Cities">
+        <option>اختر المدينه</option>
+    </select>
+
 
 </div>
