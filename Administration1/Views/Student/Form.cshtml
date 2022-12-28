@@ -55,12 +55,24 @@
 
 
         <div class="form-group col-md-6">
-        <Dropdown asp-for="@Model.CountryId" col="col-md-12" required="Required" 
+       @* <Dropdown asp-for="@Model.CountryId" col="col-md-12" required="Required" 
         error-message="PleaseEnter Country" asp-items="@ViewBag.Countries" 
-        id="CountryId" label-content="Country"></Dropdown>
+        id="CountryId" label-content="Country"></Dropdown>*@
             </div>
 
+        <Select asp-items="@ViewBag.Countries">
 
+                <option selected="selected">اختر</option>
+                
+            </Select>
+
+
+
+    <Select asp-items="@ViewBag.Cities">
+
+        <option selected="selected">اختر</option>
+
+    </Select>
 
 
     <input type="submit" class="btn btn-primary btn-main-bg m-1" value="حفظ" />

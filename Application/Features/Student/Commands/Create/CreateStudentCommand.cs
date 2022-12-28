@@ -38,7 +38,7 @@ namespace Application.Features.Student.Commands.Create
                     NameA = request.NameA,
                     NameE = request.NameE,
                     PhotoName = request.photoFile?.FileName
-                    
+
 
                 };
 

@@ -2,7 +2,6 @@
 using Application.Interfaces;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using System.ComponentModel;
 
 namespace Application.Features.Country.Queries.GetAll
 {
@@ -11,7 +10,7 @@ namespace Application.Features.Country.Queries.GetAll
         public int parentId { get; set; }
         public GetAllCountryQuery()
         {
-            
+
         }
 
         public class Handler : IRequestHandler<GetAllCountryQuery, List<CountryDTO>>
@@ -41,25 +40,45 @@ namespace Application.Features.Country.Queries.GetAll
                     ).ToListAsync();
                     return countries;
                 }
-                else
+                else if (request.parentId == 2)
                 {
                     var countries = await _context.Countries.Select(x =>
-                  new CountryDTO
-                  {
-                      Id = x.Id,
-                      NameA = x.NameA,
-                      NameE = x.NameE,
-                      SortIndex = x.SortIndex,
-                      Focus = x.Focus,
-                      Active = x.Active
+                 new CountryDTO
+                 {
+                     Id = x.Id,
+                     NameA = x.NameA,
+                     NameE = x.NameE,
+                     SortIndex = x.SortIndex,
+                     Focus = x.Focus,
+                     Active = x.Active
 
-                  }
-                    ).ToListAsync();
+                 }
+                   ).ToListAsync();
                     return countries;
                 }
+                else if (request.parentId != 0 && request.parentId !=2)
+                {
+                    var countries = await _context.Countries.Where(x => x.ParentId.Equals(request.parentId)).Select(x =>
+                 new CountryDTO
+                 {
+                     Id = x.Id,
+                     NameA = x.NameA,
+                     NameE = x.NameE,
+                     SortIndex = x.SortIndex,
+                     Focus = x.Focus,
+                     Active = x.Active
+
+                 }
+                   ).ToListAsync();
+                    return countries;
+                }
+                else return null;
+
+               
+
             }
         }
-       
+
     }
 
 }

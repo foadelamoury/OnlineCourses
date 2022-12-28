@@ -33,7 +33,7 @@ namespace Application.Features.Student.Commands.Update
 
                     NameA = request.NameA,
                     NameE = request.NameE,
-                    PhotoName = request.photoFile?.FileName  
+                    PhotoName = request.photoFile?.FileName
 
                 };
 

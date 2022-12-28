@@ -1,4 +1,3 @@
-using Application.Features.Country.Queries.GetAll;
 using Application.Features.Courses.Commands.Create;
 using Application.Features.Courses.Commands.Update;
 using Application.Features.Courses.Models;

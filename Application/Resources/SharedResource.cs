@@ -1,7 +1,7 @@
-﻿	namespace Application.Common.Resources;
+﻿namespace Application.Common.Resources;
 public class SharedResource
 {
-  public SharedResource()
-  {
-  }
+    public SharedResource()
+    {
+    }
 }

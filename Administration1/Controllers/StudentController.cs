@@ -1,4 +1,3 @@
-using Application.Features.Country.Models;
 using Application.Features.Country.Queries.GetAll;
 using Application.Features.Student.Commands.Create;
 using Application.Features.Student.Commands.Delete;
@@ -28,19 +27,19 @@ public class StudentController : Controller
     }
 
 
-	#endregion
+    #endregion
 
-	#region adding Course to Student
-	public async Task<IActionResult> AddCourse(int studentId, int courseId)
-	{
-	            long Id = await _mediator.Send(new CreateStudentCourseCommand() { StudentId=studentId,CourseId=courseId});
-		return RedirectToAction("Index");
-	}
+    #region adding Course to Student
+    public async Task<IActionResult> AddCourse(int studentId, int courseId)
+    {
+        long Id = await _mediator.Send(new CreateStudentCourseCommand() { StudentId = studentId, CourseId = courseId });
+        return RedirectToAction("Index");
+    }
 
 
-	#endregion
-	#region Index
-	public async Task<IActionResult> Index()
+    #endregion
+    #region Index
+    public async Task<IActionResult> Index()
     {
         IEnumerable<StudentDTO> Students = await _mediator.Send(new GetAllStudentsQuery());
         return View(Students);
@@ -100,7 +99,7 @@ public class StudentController : Controller
 
         StudentDTO studentDTO = await _mediator.Send(new GetStudentByIdQuery() { Id = id });
 
-        
+
 
 
         return PartialView("Form", studentDTO);
@@ -146,7 +145,7 @@ public class StudentController : Controller
 
         if (model.Id > 0)
         {
-            
+
             var command = new UpdateStudentCommand(model);
             await _mediator.Send(command);
 
@@ -158,7 +157,7 @@ public class StudentController : Controller
 
         else
         {
-         
+
             var command = new CreateStudentCommand(model);
             await _mediator.Send(command);
             return RedirectToAction("Index");

@@ -1,37 +1,35 @@
-﻿using Application.Common.Resources;
-using Microsoft.AspNetCore.Mvc.ViewFeatures;
+﻿using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Microsoft.AspNetCore.Razor.TagHelpers;
-using Microsoft.Extensions.Localization;
 
 namespace Web.TagHelpers
 {
-  [HtmlTargetElement("Standard")]
-  public class Standard : TagHelper
-  {
-
-    public Standard()
+    [HtmlTargetElement("Standard")]
+    public class Standard : TagHelper
     {
-    }
-    public ModelExpression AspForSortIndex { get; set; }
-    public ModelExpression AspForActive { get; set; }
-    public ModelExpression AspForFocus { get; set; }
 
-    public override void Process(TagHelperContext context, TagHelperOutput output)
-    {
-      int SortIndx = 0;
-      string Focus = "";
-      string Active = "";
+        public Standard()
+        {
+        }
+        public ModelExpression AspForSortIndex { get; set; }
+        public ModelExpression AspForActive { get; set; }
+        public ModelExpression AspForFocus { get; set; }
 
-      if (AspForActive != null)
-        Active = (bool)AspForActive.Model ? "checked" : "";
-      if (AspForFocus != null)
-        Focus = (bool)AspForFocus.Model ? "checked" : "";
-      if (AspForSortIndex != null)
-        SortIndx = (int)AspForSortIndex.Model;
+        public override void Process(TagHelperContext context, TagHelperOutput output)
+        {
+            int SortIndx = 0;
+            string Focus = "";
+            string Active = "";
+
+            if (AspForActive != null)
+                Active = (bool)AspForActive.Model ? "checked" : "";
+            if (AspForFocus != null)
+                Focus = (bool)AspForFocus.Model ? "checked" : "";
+            if (AspForSortIndex != null)
+                SortIndx = (int)AspForSortIndex.Model;
 
 
-      output.TagName = "div";
-      output.Content.SetHtmlContent(@$"<div class='col-md-12'> <div class='row'> <div class='col-md-3 col-sm-6'>
+            output.TagName = "div";
+            output.Content.SetHtmlContent(@$"<div class='col-md-12'> <div class='row'> <div class='col-md-3 col-sm-6'>
               <div class='form-group'>
                 <label class='form-label'> {"SortIndex"} </label>
                 <input min = '0' oninput = 'validity.valid||(value='');' type = 'number' name='SortIndex' value='{SortIndx}' class='form-control' id='sort'/>
@@ -56,9 +54,9 @@ namespace Web.TagHelpers
               </div>
             </div></div></div>");
 
-      output.Attributes.Add("class", "form-row");
+            output.Attributes.Add("class", "form-row");
 
-      output.TagMode = TagMode.StartTagAndEndTag;
+            output.TagMode = TagMode.StartTagAndEndTag;
+        }
     }
-  }
 }
