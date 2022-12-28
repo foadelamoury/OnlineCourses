@@ -16,10 +16,6 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\Github DotNet Projects\EvaluationTask\Administration1
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/Github DotNet Projects/EvaluationTask/Administration1/Views/Country/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291bnRyeVxEZXRhaWxzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/Github DotNet Projects/EvaluationTask/Administration1/Views/Country/Form.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291bnRyeVxGb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -34,10 +30,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Github DotNet Projects/EvaluationTask/Administration1/Views/CourseCategory/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlQ2F0ZWdvcnlcSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Github DotNet Projects/EvaluationTask/Administration1/Views/Course/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Github DotNet Projects/EvaluationTask/Administration1/Views/Course/Form.cshtml]

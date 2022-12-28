@@ -7,6 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Views\Country\Details.cshtml" />
+    <Content Remove="Views\Course\Details.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="Views\Country\Form.cshtml" />
     <None Include="Views\Country\Index.cshtml" />
     <None Include="Views\CourseCategory\Form.cshtml" />
