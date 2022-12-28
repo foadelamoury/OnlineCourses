@@ -7,6 +7,7 @@ using Application.Features.Student.Queries.GetAll;
 using Application.Features.Student.Queries.GetById;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Administration1.Controllers;
 
@@ -47,9 +48,9 @@ public class StudentController : Controller
     #region Edit
     public async Task<IActionResult> Edit(long id)
     {
-        ViewBag.Countries = await _mediator.Send(new GetAllCountryQuery() { parentId=0});
+        ViewBag.Countries = new SelectList(await _mediator.Send(new GetAllCountryQuery() { parentId=0}));
 
-        ViewBag.Cities = await _mediator.Send(new GetAllCountryQuery() { parentId = 1 });
+        ViewBag.Cities = new SelectList(await _mediator.Send(new GetAllCountryQuery() { parentId = 1 }));
 
 
         StudentDTO studentDTO = await _mediator.Send(new GetStudentByIdQuery() { Id = id });
