@@ -62,13 +62,13 @@
 
 	<div id="selectContainer">
 
-		<Select asp-for="CourseId" asp-items="@ViewBag.Courses" id="statement" name="statement" multiple>
+		<Select asp-for="CourseIds" asp-items="@ViewBag.Courses" id="statement" name="statement" multiple>
 
 			<option selected="selected">اختر</option>
 
 		</Select>
 </div>
-	@*<a href="@Url.ActionLink("AddCourse", "student",)" aria-expanded="false" class=" btn btn-primary bg-primary-700 text-white btn-icon rounded-circle mx-1 waves-effect waves-themed" style="font-size:large"><i class="fa fa-edit " data-toggle="tooltip" data-placement="top">اضافه</i></a>*@
+	<input type="submit" class="btn btn-primary btn-main-bg m-1" value="حفظ" />
 
 
 	</form>

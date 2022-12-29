@@ -15,7 +15,7 @@ namespace Application.Features.Student.Models
         public string? phoneNumber2 { get; set; }
 
 
-        public int CourseId { get; set; }
+        public int[] CourseIds { get; set; }
 
 
         public string? PhotoName { get; set; }
