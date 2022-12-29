@@ -30,9 +30,9 @@ public class StudentController : Controller
     #endregion
 
     #region adding Course to Student
-    public async Task<IActionResult> AddCourse(int studentId, int courseId)
+    public async Task<IActionResult> AddCourse(int Id, int CourseId)
     {
-        long Id = await _mediator.Send(new CreateStudentCourseCommand() { StudentId = studentId, CourseId = courseId });
+        long tableId = await _mediator.Send(new CreateStudentCourseCommand() { StudentId = Id, CourseId = CourseId });
         return RedirectToAction("Index");
     }
 

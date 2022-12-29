@@ -8,6 +8,14 @@ namespace Application.Features.Student.Models
         public string? Name { get; set; }
 
         public int CountryId { get; set; }
+        public int CityId { get; set; }
+
+        public string? phoneNumber1 { get; set; }
+
+        public string? phoneNumber2 { get; set; }
+
+
+        public int CourseId { get; set; }
 
 
         public string? PhotoName { get; set; }

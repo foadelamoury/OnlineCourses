@@ -37,7 +37,7 @@
         <span asp-validation-for="NameA"></span>
     </div>
 
-       <div class="form-group col-md-6">
+    <div class="form-group col-md-6">
         Name
         <input asp-for="NameE"/>
         <span asp-validation-for="NameE"></span>
@@ -51,16 +51,23 @@
         <span asp-validation-for="PhotoName"></span>
     </div>
 
+    <div class="form-group col-md-6">
+        PhoneNumber1
+        <input asp-for="phoneNumber1" />
+        <span asp-validation-for="phoneNumber1"></span>
+    </div>
+
+    <div class="form-group col-md-6">
+        PhoneNumber2
+        <input asp-for="phoneNumber2" />
+        <span asp-validation-for="phoneNumber2"></span>
+    </div>
 
 
 
-        <div class="form-group col-md-6">
-       @* <Dropdown asp-for="@Model.CountryId" col="col-md-12" required="Required" 
-        error-message="PleaseEnter Country" asp-items="@ViewBag.Countries" 
-        id="CountryId" label-content="Country"></Dropdown>*@
-            </div>
 
-        <Select asp-items="@ViewBag.Countries">
+
+        <Select asp-for="CountryId" asp-items="@ViewBag.Countries">
 
                 <option selected="selected">اختر</option>
                 
@@ -68,7 +75,7 @@
 
 
 
-    <Select asp-items="@ViewBag.Cities">
+    <Select asp-for="CityId" asp-items="@ViewBag.Cities">
 
         <option selected="selected">اختر</option>
 

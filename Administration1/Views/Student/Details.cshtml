@@ -7,7 +7,6 @@
 <link rel="stylesheet" media="screen, print" href="~/css/page-invoice.css">
 
 
-<>
 		<input type="hidden" asp-for="PhotoName" />
 	<input type="hidden" asp-for="photoFile" />
 
@@ -51,16 +50,15 @@
 
 </div>
 <form asp-action="addCourse" method="post"  enctype="multipart/form-data">
-<div id="selectContainer">
-  <select id="statement" name="statement">
-    <option value="1">Maths</option>
-    <option value="2">Science</option>
-    <option value="3">Arabic</option>
-    <option value="4">English</option>
+	<input type="hidden" asp-for="Id">
 
+	<div id="selectContainer">
 
+		<Select asp-for="CourseId" asp-items="@ViewBag.Courses" id="statement" name="statement">
 
-  </select>
+			<option selected="selected">اختر</option>
+
+		</Select>
 </div>
 	@*<a href="@Url.ActionLink("AddCourse", "student",)" aria-expanded="false" class=" btn btn-primary bg-primary-700 text-white btn-icon rounded-circle mx-1 waves-effect waves-themed" style="font-size:large"><i class="fa fa-edit " data-toggle="tooltip" data-placement="top">اضافه</i></a>*@
 
