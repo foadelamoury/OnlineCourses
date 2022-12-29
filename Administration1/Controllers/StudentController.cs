@@ -1,4 +1,5 @@
 using Application.Features.Country.Queries.GetAll;
+using Application.Features.Courses.Queries.GetAll;
 using Application.Features.Student.Commands.Create;
 using Application.Features.Student.Commands.Delete;
 using Application.Features.Student.Commands.Update;
@@ -172,7 +173,9 @@ public class StudentController : Controller
     #region Details
     public async Task<IActionResult> Details(int id)
     {
-        var eventDTO = await _mediator.Send(new GetStudentByIdQuery() { Id = id });
+        ViewBag.Courses = new SelectList(await _mediator.Send(new GetAllCoursesQuery()), "Id", "NameA");
+
+		var eventDTO = await _mediator.Send(new GetStudentByIdQuery() { Id = id });
         return View(eventDTO);
     }
     #endregion

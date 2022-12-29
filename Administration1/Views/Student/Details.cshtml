@@ -11,6 +11,14 @@
 	<input type="hidden" asp-for="photoFile" />
 
 
+
+
+@if (Model.CountryId != null)
+{
+	<div class="col-sm-2 col-4 my-2">SortIndex</div>
+	<div class="col-sm-4 col-8 my-2">@ViewBag.Countries</div>
+}
+
 @if (Model.NameA != null)
 {
 						<div class="col-sm-2 col-4 my-2">اسم</div>
@@ -54,7 +62,7 @@
 
 	<div id="selectContainer">
 
-		<Select asp-for="CourseId" asp-items="@ViewBag.Courses" id="statement" name="statement">
+		<Select asp-for="CourseId" asp-items="@ViewBag.Courses" id="statement" name="statement" multiple>
 
 			<option selected="selected">اختر</option>
 
