@@ -2,10 +2,10 @@
 {
     public class StudentCourseDTO : GlobalModels.GlobalModel
     {
-        public int CourseId { get; set; }
+        public long CourseId { get; set; }
 
 
-        public int StudentId { get; set; }
+        public long StudentId { get; set; }
 
     }
 }

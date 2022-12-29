@@ -10,7 +10,7 @@ public class Country : ObjectBase
     public string? NameE { get; set; }
 
 
-    public int ParentId { get; set; }
+    public long ParentId { get; set; }
 
     public Country? Parent { get; set; }
 

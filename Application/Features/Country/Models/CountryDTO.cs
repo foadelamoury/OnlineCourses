@@ -4,7 +4,7 @@
     {
 
 
-
+        public int parentId { get; set; }
 
 
     }

@@ -49,10 +49,7 @@ namespace Infrastructure.Migrations
                     b.Property<string>("NameE")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("ParentId")
-                        .HasColumnType("int");
-
-                    b.Property<long?>("ParentId1")
+                    b.Property<long>("ParentId")
                         .HasColumnType("bigint");
 
                     b.Property<int>("SortIndex")
@@ -60,7 +57,7 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ParentId1");
+                    b.HasIndex("ParentId");
 
                     b.ToTable("Countries");
                 });
@@ -147,11 +144,11 @@ namespace Infrastructure.Migrations
                     b.Property<bool>("Active")
                         .HasColumnType("bit");
 
-                    b.Property<int>("CityId")
-                        .HasColumnType("int");
+                    b.Property<long>("CityId")
+                        .HasColumnType("bigint");
 
-                    b.Property<int>("CountryId")
-                        .HasColumnType("int");
+                    b.Property<long>("CountryId")
+                        .HasColumnType("bigint");
 
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
@@ -191,10 +188,7 @@ namespace Infrastructure.Migrations
                     b.Property<bool>("Active")
                         .HasColumnType("bit");
 
-                    b.Property<int>("CourseId")
-                        .HasColumnType("int");
-
-                    b.Property<long?>("CourseId1")
+                    b.Property<long>("CourseId")
                         .HasColumnType("bigint");
 
                     b.Property<DateTime>("CreateDate")
@@ -209,17 +203,14 @@ namespace Infrastructure.Migrations
                     b.Property<int>("SortIndex")
                         .HasColumnType("int");
 
-                    b.Property<int>("StudentId")
-                        .HasColumnType("int");
-
-                    b.Property<long?>("StudentId1")
+                    b.Property<long>("StudentId")
                         .HasColumnType("bigint");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CourseId1");
+                    b.HasIndex("CourseId");
 
-                    b.HasIndex("StudentId1");
+                    b.HasIndex("StudentId");
 
                     b.ToTable("StudentCourses");
                 });
@@ -228,7 +219,9 @@ namespace Infrastructure.Migrations
                 {
                     b.HasOne("Domain.Entities.Country", "Parent")
                         .WithMany()
-                        .HasForeignKey("ParentId1");
+                        .HasForeignKey("ParentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Parent");
                 });
@@ -237,11 +230,15 @@ namespace Infrastructure.Migrations
                 {
                     b.HasOne("Domain.Entities.Course", "Course")
                         .WithMany()
-                        .HasForeignKey("CourseId1");
+                        .HasForeignKey("CourseId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Domain.Entities.Student", "Student")
                         .WithMany()
-                        .HasForeignKey("StudentId1");
+                        .HasForeignKey("StudentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Course");
 

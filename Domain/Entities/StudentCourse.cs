@@ -3,11 +3,11 @@ namespace Domain.Entities;
 
 public class StudentCourse : ObjectBase
 {
-    public int CourseId { get; set; }
+    public long CourseId { get; set; }
 
     public Course? Course { get; set; }
 
-    public int StudentId { get; set; }
+    public long StudentId { get; set; }
 
     public Student? Student { get; set; }
 
