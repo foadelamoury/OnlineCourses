@@ -26,7 +26,7 @@ namespace Application.Features.Country.Queries.GetAll
             {
                 if (request.parentId == 0)
                 {
-                    var countries = await _context.Countries.Where(x => x.ParentId.Equals(request.parentId)).Select(x =>
+                    var countries = await _context.Countries.Where(x=> x.ParentId == null).Select(x =>
                   new CountryDTO
                   {
                       Id = x.Id,
@@ -56,9 +56,9 @@ namespace Application.Features.Country.Queries.GetAll
                    ).ToListAsync();
                     return countries;
                 }
-                else if (request.parentId != 0 && request.parentId !=2)
+                else if (request.parentId != 0 && request.parentId != 2)
                 {
-                    var countries = await _context.Countries.Where(x => x.ParentId.Equals(request.parentId)).Select(x =>
+                    var countries = await _context.Countries.Where(x => x.ParentId != null).Select(x =>
                  new CountryDTO
                  {
                      Id = x.Id,
@@ -74,7 +74,7 @@ namespace Application.Features.Country.Queries.GetAll
                 }
                 else return null;
 
-               
+
 
             }
         }

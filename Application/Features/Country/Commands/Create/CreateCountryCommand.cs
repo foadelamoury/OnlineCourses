@@ -15,6 +15,7 @@ namespace Application.Features.Country.Commands.Create
             NameA = dto.NameA;
             NameE = dto.NameE;
             Id = dto.Id;
+            ParentId = dto.ParentId;
 
         }
         public class Handler : IRequestHandler<CreateCountryCommand, long>
@@ -29,10 +30,11 @@ namespace Application.Features.Country.Commands.Create
             {
                 Domain.Entities.Country entity = new Domain.Entities.Country
                 {
-                    Id = request.Id,
 
                     NameA = request.NameA,
                     NameE = request.NameE,
+                    ParentId = request.ParentId
+
 
                 };
 

@@ -31,19 +31,25 @@ public class StudentController : Controller
     #endregion
 
     #region adding Course to Student
-    public async Task<IActionResult> AddCourse(int Id, int[] CourseIds)
+    public async Task<IActionResult> AddCourse(long Id, long[] CourseIds)
     {
+		ViewBag.Courses = new SelectList(await _mediator.Send(new GetAllCoursesQuery()), "Id", "NameA");
+
         foreach (var CourseId in CourseIds)
         {
-            long tableId = await _mediator.Send(new CreateStudentCourseCommand() { StudentId = Id, CourseId = CourseId });
+            if (Id != 0 && CourseId != 0)
+            {
+                long tableId = await _mediator.Send(new CreateStudentCourseCommand() { StudentId = Id, CourseId = CourseId });
+            }
         }
-        return RedirectToAction("Index");
-    }
+		return RedirectToAction("Index");
+
+	}
 
 
-    #endregion
-    #region Index
-    public async Task<IActionResult> Index()
+	#endregion
+	#region Index
+	public async Task<IActionResult> Index()
     {
         IEnumerable<StudentDTO> Students = await _mediator.Send(new GetAllStudentsQuery());
         return View(Students);
@@ -96,9 +102,11 @@ public class StudentController : Controller
         //ViewBag.Cities = items2;
 
         #endregion
+        var CountryId = await _mediator.Send(new GetAllCountryQuery() { parentId = 0 });
+
         ViewBag.Countries = new SelectList(await _mediator.Send(new GetAllCountryQuery() { parentId = 0 }), "Id", "NameA");
 
-        ViewBag.Cities = new SelectList(await _mediator.Send(new GetAllCountryQuery() { parentId = 1 }), "Id", "NameA");
+        ViewBag.Cities = new SelectList(await _mediator.Send(new GetAllCountryQuery() { parentId =1 }), "Id", "NameA");
 
 
         StudentDTO studentDTO = await _mediator.Send(new GetStudentByIdQuery() { Id = id });
@@ -176,7 +184,7 @@ public class StudentController : Controller
     #region Details
     public async Task<IActionResult> Details(int id)
     {
-        ViewBag.Courses = new SelectList(await _mediator.Send(new GetAllCoursesQuery()), "Id", "NameA");
+		ViewBag.Courses = new SelectList(await _mediator.Send(new GetAllCoursesQuery()), "Id", "NameA");
 
 		var eventDTO = await _mediator.Send(new GetStudentByIdQuery() { Id = id });
         return View(eventDTO);

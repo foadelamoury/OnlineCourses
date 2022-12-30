@@ -9,7 +9,7 @@ namespace Application.Features.Courses.Models
 
         public int CreditHours;
 
-        public int CourseCategoryId;
+        public long CourseCategoryId;
 
 
     }

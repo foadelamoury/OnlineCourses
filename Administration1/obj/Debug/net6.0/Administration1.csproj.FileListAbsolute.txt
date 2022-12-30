@@ -198,7 +198,6 @@ D:\Github DotNet Projects\EvaluationTask\Administration1\obj\Debug\net6.0\Admini
 D:\Github DotNet Projects\EvaluationTask\Administration1\obj\Debug\net6.0\Administration1.AssemblyInfoInputs.cache
 D:\Github DotNet Projects\EvaluationTask\Administration1\obj\Debug\net6.0\Administration1.AssemblyInfo.cs
 D:\Github DotNet Projects\EvaluationTask\Administration1\obj\Debug\net6.0\Administration1.csproj.CoreCompileInputs.cache
-D:\Github DotNet Projects\EvaluationTask\Administration1\obj\Debug\net6.0\Administration1.MvcApplicationPartsAssemblyInfo.cs
 D:\Github DotNet Projects\EvaluationTask\Administration1\obj\Debug\net6.0\Administration1.MvcApplicationPartsAssemblyInfo.cache
 D:\Github DotNet Projects\EvaluationTask\Administration1\obj\Debug\net6.0\Administration1.RazorAssemblyInfo.cache
 D:\Github DotNet Projects\EvaluationTask\Administration1\obj\Debug\net6.0\Administration1.RazorAssemblyInfo.cs
@@ -479,6 +478,8 @@ D:\Github DotNet Projects\EvaluationTask\Administration1\bin\Debug\net6.0\Infras
 D:\Github DotNet Projects\EvaluationTask\Administration1\bin\Debug\net6.0\Application.pdb
 D:\Github DotNet Projects\EvaluationTask\Administration1\bin\Debug\net6.0\Infrastructure.pdb
 D:\Github DotNet Projects\EvaluationTask\Administration1\bin\Debug\net6.0\Domain.pdb
+D:\Github DotNet Projects\EvaluationTask\Administration1\bin\Debug\net6.0\ar-EG\Application.resources.dll
+D:\Github DotNet Projects\EvaluationTask\Administration1\bin\Debug\net6.0\en-US\Application.resources.dll
 D:\Github DotNet Projects\EvaluationTask\Administration1\obj\Debug\net6.0\staticwebassets\msbuild.Administration1.Microsoft.AspNetCore.StaticWebAssets.props
 D:\Github DotNet Projects\EvaluationTask\Administration1\obj\Debug\net6.0\staticwebassets\msbuild.build.Administration1.props
 D:\Github DotNet Projects\EvaluationTask\Administration1\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Administration1.props
@@ -495,5 +496,4 @@ D:\Github DotNet Projects\EvaluationTask\Administration1\obj\Debug\net6.0\refint
 D:\Github DotNet Projects\EvaluationTask\Administration1\obj\Debug\net6.0\Administration1.pdb
 D:\Github DotNet Projects\EvaluationTask\Administration1\obj\Debug\net6.0\Administration1.genruntimeconfig.cache
 D:\Github DotNet Projects\EvaluationTask\Administration1\obj\Debug\net6.0\ref\Administration1.dll
-D:\Github DotNet Projects\EvaluationTask\Administration1\bin\Debug\net6.0\ar-EG\Application.resources.dll
-D:\Github DotNet Projects\EvaluationTask\Administration1\bin\Debug\net6.0\en-US\Application.resources.dll
+D:\Github DotNet Projects\EvaluationTask\Administration1\obj\Debug\net6.0\Administration1.MvcApplicationPartsAssemblyInfo.cs

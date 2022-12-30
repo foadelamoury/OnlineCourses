@@ -4,8 +4,7 @@
     {
 
 
-        public int parentId { get; set; }
-
+        public long ParentId;
 
     }
 }

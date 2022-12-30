@@ -16,6 +16,10 @@ namespace Application.Features.Student.Commands.Create
             NameA = dto.NameA;
             NameE = dto.NameE;
             Id = dto.Id;
+            CountryId = dto.CountryId;
+            CityId = dto.CityId;
+            CreateDate =dto.CreateDate;
+
 
         }
         public class Handler : IRequestHandler<CreateStudentCommand, long>
@@ -37,7 +41,11 @@ namespace Application.Features.Student.Commands.Create
 
                     NameA = request.NameA,
                     NameE = request.NameE,
-                    PhotoName = request.photoFile?.FileName
+                    PhotoName = request.photoFile?.FileName,
+                    CountryId = request.CountryId,
+                    CityId = request.CityId,
+           
+           
 
 
                 };

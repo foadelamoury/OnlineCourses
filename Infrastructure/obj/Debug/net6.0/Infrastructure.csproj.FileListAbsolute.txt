@@ -44,6 +44,8 @@ D:\Github DotNet Projects\EvaluationTask\Infrastructure\bin\Debug\net6.0\Applica
 D:\Github DotNet Projects\EvaluationTask\Infrastructure\bin\Debug\net6.0\Domain.dll
 D:\Github DotNet Projects\EvaluationTask\Infrastructure\bin\Debug\net6.0\Application.pdb
 D:\Github DotNet Projects\EvaluationTask\Infrastructure\bin\Debug\net6.0\Domain.pdb
+D:\Github DotNet Projects\EvaluationTask\Infrastructure\bin\Debug\net6.0\ar-EG\Application.resources.dll
+D:\Github DotNet Projects\EvaluationTask\Infrastructure\bin\Debug\net6.0\en-US\Application.resources.dll
 D:\Github DotNet Projects\EvaluationTask\Infrastructure\obj\Debug\net6.0\Infrastructure.csproj.AssemblyReference.cache
 D:\Github DotNet Projects\EvaluationTask\Infrastructure\obj\Debug\net6.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
 D:\Github DotNet Projects\EvaluationTask\Infrastructure\obj\Debug\net6.0\Infrastructure.AssemblyInfoInputs.cache
@@ -55,5 +57,3 @@ D:\Github DotNet Projects\EvaluationTask\Infrastructure\obj\Debug\net6.0\refint\
 D:\Github DotNet Projects\EvaluationTask\Infrastructure\obj\Debug\net6.0\Infrastructure.pdb
 D:\Github DotNet Projects\EvaluationTask\Infrastructure\obj\Debug\net6.0\Infrastructure.genruntimeconfig.cache
 D:\Github DotNet Projects\EvaluationTask\Infrastructure\obj\Debug\net6.0\ref\Infrastructure.dll
-D:\Github DotNet Projects\EvaluationTask\Infrastructure\bin\Debug\net6.0\ar-EG\Application.resources.dll
-D:\Github DotNet Projects\EvaluationTask\Infrastructure\bin\Debug\net6.0\en-US\Application.resources.dll

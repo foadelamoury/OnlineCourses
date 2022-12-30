@@ -10,7 +10,7 @@ public class Course : ObjectBase
     public int CreditHours;
 
     public long CourseCategoryId;
-
+    
     public CourseCategory? CourseCategory;
 
 }

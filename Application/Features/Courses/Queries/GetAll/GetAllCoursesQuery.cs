@@ -26,7 +26,9 @@ namespace Application.Features.Courses.Queries.GetAll
                   NameE = x.NameE,
                   SortIndex = x.SortIndex,
                   Focus = x.Focus,
-                  Active = x.Active
+                  Active = x.Active,
+                  CourseCategoryId = x.CourseCategoryId
+
 
               }
           ).ToListAsync();

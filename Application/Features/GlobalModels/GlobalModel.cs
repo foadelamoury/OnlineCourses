@@ -8,9 +8,9 @@
         public bool Focus { get; set; }
         public bool Active { get; set; }
 
-        public DateTime CreateDate { get; set; }
+        public DateTime CreateDate { get; set; } = DateTime.Now;
 
-        public DateTime ModifyDate { get; set; }
+        public DateTime ModifyDate { get; set; } = DateTime.Now;
 
     }
 }

@@ -57,36 +57,27 @@
 		}
 
 </div>
-<form asp-action="addCourse" method="post"  enctype="multipart/form-data">
-	<input type="hidden" asp-for="Id">
 
-	<div id="selectContainer">
 
-		<Select asp-for="CourseIds" asp-items="@ViewBag.Courses" id="statement" name="statement" multiple>
+<form asp-action="addCourse" method="post" enctype="multipart/form-data">
 
-			<option selected="selected">اختر</option>
+	<input type="hidden" asp-for="Id" />
 
-		</Select>
-</div>
+	<Select asp-for="@Model.CourseIds" asp-items="@ViewBag.Courses" multiple>
+
+		<option selected="selected">اختر</option>
+
+	</Select>
+
 	<input type="submit" class="btn btn-primary btn-main-bg m-1" value="حفظ" />
 
 
-	</form>
+</form>
+<a href="@Url.ActionLink("addCourse", "Student", new { Id = Model.Id,CourseIds= ViewBag.Courses })" aria-expanded="false">
+	add Course
+</a>
 
-<button onclick="cloneSelect()">Add another Course</button>
+@*<a href="@Url.ActionLink("addCourse", "student",new { Id = Model.Id })" aria-expanded="false">
+	add Course
+</a>*@
 
-
-<script>
-
-		var selectionCounter = 0
-		function cloneSelect() {
-			var select = document.getElementById("statement")
-			var clone = select.cloneNode(true)
-			var name = select.getAttribute("name") + selectionCounter++
-			clone.id = name
-			clone.setAttribute("name", name)
-			document.getElementById("selectContainer").appendChild(clone)
-		}
-	
-
-</script>

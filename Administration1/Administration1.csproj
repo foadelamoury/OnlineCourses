@@ -7,32 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="Views\Country\Details.cshtml" />
-    <Content Remove="Views\Course\Details.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Views\Country\Form.cshtml" />
-    <None Include="Views\Country\Index.cshtml" />
-    <None Include="Views\CourseCategory\Form.cshtml" />
-    <None Include="Views\CourseCategory\Index.cshtml" />
-    <None Include="Views\Course\Form.cshtml" />
-    <None Include="Views\Course\Index.cshtml" />
-    <None Include="Views\Home\Index.cshtml" />
-    <None Include="Views\Home\Privacy.cshtml" />
-    <None Include="Views\Shared\Error.cshtml" />
-    <None Include="Views\Shared\_FormModal.cshtml" />
-    <None Include="Views\Shared\_Layout.cshtml" />
-    <None Include="Views\Shared\_ValidationScriptsPartial.cshtml" />
-    <None Include="Views\StudentCourse\Form.cshtml" />
-    <None Include="Views\StudentCourse\Index.cshtml" />
-    <None Include="Views\Student\Form.cshtml" />
-    <None Include="Views\Student\Index.cshtml" />
-    <None Include="Views\_ViewImports.cshtml" />
-    <None Include="Views\_ViewStart.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="FluentValidation.AspNetCore" Version="11.2.2" />
     <PackageReference Include="HtmlSanitizer" Version="7.1.542" />
     <PackageReference Include="jQuery.Validation" Version="1.19.5" />
@@ -52,6 +26,31 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\Photos\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Country\Details.cshtml" />
+    <None Include="Views\Country\Form.cshtml" />
+    <None Include="Views\Country\Index.cshtml" />
+    <None Include="Views\CourseCategory\Form.cshtml" />
+    <None Include="Views\CourseCategory\Index.cshtml" />
+    <None Include="Views\Course\Details.cshtml" />
+    <None Include="Views\Course\Form.cshtml" />
+    <None Include="Views\Course\Index.cshtml" />
+    <None Include="Views\Home\Index.cshtml" />
+    <None Include="Views\Home\Privacy.cshtml" />
+    <None Include="Views\Shared\Error.cshtml" />
+    <None Include="Views\Shared\_FormModal.cshtml" />
+    <None Include="Views\Shared\_Layout.cshtml" />
+    <None Include="Views\Shared\_Nav.cshtml" />
+    <None Include="Views\Shared\_ValidationScriptsPartial.cshtml" />
+    <None Include="Views\StudentCourse\Form.cshtml" />
+    <None Include="Views\StudentCourse\Index.cshtml" />
+    <None Include="Views\Student\Details.cshtml" />
+    <None Include="Views\Student\Form.cshtml" />
+    <None Include="Views\Student\Index.cshtml" />
+    <None Include="Views\_ViewImports.cshtml" />
+    <None Include="Views\_ViewStart.cshtml" />
   </ItemGroup>
 
 </Project>

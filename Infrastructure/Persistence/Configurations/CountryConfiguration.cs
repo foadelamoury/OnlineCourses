@@ -23,6 +23,6 @@ public class CountryConfiguration : IEntityTypeConfiguration<Country>
 
         builder.Property(e => e.NameE)
                   ;
-
+      
     }
 }

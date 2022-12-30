@@ -13,7 +13,6 @@ namespace Application.Features.StudentCourseTable.Commands.Create
 
         public CreateStudentCourseCommand(StudentCourseDTO dto)
         {
-            Id = dto.Id;
             StudentId = dto.StudentId;
             CourseId = dto.CourseId;
 
@@ -30,9 +29,9 @@ namespace Application.Features.StudentCourseTable.Commands.Create
             {
                 Domain.Entities.StudentCourse entity = new Domain.Entities.StudentCourse
                 {
-                    Id = request.Id,
                     StudentId = request.StudentId,
                     CourseId = request.CourseId
+                    
 
                 };
 
