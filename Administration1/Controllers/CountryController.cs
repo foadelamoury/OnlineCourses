@@ -59,18 +59,28 @@ public class CountryController : Controller
         if (model.Id > 0)
         {
             var command = new UpdateCountryCommand(model);
-            await _mediator.Send(command);
 
-            return View("form", command);
+            //if (!ModelState.IsValid)
+            //{
+                await _mediator.Send(command);
+                //return View("form", command);
 
 
+            //}
+
+            return RedirectToAction("Index");
 
         }
 
         else
         {
-            var command = new CreateCountryCommand(model);
-            await _mediator.Send(command);
+            //if (!ModelState.IsValid)
+            //{
+                var command = new CreateCountryCommand(model);
+                await _mediator.Send(command);
+                //return View("form", command);
+
+            //}
             return RedirectToAction("Index");
 
 

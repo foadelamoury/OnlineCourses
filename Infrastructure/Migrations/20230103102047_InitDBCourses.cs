@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Infrastructure.Migrations
 {
-    public partial class InitDB : Migration
+    public partial class InitDBCourses : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -31,8 +31,7 @@ namespace Infrastructure.Migrations
                         name: "FK_Countries_Countries_ParentId",
                         column: x => x.ParentId,
                         principalTable: "Countries",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.NoAction);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -81,7 +80,7 @@ namespace Infrastructure.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     NameA = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     NameE = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CountryId = table.Column<long>(type: "bigint", nullable: true),
+                    CountryId = table.Column<long>(type: "bigint", nullable: false),
                     CityId = table.Column<long>(type: "bigint", nullable: false),
                     PhotoName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -117,16 +116,19 @@ namespace Infrastructure.Migrations
                         column: x => x.CourseId,
                         principalTable: "Courses",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.NoAction);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_StudentCourses_Students_StudentId",
                         column: x => x.StudentId,
                         principalTable: "Students",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.NoAction);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
-        
+            migrationBuilder.CreateIndex(
+                name: "IX_Countries_ParentId",
+                table: "Countries",
+                column: "ParentId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_StudentCourses_CourseId",

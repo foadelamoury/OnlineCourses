@@ -1,5 +1,6 @@
 using Application;
 using Application.Interfaces;
+using FluentValidation.AspNetCore;
 using Infrastructure;
 using Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
@@ -38,6 +39,13 @@ builder.Services.AddControllersWithViews();
 
 //fluent Validation
 //builder.Services.AddFluentValidationAutoValidation();
+
+//builder.Services.AddFluentValidationAutoValidation(config =>
+//{
+//    config.DisableDataAnnotationsValidation = true;
+//    config.ImplicitlyValidateChildProperties = true;
+
+//});
 
 //fluent Validation
 //builder.Services.AddValidatorsFromAssemblyContaining<Program>();

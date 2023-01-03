@@ -12,7 +12,7 @@ public class Country : ObjectBase
 
     public long? ParentId { get; set; }
 
-    public Country country { get; set; }
+    public Country Parent { get; set; }
 
 
 }

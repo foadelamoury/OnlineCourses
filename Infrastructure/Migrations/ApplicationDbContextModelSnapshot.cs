@@ -55,12 +55,9 @@ namespace Infrastructure.Migrations
                     b.Property<int>("SortIndex")
                         .HasColumnType("int");
 
-                    b.Property<long>("countryId")
-                        .HasColumnType("bigint");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("countryId");
+                    b.HasIndex("ParentId");
 
                     b.ToTable("Countries");
                 });
@@ -220,13 +217,11 @@ namespace Infrastructure.Migrations
 
             modelBuilder.Entity("Domain.Entities.Country", b =>
                 {
-                    b.HasOne("Domain.Entities.Country", "country")
+                    b.HasOne("Domain.Entities.Country", "Parent")
                         .WithMany()
-                        .HasForeignKey("countryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ParentId");
 
-                    b.Navigation("country");
+                    b.Navigation("Parent");
                 });
 
             modelBuilder.Entity("Domain.Entities.StudentCourse", b =>

@@ -57,3 +57,24 @@ D:\Github DotNet Projects\EvaluationTask\Infrastructure\obj\Debug\net6.0\refint\
 D:\Github DotNet Projects\EvaluationTask\Infrastructure\obj\Debug\net6.0\Infrastructure.pdb
 D:\Github DotNet Projects\EvaluationTask\Infrastructure\obj\Debug\net6.0\Infrastructure.genruntimeconfig.cache
 D:\Github DotNet Projects\EvaluationTask\Infrastructure\obj\Debug\net6.0\ref\Infrastructure.dll
+C:\Users\moshaban\Documents\GitHub\EvaluationTask\Infrastructure\bin\Debug\net6.0\Infrastructure.deps.json
+C:\Users\moshaban\Documents\GitHub\EvaluationTask\Infrastructure\bin\Debug\net6.0\Infrastructure.runtimeconfig.json
+C:\Users\moshaban\Documents\GitHub\EvaluationTask\Infrastructure\bin\Debug\net6.0\Infrastructure.dll
+C:\Users\moshaban\Documents\GitHub\EvaluationTask\Infrastructure\bin\Debug\net6.0\ref\Infrastructure.dll
+C:\Users\moshaban\Documents\GitHub\EvaluationTask\Infrastructure\bin\Debug\net6.0\Infrastructure.pdb
+C:\Users\moshaban\Documents\GitHub\EvaluationTask\Infrastructure\bin\Debug\net6.0\Application.dll
+C:\Users\moshaban\Documents\GitHub\EvaluationTask\Infrastructure\bin\Debug\net6.0\Domain.dll
+C:\Users\moshaban\Documents\GitHub\EvaluationTask\Infrastructure\bin\Debug\net6.0\Application.pdb
+C:\Users\moshaban\Documents\GitHub\EvaluationTask\Infrastructure\bin\Debug\net6.0\Domain.pdb
+C:\Users\moshaban\Documents\GitHub\EvaluationTask\Infrastructure\bin\Debug\net6.0\ar-EG\Application.resources.dll
+C:\Users\moshaban\Documents\GitHub\EvaluationTask\Infrastructure\bin\Debug\net6.0\en-US\Application.resources.dll
+C:\Users\moshaban\Documents\GitHub\EvaluationTask\Infrastructure\obj\Debug\net6.0\Infrastructure.csproj.AssemblyReference.cache
+C:\Users\moshaban\Documents\GitHub\EvaluationTask\Infrastructure\obj\Debug\net6.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\moshaban\Documents\GitHub\EvaluationTask\Infrastructure\obj\Debug\net6.0\Infrastructure.AssemblyInfoInputs.cache
+C:\Users\moshaban\Documents\GitHub\EvaluationTask\Infrastructure\obj\Debug\net6.0\Infrastructure.AssemblyInfo.cs
+C:\Users\moshaban\Documents\GitHub\EvaluationTask\Infrastructure\obj\Debug\net6.0\Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\moshaban\Documents\GitHub\EvaluationTask\Infrastructure\obj\Debug\net6.0\Infrastructure.csproj.CopyComplete
+C:\Users\moshaban\Documents\GitHub\EvaluationTask\Infrastructure\obj\Debug\net6.0\Infrastructure.dll
+C:\Users\moshaban\Documents\GitHub\EvaluationTask\Infrastructure\obj\Debug\net6.0\ref\Infrastructure.dll
+C:\Users\moshaban\Documents\GitHub\EvaluationTask\Infrastructure\obj\Debug\net6.0\Infrastructure.pdb
+C:\Users\moshaban\Documents\GitHub\EvaluationTask\Infrastructure\obj\Debug\net6.0\Infrastructure.genruntimeconfig.cache
