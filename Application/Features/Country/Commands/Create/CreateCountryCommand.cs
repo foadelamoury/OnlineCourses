@@ -28,19 +28,42 @@ namespace Application.Features.Country.Commands.Create
             }
             public async Task<long> Handle(CreateCountryCommand request, CancellationToken cancellationToken)
             {
-                Domain.Entities.Country entity = new Domain.Entities.Country
+                Domain.Entities.Country entity;
+
+                if (request.ParentId == 0)
+                {
+                    entity = new Domain.Entities.Country
+                    {
+
+                        Id = request.Id,
+                        NameA = request.NameA,
+                        NameE = request.NameE,
+                        ParentId = null
+
+
+                    };
+                    await _context.Countries.AddAsync(entity);
+
+                }
+                else
                 {
 
-                    Id = request.Id,
-                    NameA = request.NameA,
-                    NameE = request.NameE,
-                    ParentId = request.ParentId
+                    entity = new Domain.Entities.Country
+                    {
+
+                        Id = request.Id,
+                        NameA = request.NameA,
+                        NameE = request.NameE,
+                        ParentId = request.ParentId
 
 
-                };
+                    };
+                    await _context.Countries.AddAsync(entity);
 
 
-                await _context.Countries.AddAsync(entity);
+                }
+
+
                 await _context.SaveChangesAsync(cancellationToken);
 
 

@@ -60,7 +60,7 @@ public class CountryController : Controller
         {
             var command = new UpdateCountryCommand(model);
 
-            if (!ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 await _mediator.Send(command);
                 return View("form", command);
@@ -74,7 +74,7 @@ public class CountryController : Controller
 
         else
         {
-            if (!ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 var command = new CreateCountryCommand(model);
                 await _mediator.Send(command);
