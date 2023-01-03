@@ -1,4 +1,5 @@
 using Application;
+using Application.Features.Country.Commands.Create;
 using Application.Interfaces;
 using FluentValidation;
 using FluentValidation.AspNetCore;
@@ -39,7 +40,7 @@ builder.Services.AddControllersWithViews();
 
 
 //fluent Validation
-builder.Services.AddFluentValidationAutoValidation();
+//builder.Services.AddFluentValidationAutoValidation();
 
 //builder.Services.AddFluentValidationAutoValidation(config =>
 //{
@@ -49,14 +50,15 @@ builder.Services.AddFluentValidationAutoValidation();
 //});
 
 //fluent Validation
-//builder.Services.AddValidatorsFromAssemblyContaining<Program>();
+builder.Services.AddValidatorsFromAssemblyContaining<Program>();
+
+builder.Services.AddScoped<IValidator<CreateCountryCommand>, CreateCountryCommandValidator>();
 
 
 builder.Services.AddScoped<IApplicationDbContext>(provider =>
 {
 #pragma warning disable CS8603 // Possible null reference return.
     return provider.GetService<ApplicationDbContext>();
-#pragma warning restore CS8603 // Possible null reference return.
 });
 
 builder.Services

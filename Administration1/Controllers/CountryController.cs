@@ -3,8 +3,11 @@ using Application.Features.Country.Commands.Update;
 using Application.Features.Country.Models;
 using Application.Features.Country.Queries.GetAll;
 using Application.Features.Country.Queries.GetById;
+using FluentValidation;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+using System.ComponentModel.DataAnnotations;
 
 namespace Administration1.Controllers;
 
@@ -14,12 +17,14 @@ public class CountryController : Controller
 
     private readonly IWebHostEnvironment _webHostEnvironment;
     private readonly IMediator _mediator;
+    private IValidator<CreateCountryCommand> _validator;
 
 
-    public CountryController(IWebHostEnvironment webHostEnvironment, IMediator mediator)
+    public CountryController(IWebHostEnvironment webHostEnvironment, IMediator mediator, IValidator<CreateCountryCommand> validator)
     {
         _webHostEnvironment = webHostEnvironment;
         _mediator = mediator;
+        _validator = validator;
     }
 
 
@@ -59,10 +64,10 @@ public class CountryController : Controller
         if (model.Id > 0)
         {
             var command = new UpdateCountryCommand(model);
-
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid )
             {
                 await _mediator.Send(command);
+                result.AddToModelState(this.ModelState);
                 return View("form", command);
 
 
@@ -79,6 +84,8 @@ public class CountryController : Controller
         else
         {
             var command = new CreateCountryCommand(model);
+            ValidationResult result = await _validator.ValidateAsync(command);
+
 
             if (ModelState.IsValid)
             {
@@ -147,4 +154,14 @@ public class CountryController : Controller
 
 
 
+}
+public static class Extensions
+{
+    public static void AddToModelState(this ValidationResult result, ModelStateDictionary modelState)
+    {
+        //foreach (var error in result.Errors)
+        //{
+        //    modelState.AddModelError(error.PropertyName, error.ErrorMessage);
+        //}
+    }
 }
