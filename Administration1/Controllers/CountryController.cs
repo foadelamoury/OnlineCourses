@@ -4,10 +4,11 @@ using Application.Features.Country.Models;
 using Application.Features.Country.Queries.GetAll;
 using Application.Features.Country.Queries.GetById;
 using FluentValidation;
+using FluentValidation.Results;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
-using System.ComponentModel.DataAnnotations;
+using System;
 
 namespace Administration1.Controllers;
 
@@ -63,11 +64,13 @@ public class CountryController : Controller
     {
         if (model.Id > 0)
         {
-            var command = new UpdateCountryCommand(model);
-            if (!ModelState.IsValid )
+			var command = new UpdateCountryCommand(model);
+			//ValidationResult result = await _validator.ValidateAsync(command);
+
+			if (!ModelState.IsValid )
             {
                 await _mediator.Send(command);
-                result.AddToModelState(this.ModelState);
+                //result.AddToModelState(this.ModelState);
                 return View("form", command);
 
 
@@ -89,6 +92,7 @@ public class CountryController : Controller
 
             if (ModelState.IsValid)
             {
+                result.AddToModelState(this.ModelState);
                 await _mediator.Send(command);
                 return View("form", command);
 
@@ -159,9 +163,9 @@ public static class Extensions
 {
     public static void AddToModelState(this ValidationResult result, ModelStateDictionary modelState)
     {
-        //foreach (var error in result.Errors)
-        //{
-        //    modelState.AddModelError(error.PropertyName, error.ErrorMessage);
-        //}
+        foreach (var error in result.Errors)
+        {
+            modelState.AddModelError(error.PropertyName, error.ErrorMessage);
+        }
     }
 }

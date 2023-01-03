@@ -50,9 +50,7 @@ builder.Services.AddControllersWithViews();
 //});
 
 //fluent Validation
-builder.Services.AddValidatorsFromAssemblyContaining<Program>();
 
-builder.Services.AddScoped<IValidator<CreateCountryCommand>, CreateCountryCommandValidator>();
 
 
 builder.Services.AddScoped<IApplicationDbContext>(provider =>
@@ -68,6 +66,10 @@ builder.Services
 builder.Services.AddApplication();
 builder.Services.AddInfrastructure(builder.Configuration, builder.Environment);
 
+
+builder.Services.AddValidatorsFromAssemblyContaining<Program>();
+
+builder.Services.AddScoped<IValidator<CreateCountryCommand>, CreateCountryCommandValidator>();
 
 
 

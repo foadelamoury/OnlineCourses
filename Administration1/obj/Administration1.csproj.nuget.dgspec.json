@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\moshaban\\Documents\\GitHub\\EvaluationTask\\Administration1\\Administration1.csproj": {}
+    "D:\\Github DotNet Projects\\EvaluationTask\\Administration1\\Administration1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\moshaban\\Documents\\GitHub\\EvaluationTask\\Administration1\\Administration1.csproj": {
+    "D:\\Github DotNet Projects\\EvaluationTask\\Administration1\\Administration1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\moshaban\\Documents\\GitHub\\EvaluationTask\\Administration1\\Administration1.csproj",
+        "projectUniqueName": "D:\\Github DotNet Projects\\EvaluationTask\\Administration1\\Administration1.csproj",
         "projectName": "Administration1",
-        "projectPath": "C:\\Users\\moshaban\\Documents\\GitHub\\EvaluationTask\\Administration1\\Administration1.csproj",
-        "packagesPath": "C:\\Users\\moshaban\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\moshaban\\Documents\\GitHub\\EvaluationTask\\Administration1\\obj\\",
+        "projectPath": "D:\\Github DotNet Projects\\EvaluationTask\\Administration1\\Administration1.csproj",
+        "packagesPath": "C:\\Users\\elamoury123\\.nuget\\packages\\",
+        "outputPath": "D:\\Github DotNet Projects\\EvaluationTask\\Administration1\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\moshaban\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\elamoury123\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,11 +31,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\moshaban\\Documents\\GitHub\\EvaluationTask\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\moshaban\\Documents\\GitHub\\EvaluationTask\\Application\\Application.csproj"
+              "D:\\Github DotNet Projects\\EvaluationTask\\Application\\Application.csproj": {
+                "projectPath": "D:\\Github DotNet Projects\\EvaluationTask\\Application\\Application.csproj"
               },
-              "C:\\Users\\moshaban\\Documents\\GitHub\\EvaluationTask\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\moshaban\\Documents\\GitHub\\EvaluationTask\\Infrastructure\\Infrastructure.csproj"
+              "D:\\Github DotNet Projects\\EvaluationTask\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "D:\\Github DotNet Projects\\EvaluationTask\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -84,7 +87,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -96,21 +100,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\moshaban\\Documents\\GitHub\\EvaluationTask\\Application\\Application.csproj": {
+    "D:\\Github DotNet Projects\\EvaluationTask\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\moshaban\\Documents\\GitHub\\EvaluationTask\\Application\\Application.csproj",
+        "projectUniqueName": "D:\\Github DotNet Projects\\EvaluationTask\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\moshaban\\Documents\\GitHub\\EvaluationTask\\Application\\Application.csproj",
-        "packagesPath": "C:\\Users\\moshaban\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\moshaban\\Documents\\GitHub\\EvaluationTask\\Application\\obj\\",
+        "projectPath": "D:\\Github DotNet Projects\\EvaluationTask\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\elamoury123\\.nuget\\packages\\",
+        "outputPath": "D:\\Github DotNet Projects\\EvaluationTask\\Application\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\moshaban\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\elamoury123\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -124,8 +131,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\moshaban\\Documents\\GitHub\\EvaluationTask\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\moshaban\\Documents\\GitHub\\EvaluationTask\\Domain\\Domain.csproj"
+              "D:\\Github DotNet Projects\\EvaluationTask\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\Github DotNet Projects\\EvaluationTask\\Domain\\Domain.csproj"
               }
             }
           }
@@ -183,7 +190,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -192,21 +200,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\moshaban\\Documents\\GitHub\\EvaluationTask\\Domain\\Domain.csproj": {
+    "D:\\Github DotNet Projects\\EvaluationTask\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\moshaban\\Documents\\GitHub\\EvaluationTask\\Domain\\Domain.csproj",
+        "projectUniqueName": "D:\\Github DotNet Projects\\EvaluationTask\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\moshaban\\Documents\\GitHub\\EvaluationTask\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\moshaban\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\moshaban\\Documents\\GitHub\\EvaluationTask\\Domain\\obj\\",
+        "projectPath": "D:\\Github DotNet Projects\\EvaluationTask\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\elamoury123\\.nuget\\packages\\",
+        "outputPath": "D:\\Github DotNet Projects\\EvaluationTask\\Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\moshaban\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\elamoury123\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -251,7 +262,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -260,21 +272,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\moshaban\\Documents\\GitHub\\EvaluationTask\\Infrastructure\\Infrastructure.csproj": {
+    "D:\\Github DotNet Projects\\EvaluationTask\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\moshaban\\Documents\\GitHub\\EvaluationTask\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "D:\\Github DotNet Projects\\EvaluationTask\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\moshaban\\Documents\\GitHub\\EvaluationTask\\Infrastructure\\Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\moshaban\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\moshaban\\Documents\\GitHub\\EvaluationTask\\Infrastructure\\obj\\",
+        "projectPath": "D:\\Github DotNet Projects\\EvaluationTask\\Infrastructure\\Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\elamoury123\\.nuget\\packages\\",
+        "outputPath": "D:\\Github DotNet Projects\\EvaluationTask\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\moshaban\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\elamoury123\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -288,8 +303,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\moshaban\\Documents\\GitHub\\EvaluationTask\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\moshaban\\Documents\\GitHub\\EvaluationTask\\Application\\Application.csproj"
+              "D:\\Github DotNet Projects\\EvaluationTask\\Application\\Application.csproj": {
+                "projectPath": "D:\\Github DotNet Projects\\EvaluationTask\\Application\\Application.csproj"
               }
             }
           }
@@ -347,7 +362,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -356,7 +372,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
