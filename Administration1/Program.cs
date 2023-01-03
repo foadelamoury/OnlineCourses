@@ -1,5 +1,6 @@
 using Application;
 using Application.Interfaces;
+using FluentValidation;
 using FluentValidation.AspNetCore;
 using Infrastructure;
 using Infrastructure.Persistence;
@@ -38,7 +39,7 @@ builder.Services.AddControllersWithViews();
 
 
 //fluent Validation
-//builder.Services.AddFluentValidationAutoValidation();
+builder.Services.AddFluentValidationAutoValidation();
 
 //builder.Services.AddFluentValidationAutoValidation(config =>
 //{

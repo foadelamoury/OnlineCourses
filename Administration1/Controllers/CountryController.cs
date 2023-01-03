@@ -67,21 +67,32 @@ public class CountryController : Controller
 
 
             }
+            else
+            {
+                return View("form", command);
 
-            return RedirectToAction("Index");
+            }
+
 
         }
 
         else
         {
+            var command = new CreateCountryCommand(model);
+
             if (ModelState.IsValid)
             {
-                var command = new CreateCountryCommand(model);
                 await _mediator.Send(command);
                 return View("form", command);
 
             }
-            return RedirectToAction("Index");
+            else
+            {
+                return View("form", command);
+
+            }
+
+
 
 
         }
