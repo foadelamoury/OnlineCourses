@@ -31,6 +31,7 @@ namespace Application.Features.Country.Commands.Create
                 Domain.Entities.Country entity = new Domain.Entities.Country
                 {
 
+                    Id = request.Id,
                     NameA = request.NameA,
                     NameE = request.NameE,
                     ParentId = request.ParentId
