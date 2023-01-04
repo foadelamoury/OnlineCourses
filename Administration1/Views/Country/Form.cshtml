@@ -39,10 +39,14 @@
         <span asp-validation-for="NameE"></span>
     </div>
 
-     <div class="form-group col-md-6">
-        ParentId
-        <input type="number" asp-for="ParentId"/>
-        <span asp-validation-for="ParentId"></span>
+    
+
+     <Select asp-for="ParentId" asp-items="@ViewBag.Countries">
+
+                <option selected="selected">اختر</option>
+                
+            </Select>
+
     </div>
 
 

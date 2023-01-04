@@ -8,6 +8,7 @@ using FluentValidation.Results;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 
 namespace Administration1.Controllers;
@@ -45,8 +46,10 @@ public class CountryController : Controller
     #endregion
 
     #region Create
-    public ActionResult Create()
+    public async Task<ActionResult> CreateAsync()
     {
+        ViewBag.Countries = new SelectList(await _mediator.Send(new GetAllCountryQuery() { parentId = 0 }), "Id", "NameA");
+
         return PartialView("Form", new CountryDTO { Active = true, CreateDate = DateTime.Now });
     }
     #endregion
@@ -54,6 +57,8 @@ public class CountryController : Controller
     #region Edit
     public async Task<IActionResult> Edit(long id)
     {
+        ViewBag.Countries = new SelectList(await _mediator.Send(new GetAllCountryQuery() { parentId = 0 }), "Id", "NameA");
+
         CountryDTO? countryDTO = await _mediator.Send(new GetCountryByIdQuery() { Id = id });
 
 
@@ -65,6 +70,8 @@ public class CountryController : Controller
     [HttpPost]
     public async Task<IActionResult> Form(CountryDTO model)
     {
+        ViewBag.Countries = new SelectList(await _mediator.Send(new GetAllCountryQuery() { parentId = 0 }), "Id", "NameA");
+
         if (model.Id > 0)
         {
 			var command = new UpdateCountryCommand(model);
