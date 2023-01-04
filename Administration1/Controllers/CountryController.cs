@@ -35,6 +35,10 @@ public class CountryController : Controller
 
     #endregion
 
+
+
+
+
     #region Index
     public async Task<IActionResult> Index()
     {
@@ -45,6 +49,8 @@ public class CountryController : Controller
 
     #endregion
 
+
+
     #region Create
     public async Task<ActionResult> CreateAsync()
     {
@@ -53,6 +59,8 @@ public class CountryController : Controller
         return PartialView("Form", new CountryDTO { Active = true, CreateDate = DateTime.Now });
     }
     #endregion
+
+
 
     #region Edit
     public async Task<IActionResult> Edit(long id)
@@ -65,6 +73,8 @@ public class CountryController : Controller
         return PartialView("Form", countryDTO);
     }
     #endregion
+
+
 
     #region Form
     [HttpPost]
@@ -123,6 +133,9 @@ public class CountryController : Controller
     #endregion
 
 
+
+
+
     #region Delete
 
 
@@ -136,6 +149,9 @@ public class CountryController : Controller
     //}
     #endregion
 
+
+
+
     #region Details
     public async Task<IActionResult> Details(int id)
     {
@@ -143,6 +159,8 @@ public class CountryController : Controller
         return View(eventDTO);
     }
     #endregion
+
+
 
     #region Activate
 
@@ -169,6 +187,8 @@ public class CountryController : Controller
 
 
 }
+
+#region To send Verification to the view
 public static class Extensions
 {
     public static void AddToModelState(this ValidationResult result, ModelStateDictionary modelState)
@@ -179,3 +199,4 @@ public static class Extensions
         }
     }
 }
+#endregion
