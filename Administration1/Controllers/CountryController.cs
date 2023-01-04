@@ -19,13 +19,16 @@ public class CountryController : Controller
     private readonly IWebHostEnvironment _webHostEnvironment;
     private readonly IMediator _mediator;
     private IValidator<CreateCountryCommand> _validator;
+    private IValidator<UpdateCountryCommand> _validator2;
 
 
-    public CountryController(IWebHostEnvironment webHostEnvironment, IMediator mediator, IValidator<CreateCountryCommand> validator)
+
+    public CountryController(IWebHostEnvironment webHostEnvironment, IMediator mediator, IValidator<CreateCountryCommand> validator, IValidator<UpdateCountryCommand> validator2)
     {
         _webHostEnvironment = webHostEnvironment;
         _mediator = mediator;
         _validator = validator;
+        _validator2 = validator2;
     }
 
 
@@ -65,19 +68,19 @@ public class CountryController : Controller
         if (model.Id > 0)
         {
 			var command = new UpdateCountryCommand(model);
-			//ValidationResult result = await _validator.ValidateAsync(command);
+            ValidationResult result = await _validator2.ValidateAsync(command);
 
-			if (!ModelState.IsValid )
+            if (!ModelState.IsValid && !result.IsValid)
             {
-                await _mediator.Send(command);
-                //result.AddToModelState(this.ModelState);
+                result.AddToModelState(this.ModelState);
                 return View("form", command);
 
 
             }
             else
             {
-                return View("form", command);
+                await _mediator.Send(command);
+                return RedirectToAction("Index");
 
             }
 
@@ -90,16 +93,16 @@ public class CountryController : Controller
             ValidationResult result = await _validator.ValidateAsync(command);
 
 
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid && !result.IsValid)
             {
                 result.AddToModelState(this.ModelState);
-                await _mediator.Send(command);
                 return View("form", command);
 
             }
             else
             {
-                return View("form", command);
+                await _mediator.Send(command);
+                return RedirectToAction("Index");
 
             }
 

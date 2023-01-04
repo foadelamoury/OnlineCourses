@@ -1,5 +1,6 @@
 using Application;
 using Application.Features.Country.Commands.Create;
+using Application.Features.Country.Commands.Update;
 using Application.Interfaces;
 using FluentValidation;
 using FluentValidation.AspNetCore;
@@ -69,7 +70,11 @@ builder.Services.AddInfrastructure(builder.Configuration, builder.Environment);
 
 builder.Services.AddValidatorsFromAssemblyContaining<Program>();
 
+
+builder.Services.AddScoped<IValidator<UpdateCountryCommand>, UpdateCountryCommandValidator>();
 builder.Services.AddScoped<IValidator<CreateCountryCommand>, CreateCountryCommandValidator>();
+
+
 
 
 
