@@ -157,7 +157,7 @@ public class StudentController : Controller
 
         if (model.Id > 0)
         {
-
+            
             var command = new UpdateStudentCommand(model);
             await _mediator.Send(command);
 
