@@ -38,7 +38,8 @@ namespace Application.Features.Country.Commands.Create
                         Id = request.Id,
                         NameA = request.NameA,
                         NameE = request.NameE,
-                        ParentId = null
+                        ParentId = null,
+                        CreateDate = DateTime.Now
 
 
                     };

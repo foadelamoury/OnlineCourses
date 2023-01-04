@@ -14,7 +14,8 @@ namespace Application.Features.Country.Commands.Update
         {
             Id = dto.Id;
 
-            NameA = dto.NameA; NameE = dto.NameE;
+            NameA = dto.NameA; 
+            NameE = dto.NameE;
 
 
 
@@ -34,7 +35,7 @@ namespace Application.Features.Country.Commands.Update
                     NameA = request.NameA,
                     NameE = request.NameE,
                     Id = request.Id,
-                    CreateDate = request.CreateDate
+                    ModifyDate = DateTime.Now
 
 
                 };
