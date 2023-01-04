@@ -21,7 +21,7 @@
 
    <div asp-validation-summary="ModelOnly"></div>
 
-<form asp-action="Form" method="post"  enctype="multipart/form-data">
+<form asp-action="Form" class="pure-form" method="post"  enctype="multipart/form-data">
    
       
 
@@ -41,7 +41,7 @@
 
      <div class="form-group col-md-6">
         ParentId
-        <input asp-for="ParentId"/>
+        <input type="number" asp-for="ParentId"/>
         <span asp-validation-for="ParentId"></span>
     </div>
 
@@ -52,3 +52,17 @@
     <a href="@Url.ActionLink("index")" aria-expanded="false" class=" btn btn-primary bg-primary-700 text-white btn-icon rounded-circle mx-1 waves-effect waves-themed" style="font-size:large"><i class="fa fa-edit " data-toggle="tooltip" data-placement="top">الرجوع</i></a>
 
 </form>
+
+
+<script>
+
+
+ var nameInput = document.getElementById('ParentId');
+
+document.querySelector('.pure-form').addEventListener('submit', function (e) {
+
+    //e.preventDefault();
+    console.log(nameInput.value);    
+});
+
+</script>

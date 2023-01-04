@@ -44,9 +44,13 @@ namespace Application.Features.Country.Commands.Create
 
                     };
                     await _context.Countries.AddAsync(entity);
+                    await _context.SaveChangesAsync(cancellationToken);
+
+                    return entity.Id;
+
 
                 }
-                else
+                else if (request.ParentId >0)
                 {
 
                     entity = new Domain.Entities.Country
@@ -60,17 +64,18 @@ namespace Application.Features.Country.Commands.Create
 
                     };
                     await _context.Countries.AddAsync(entity);
+                    await _context.SaveChangesAsync(cancellationToken);
+
+                    return entity.Id;
 
 
                 }
 
-
-                await _context.SaveChangesAsync(cancellationToken);
-
+                return -1;
 
 
 
-                return entity.Id;
+
             }
 
         }
