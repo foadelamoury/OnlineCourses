@@ -30,7 +30,6 @@ E:\Net Core Projects\_Task\EvaluationTask\Application\obj\Debug\net6.0\ref\Appli
 E:\Net Core Projects\_Task\EvaluationTask\Application\obj\Debug\net6.0\Application.pdb
 C:\Users\moshaban\Documents\GitHub\EvaluationTask\Application\bin\Debug\net6.0\Application.deps.json
 C:\Users\moshaban\Documents\GitHub\EvaluationTask\Application\bin\Debug\net6.0\Application.dll
-C:\Users\moshaban\Documents\GitHub\EvaluationTask\Application\bin\Debug\net6.0\ref\Application.dll
 C:\Users\moshaban\Documents\GitHub\EvaluationTask\Application\bin\Debug\net6.0\Application.pdb
 C:\Users\moshaban\Documents\GitHub\EvaluationTask\Application\bin\Debug\net6.0\ar-EG\Application.resources.dll
 C:\Users\moshaban\Documents\GitHub\EvaluationTask\Application\bin\Debug\net6.0\en-US\Application.resources.dll
@@ -76,3 +75,4 @@ D:\Github DotNet Projects\EvaluationTask\Application\obj\Debug\net6.0\Applicatio
 D:\Github DotNet Projects\EvaluationTask\Application\obj\Debug\net6.0\refint\Application.dll
 D:\Github DotNet Projects\EvaluationTask\Application\obj\Debug\net6.0\Application.pdb
 D:\Github DotNet Projects\EvaluationTask\Application\obj\Debug\net6.0\ref\Application.dll
+C:\Users\moshaban\Documents\GitHub\EvaluationTask\Application\obj\Debug\net6.0\refint\Application.dll

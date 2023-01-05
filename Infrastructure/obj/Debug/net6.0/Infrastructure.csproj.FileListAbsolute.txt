@@ -39,7 +39,6 @@ E:\Net Core Projects\_Task\EvaluationTask\Infrastructure\obj\Debug\net6.0\Infras
 C:\Users\moshaban\Documents\GitHub\EvaluationTask\Infrastructure\bin\Debug\net6.0\Infrastructure.deps.json
 C:\Users\moshaban\Documents\GitHub\EvaluationTask\Infrastructure\bin\Debug\net6.0\Infrastructure.runtimeconfig.json
 C:\Users\moshaban\Documents\GitHub\EvaluationTask\Infrastructure\bin\Debug\net6.0\Infrastructure.dll
-C:\Users\moshaban\Documents\GitHub\EvaluationTask\Infrastructure\bin\Debug\net6.0\ref\Infrastructure.dll
 C:\Users\moshaban\Documents\GitHub\EvaluationTask\Infrastructure\bin\Debug\net6.0\Infrastructure.pdb
 C:\Users\moshaban\Documents\GitHub\EvaluationTask\Infrastructure\bin\Debug\net6.0\Application.dll
 C:\Users\moshaban\Documents\GitHub\EvaluationTask\Infrastructure\bin\Debug\net6.0\Domain.dll
@@ -78,3 +77,4 @@ D:\Github DotNet Projects\EvaluationTask\Infrastructure\obj\Debug\net6.0\refint\
 D:\Github DotNet Projects\EvaluationTask\Infrastructure\obj\Debug\net6.0\Infrastructure.pdb
 D:\Github DotNet Projects\EvaluationTask\Infrastructure\obj\Debug\net6.0\Infrastructure.genruntimeconfig.cache
 D:\Github DotNet Projects\EvaluationTask\Infrastructure\obj\Debug\net6.0\ref\Infrastructure.dll
+C:\Users\moshaban\Documents\GitHub\EvaluationTask\Infrastructure\obj\Debug\net6.0\refint\Infrastructure.dll
