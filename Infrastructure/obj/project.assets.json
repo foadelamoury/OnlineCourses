@@ -3555,19 +3555,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\moshaban\\.nuget\\packages\\": {}
+    "C:\\Users\\elamoury123\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\moshaban\\Documents\\GitHub\\EvaluationTask\\Infrastructure\\Infrastructure.csproj",
+      "projectUniqueName": "D:\\Github DotNet Projects\\EvaluationTask\\Infrastructure\\Infrastructure.csproj",
       "projectName": "Infrastructure",
-      "projectPath": "C:\\Users\\moshaban\\Documents\\GitHub\\EvaluationTask\\Infrastructure\\Infrastructure.csproj",
-      "packagesPath": "C:\\Users\\moshaban\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\moshaban\\Documents\\GitHub\\EvaluationTask\\Infrastructure\\obj\\",
+      "projectPath": "D:\\Github DotNet Projects\\EvaluationTask\\Infrastructure\\Infrastructure.csproj",
+      "packagesPath": "C:\\Users\\elamoury123\\.nuget\\packages\\",
+      "outputPath": "D:\\Github DotNet Projects\\EvaluationTask\\Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\moshaban\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\elamoury123\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3581,8 +3585,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\moshaban\\Documents\\GitHub\\EvaluationTask\\Application\\Application.csproj": {
-              "projectPath": "C:\\Users\\moshaban\\Documents\\GitHub\\EvaluationTask\\Application\\Application.csproj"
+            "D:\\Github DotNet Projects\\EvaluationTask\\Application\\Application.csproj": {
+              "projectPath": "D:\\Github DotNet Projects\\EvaluationTask\\Application\\Application.csproj"
             }
           }
         }

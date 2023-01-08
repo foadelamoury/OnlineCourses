@@ -2137,19 +2137,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\moshaban\\.nuget\\packages\\": {}
+    "C:\\Users\\elamoury123\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\moshaban\\Documents\\GitHub\\EvaluationTask\\Domain\\Domain.csproj",
+      "projectUniqueName": "D:\\Github DotNet Projects\\EvaluationTask\\Domain\\Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "C:\\Users\\moshaban\\Documents\\GitHub\\EvaluationTask\\Domain\\Domain.csproj",
-      "packagesPath": "C:\\Users\\moshaban\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\moshaban\\Documents\\GitHub\\EvaluationTask\\Domain\\obj\\",
+      "projectPath": "D:\\Github DotNet Projects\\EvaluationTask\\Domain\\Domain.csproj",
+      "packagesPath": "C:\\Users\\elamoury123\\.nuget\\packages\\",
+      "outputPath": "D:\\Github DotNet Projects\\EvaluationTask\\Domain\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\moshaban\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\elamoury123\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

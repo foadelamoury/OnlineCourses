@@ -9,97 +9,97 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Administration1
 build_property.RootNamespace = Administration1
-build_property.ProjectDir = C:\Users\moshaban\Documents\GitHub\EvaluationTask\Administration1\
+build_property.ProjectDir = D:\Github DotNet Projects\EvaluationTask\Administration1\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\moshaban\Documents\GitHub\EvaluationTask\Administration1
+build_property.MSBuildProjectDirectory = D:\Github DotNet Projects\EvaluationTask\Administration1
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/moshaban/Documents/GitHub/EvaluationTask/Administration1/Views/Country/Details.cshtml]
+[D:/Github DotNet Projects/EvaluationTask/Administration1/Views/Country/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291bnRyeVxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/moshaban/Documents/GitHub/EvaluationTask/Administration1/Views/Country/Form.cshtml]
+[D:/Github DotNet Projects/EvaluationTask/Administration1/Views/Country/Form.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291bnRyeVxGb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/moshaban/Documents/GitHub/EvaluationTask/Administration1/Views/Country/Index.cshtml]
+[D:/Github DotNet Projects/EvaluationTask/Administration1/Views/Country/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291bnRyeVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/moshaban/Documents/GitHub/EvaluationTask/Administration1/Views/CourseCategory/Form.cshtml]
+[D:/Github DotNet Projects/EvaluationTask/Administration1/Views/CourseCategory/Form.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlQ2F0ZWdvcnlcRm9ybS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/moshaban/Documents/GitHub/EvaluationTask/Administration1/Views/CourseCategory/Index.cshtml]
+[D:/Github DotNet Projects/EvaluationTask/Administration1/Views/CourseCategory/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlQ2F0ZWdvcnlcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/moshaban/Documents/GitHub/EvaluationTask/Administration1/Views/Course/Details.cshtml]
+[D:/Github DotNet Projects/EvaluationTask/Administration1/Views/Course/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/moshaban/Documents/GitHub/EvaluationTask/Administration1/Views/Course/Form.cshtml]
+[D:/Github DotNet Projects/EvaluationTask/Administration1/Views/Course/Form.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlXEZvcm0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/moshaban/Documents/GitHub/EvaluationTask/Administration1/Views/Course/Index.cshtml]
+[D:/Github DotNet Projects/EvaluationTask/Administration1/Views/Course/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/moshaban/Documents/GitHub/EvaluationTask/Administration1/Views/Home/Index.cshtml]
+[D:/Github DotNet Projects/EvaluationTask/Administration1/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/moshaban/Documents/GitHub/EvaluationTask/Administration1/Views/Home/Privacy.cshtml]
+[D:/Github DotNet Projects/EvaluationTask/Administration1/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/moshaban/Documents/GitHub/EvaluationTask/Administration1/Views/Shared/Error.cshtml]
+[D:/Github DotNet Projects/EvaluationTask/Administration1/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/moshaban/Documents/GitHub/EvaluationTask/Administration1/Views/Shared/_FormModal.cshtml]
+[D:/Github DotNet Projects/EvaluationTask/Administration1/Views/Shared/_FormModal.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Gb3JtTW9kYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/moshaban/Documents/GitHub/EvaluationTask/Administration1/Views/Shared/_Nav.cshtml]
+[D:/Github DotNet Projects/EvaluationTask/Administration1/Views/Shared/_Nav.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9OYXYuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/moshaban/Documents/GitHub/EvaluationTask/Administration1/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/Github DotNet Projects/EvaluationTask/Administration1/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/moshaban/Documents/GitHub/EvaluationTask/Administration1/Views/StudentCourse/Form.cshtml]
+[D:/Github DotNet Projects/EvaluationTask/Administration1/Views/StudentCourse/Form.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudENvdXJzZVxGb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/moshaban/Documents/GitHub/EvaluationTask/Administration1/Views/StudentCourse/Index.cshtml]
+[D:/Github DotNet Projects/EvaluationTask/Administration1/Views/StudentCourse/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudENvdXJzZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/moshaban/Documents/GitHub/EvaluationTask/Administration1/Views/Student/Details.cshtml]
+[D:/Github DotNet Projects/EvaluationTask/Administration1/Views/Student/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/moshaban/Documents/GitHub/EvaluationTask/Administration1/Views/Student/Form.cshtml]
+[D:/Github DotNet Projects/EvaluationTask/Administration1/Views/Student/Form.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxGb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/moshaban/Documents/GitHub/EvaluationTask/Administration1/Views/Student/Index.cshtml]
+[D:/Github DotNet Projects/EvaluationTask/Administration1/Views/Student/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/moshaban/Documents/GitHub/EvaluationTask/Administration1/Views/_ViewImports.cshtml]
+[D:/Github DotNet Projects/EvaluationTask/Administration1/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/moshaban/Documents/GitHub/EvaluationTask/Administration1/Views/_ViewStart.cshtml]
+[D:/Github DotNet Projects/EvaluationTask/Administration1/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/moshaban/Documents/GitHub/EvaluationTask/Administration1/Views/Shared/_Layout.cshtml]
+[D:/Github DotNet Projects/EvaluationTask/Administration1/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-5rja636amj
