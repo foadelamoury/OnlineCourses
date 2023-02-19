@@ -1,2 +1,1 @@
-# EvaluationTask
- It is the project ofthe course 
+Online Courses
